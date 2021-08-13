@@ -1,0 +1,161 @@
+
++--------+-----------+----------------------------------------------+-------------------------------+-------------------------------------------------------------------+------------+
+| Domain | Method    | URI                                          | Name                          | Action                                                            | Middleware |
++--------+-----------+----------------------------------------------+-------------------------------+-------------------------------------------------------------------+------------+
+|        | GET|HEAD  | /                                            |                               | sispg\Http\Controllers\HomeController@index                       | web,auth   |
+|        | POST      | fill                                         | fill                          | sispg\Http\Controllers\SelectFillController@fill                  | web,guest  |
+|        | POST      | fill/roles                                   | fill_roles                    | sispg\Http\Controllers\SelectFillController@fill_roles            | web,guest  |
+|        | GET|HEAD  | home                                         |                               | sispg\Http\Controllers\HomeController@index                       | web,auth   |
+|        | POST      | login                                        |                               | sispg\Http\Controllers\Auth\AuthController@login                  | web,guest  |
+|        | GET|HEAD  | login                                        |                               | sispg\Http\Controllers\Auth\AuthController@showLoginForm          | web,guest  |
+|        | GET|HEAD  | logout                                       |                               | sispg\Http\Controllers\Auth\AuthController@logout                 | web        |
+|        | POST      | password/email                               |                               | sispg\Http\Controllers\Auth\PasswordController@sendResetLinkEmail | web,guest  |
+|        | POST      | password/reset                               |                               | sispg\Http\Controllers\Auth\PasswordController@reset              | web,guest  |
+|        | GET|HEAD  | password/reset/{token?}                      |                               | sispg\Http\Controllers\Auth\PasswordController@showResetForm      | web,guest  |
+|        | POST      | register                                     |                               | sispg\Http\Controllers\Auth\AuthController@register               | web,guest  |
+|        | GET|HEAD  | register                                     |                               | sispg\Http\Controllers\Auth\AuthController@showRegistrationForm   | web,guest  |
+|        | POST      | ues/actividades                              | ues.actividades.store         | sispg\Http\Controllers\ActividadController@store                  | web,auth   |
+|        | GET|HEAD  | ues/actividades                              | ues.actividades.index         | sispg\Http\Controllers\ActividadController@index                  | web,auth   |
+|        | GET|HEAD  | ues/actividades/create                       | ues.actividades.create        | sispg\Http\Controllers\ActividadController@create                 | web,auth   |
+|        | GET|HEAD  | ues/actividades/{actividades}                | ues.actividades.show          | sispg\Http\Controllers\ActividadController@show                   | web,auth   |
+|        | PUT|PATCH | ues/actividades/{actividades}                | ues.actividades.update        | sispg\Http\Controllers\ActividadController@update                 | web,auth   |
+|        | DELETE    | ues/actividades/{actividades}                | ues.actividades.destroy       | sispg\Http\Controllers\ActividadController@destroy                | web,auth   |
+|        | GET|HEAD  | ues/actividades/{actividades}/edit           | ues.actividades.edit          | sispg\Http\Controllers\ActividadController@edit                   | web,auth   |
+|        | GET|HEAD  | ues/carreras                                 | ues.carreras.index            | sispg\Http\Controllers\CarreraController@index                    | web,auth   |
+|        | POST      | ues/carreras                                 | ues.carreras.store            | sispg\Http\Controllers\CarreraController@store                    | web,auth   |
+|        | GET|HEAD  | ues/carreras/create                          | ues.carreras.create           | sispg\Http\Controllers\CarreraController@create                   | web,auth   |
+|        | DELETE    | ues/carreras/{carreras}                      | ues.carreras.destroy          | sispg\Http\Controllers\CarreraController@destroy                  | web,auth   |
+|        | GET|HEAD  | ues/carreras/{carreras}                      | ues.carreras.show             | sispg\Http\Controllers\CarreraController@show                     | web,auth   |
+|        | PUT|PATCH | ues/carreras/{carreras}                      | ues.carreras.update           | sispg\Http\Controllers\CarreraController@update                   | web,auth   |
+|        | GET|HEAD  | ues/carreras/{carreras}/edit                 | ues.carreras.edit             | sispg\Http\Controllers\CarreraController@edit                     | web,auth   |
+|        | POST      | ues/categorias                               | ues.categorias.store          | sispg\Http\Controllers\categoriasController@store                 | web,auth   |
+|        | GET|HEAD  | ues/categorias                               | ues.categorias.index          | sispg\Http\Controllers\categoriasController@index                 | web,auth   |
+|        | GET|HEAD  | ues/categorias/create                        | ues.categorias.create         | sispg\Http\Controllers\categoriasController@create                | web,auth   |
+|        | GET|HEAD  | ues/categorias/{categorias}                  | ues.categorias.show           | sispg\Http\Controllers\categoriasController@show                  | web,auth   |
+|        | DELETE    | ues/categorias/{categorias}                  | ues.categorias.destroy        | sispg\Http\Controllers\categoriasController@destroy               | web,auth   |
+|        | PUT|PATCH | ues/categorias/{categorias}                  | ues.categorias.update         | sispg\Http\Controllers\categoriasController@update                | web,auth   |
+|        | GET|HEAD  | ues/categorias/{categorias}/edit             | ues.categorias.edit           | sispg\Http\Controllers\categoriasController@edit                  | web,auth   |
+|        | GET|HEAD  | ues/departamentos                            | ues.departamentos.index       | sispg\Http\Controllers\departamentosController@index              | web,auth   |
+|        | POST      | ues/departamentos                            | ues.departamentos.store       | sispg\Http\Controllers\departamentosController@store              | web,auth   |
+|        | GET|HEAD  | ues/departamentos/create                     | ues.departamentos.create      | sispg\Http\Controllers\departamentosController@create             | web,auth   |
+|        | DELETE    | ues/departamentos/{departamentos}            | ues.departamentos.destroy     | sispg\Http\Controllers\departamentosController@destroy            | web,auth   |
+|        | GET|HEAD  | ues/departamentos/{departamentos}            | ues.departamentos.show        | sispg\Http\Controllers\departamentosController@show               | web,auth   |
+|        | PUT|PATCH | ues/departamentos/{departamentos}            | ues.departamentos.update      | sispg\Http\Controllers\departamentosController@update             | web,auth   |
+|        | GET|HEAD  | ues/departamentos/{departamentos}/edit       | ues.departamentos.edit        | sispg\Http\Controllers\departamentosController@edit               | web,auth   |
+|        | GET|HEAD  | ues/docentes                                 | ues.docentes.index            | sispg\Http\Controllers\docentesController@index                   | web,auth   |
+|        | POST      | ues/docentes                                 | ues.docentes.store            | sispg\Http\Controllers\docentesController@store                   | web,auth   |
+|        | GET|HEAD  | ues/docentes/create                          | ues.docentes.create           | sispg\Http\Controllers\docentesController@create                  | web,auth   |
+|        | GET|HEAD  | ues/docentes/{docentes}                      | ues.docentes.show             | sispg\Http\Controllers\docentesController@show                    | web,auth   |
+|        | PUT|PATCH | ues/docentes/{docentes}                      | ues.docentes.update           | sispg\Http\Controllers\docentesController@update                  | web,auth   |
+|        | DELETE    | ues/docentes/{docentes}                      | ues.docentes.destroy          | sispg\Http\Controllers\docentesController@destroy                 | web,auth   |
+|        | GET|HEAD  | ues/docentes/{docentes}/edit                 | ues.docentes.edit             | sispg\Http\Controllers\docentesController@edit                    | web,auth   |
+|        | POST      | ues/emails                                   | ues.emails.confirmation_code  | sispg\Http\Controllers\EstudianteController@store                 | web,auth   |
+|        | GET|HEAD  | ues/estudiantes                              | ues.estudiantes.index         | sispg\Http\Controllers\EstudianteController@index                 | web,auth   |
+|        | POST      | ues/estudiantes                              | ues.estudiantes.store         | sispg\Http\Controllers\EstudianteController@store                 | web,auth   |
+|        | GET|HEAD  | ues/estudiantes/create                       | ues.estudiantes.create        | sispg\Http\Controllers\EstudianteController@create                | web,auth   |
+|        | GET|HEAD  | ues/estudiantes/{estudiantes}                | ues.estudiantes.show          | sispg\Http\Controllers\EstudianteController@show                  | web,auth   |
+|        | PUT|PATCH | ues/estudiantes/{estudiantes}                | ues.estudiantes.update        | sispg\Http\Controllers\EstudianteController@update                | web,auth   |
+|        | DELETE    | ues/estudiantes/{estudiantes}                | ues.estudiantes.destroy       | sispg\Http\Controllers\EstudianteController@destroy               | web,auth   |
+|        | GET|HEAD  | ues/estudiantes/{estudiantes}/edit           | ues.estudiantes.edit          | sispg\Http\Controllers\EstudianteController@edit                  | web,auth   |
+|        | GET|HEAD  | ues/estudiantesHS                            | ues.estudiantesHS.index       | sispg\Http\Controllers\EstudianteHSController@index               | web,auth   |
+|        | POST      | ues/estudiantesHS                            | ues.estudiantesHS.store       | sispg\Http\Controllers\EstudianteHSController@store               | web,auth   |
+|        | GET|HEAD  | ues/estudiantesHS/create                     | ues.estudiantesHS.create      | sispg\Http\Controllers\EstudianteHSController@create              | web,auth   |
+|        | GET|HEAD  | ues/estudiantesHS/{estudiantesHS}            | ues.estudiantesHS.show        | sispg\Http\Controllers\EstudianteHSController@show                | web,auth   |
+|        | PUT|PATCH | ues/estudiantesHS/{estudiantesHS}            | ues.estudiantesHS.update      | sispg\Http\Controllers\EstudianteHSController@update              | web,auth   |
+|        | DELETE    | ues/estudiantesHS/{estudiantesHS}            | ues.estudiantesHS.destroy     | sispg\Http\Controllers\EstudianteHSController@destroy             | web,auth   |
+|        | GET|HEAD  | ues/estudiantesHS/{estudiantesHS}/edit       | ues.estudiantesHS.edit        | sispg\Http\Controllers\EstudianteHSController@edit                | web,auth   |
+|        | POST      | ues/estudiantesPera                          | ues.estudiantesPera.store     | sispg\Http\Controllers\EstudiantePeraController@store             | web,auth   |
+|        | GET|HEAD  | ues/estudiantesPera                          | ues.estudiantesPera.index     | sispg\Http\Controllers\EstudiantePeraController@index             | web,auth   |
+|        | GET|HEAD  | ues/estudiantesPera/create                   | ues.estudiantesPera.create    | sispg\Http\Controllers\EstudiantePeraController@create            | web,auth   |
+|        | GET|HEAD  | ues/estudiantesPera/{estudiantesPera}        | ues.estudiantesPera.show      | sispg\Http\Controllers\EstudiantePeraController@show              | web,auth   |
+|        | PUT|PATCH | ues/estudiantesPera/{estudiantesPera}        | ues.estudiantesPera.update    | sispg\Http\Controllers\EstudiantePeraController@update            | web,auth   |
+|        | DELETE    | ues/estudiantesPera/{estudiantesPera}        | ues.estudiantesPera.destroy   | sispg\Http\Controllers\EstudiantePeraController@destroy           | web,auth   |
+|        | GET|HEAD  | ues/estudiantesPera/{estudiantesPera}/edit   | ues.estudiantesPera.edit      | sispg\Http\Controllers\EstudiantePeraController@edit              | web,auth   |
+|        | GET|HEAD  | ues/etapas                                   | ues.etapas.index              | sispg\Http\Controllers\etapasnombreController@index               | web,auth   |
+|        | POST      | ues/etapas                                   | ues.etapas.store              | sispg\Http\Controllers\etapasnombreController@store               | web,auth   |
+|        | GET|HEAD  | ues/etapas/create                            | ues.etapas.create             | sispg\Http\Controllers\etapasnombreController@create              | web,auth   |
+|        | GET|HEAD  | ues/etapas/{etapas}                          | ues.etapas.show               | sispg\Http\Controllers\etapasnombreController@show                | web,auth   |
+|        | DELETE    | ues/etapas/{etapas}                          | ues.etapas.destroy            | sispg\Http\Controllers\etapasnombreController@destroy             | web,auth   |
+|        | PUT|PATCH | ues/etapas/{etapas}                          | ues.etapas.update             | sispg\Http\Controllers\etapasnombreController@update              | web,auth   |
+|        | GET|HEAD  | ues/etapas/{etapas}/edit                     | ues.etapas.edit               | sispg\Http\Controllers\etapasnombreController@edit                | web,auth   |
+|        | GET|HEAD  | ues/facultades                               | ues.facultades.index          | sispg\Http\Controllers\FacultadController@index                   | web,auth   |
+|        | POST      | ues/facultades                               | ues.facultades.store          | sispg\Http\Controllers\FacultadController@store                   | web,auth   |
+|        | GET|HEAD  | ues/facultades/create                        | ues.facultades.create         | sispg\Http\Controllers\FacultadController@create                  | web,auth   |
+|        | GET|HEAD  | ues/facultades/{facultades}                  | ues.facultades.show           | sispg\Http\Controllers\FacultadController@show                    | web,auth   |
+|        | PUT|PATCH | ues/facultades/{facultades}                  | ues.facultades.update         | sispg\Http\Controllers\FacultadController@update                  | web,auth   |
+|        | DELETE    | ues/facultades/{facultades}                  | ues.facultades.destroy        | sispg\Http\Controllers\FacultadController@destroy                 | web,auth   |
+|        | GET|HEAD  | ues/facultades/{facultades}/edit             | ues.facultades.edit           | sispg\Http\Controllers\FacultadController@edit                    | web,auth   |
+|        | POST      | ues/grupos                                   | ues.grupos.store              | sispg\Http\Controllers\GrupoController@store                      | web,auth   |
+|        | GET|HEAD  | ues/grupos                                   | ues.grupos.index              | sispg\Http\Controllers\GrupoController@index                      | web,auth   |
+|        | GET|HEAD  | ues/grupos/create                            | ues.grupos.create             | sispg\Http\Controllers\GrupoController@create                     | web,auth   |
+|        | PUT|PATCH | ues/grupos/{grupos}                          | ues.grupos.update             | sispg\Http\Controllers\GrupoController@update                     | web,auth   |
+|        | DELETE    | ues/grupos/{grupos}                          | ues.grupos.destroy            | sispg\Http\Controllers\GrupoController@destroy                    | web,auth   |
+|        | GET|HEAD  | ues/grupos/{grupos}                          | ues.grupos.show               | sispg\Http\Controllers\GrupoController@show                       | web,auth   |
+|        | GET|HEAD  | ues/grupos/{grupos}/edit                     | ues.grupos.edit               | sispg\Http\Controllers\GrupoController@edit                       | web,auth   |
+|        | GET|HEAD  | ues/nombreetapas                             | ues.nombreetapas.index        | sispg\Http\Controllers\nombreetapasController@index               | web,auth   |
+|        | POST      | ues/nombreetapas                             | ues.nombreetapas.store        | sispg\Http\Controllers\nombreetapasController@store               | web,auth   |
+|        | GET|HEAD  | ues/nombreetapas/create                      | ues.nombreetapas.create       | sispg\Http\Controllers\nombreetapasController@create              | web,auth   |
+|        | DELETE    | ues/nombreetapas/{nombreetapas}              | ues.nombreetapas.destroy      | sispg\Http\Controllers\nombreetapasController@destroy             | web,auth   |
+|        | GET|HEAD  | ues/nombreetapas/{nombreetapas}              | ues.nombreetapas.show         | sispg\Http\Controllers\nombreetapasController@show                | web,auth   |
+|        | PUT|PATCH | ues/nombreetapas/{nombreetapas}              | ues.nombreetapas.update       | sispg\Http\Controllers\nombreetapasController@update              | web,auth   |
+|        | GET|HEAD  | ues/nombreetapas/{nombreetapas}/edit         | ues.nombreetapas.edit         | sispg\Http\Controllers\nombreetapasController@edit                | web,auth   |
+|        | GET|HEAD  | ues/nuevaetapa                               | ues.nuevaetapa.index          | sispg\Http\Controllers\nuevaetapaController@index                 | web,auth   |
+|        | POST      | ues/nuevaetapa                               | ues.nuevaetapa.store          | sispg\Http\Controllers\nuevaetapaController@store                 | web,auth   |
+|        | GET|HEAD  | ues/nuevaetapa/create                        | ues.nuevaetapa.create         | sispg\Http\Controllers\nuevaetapaController@create                | web,auth   |
+|        | POST      | ues/nuevaetapa/getetapas/{idtipotrabajo}     | ues.nuevaetapa.getetapas      | sispg\Http\Controllers\nuevaetapaController@getEtapas             | web,auth   |
+|        | POST      | ues/nuevaetapa/getnum/{idtipotrabajo}        | ues.nuevaetapa.numetapas      | sispg\Http\Controllers\nuevaetapaController@getCountEtapas        | web,auth   |
+|        | GET|HEAD  | ues/nuevaetapa/{nuevaetapa}                  | ues.nuevaetapa.show           | sispg\Http\Controllers\nuevaetapaController@show                  | web,auth   |
+|        | PUT|PATCH | ues/nuevaetapa/{nuevaetapa}                  | ues.nuevaetapa.update         | sispg\Http\Controllers\nuevaetapaController@update                | web,auth   |
+|        | DELETE    | ues/nuevaetapa/{nuevaetapa}                  | ues.nuevaetapa.destroy        | sispg\Http\Controllers\nuevaetapaController@destroy               | web,auth   |
+|        | GET|HEAD  | ues/nuevaetapa/{nuevaetapa}/edit             | ues.nuevaetapa.edit           | sispg\Http\Controllers\nuevaetapaController@edit                  | web,auth   |
+|        | POST      | ues/ponderacion                              | ues.ponderacion.store         | sispg\Http\Controllers\PonderacionController@store                | web,auth   |
+|        | GET|HEAD  | ues/ponderacion                              | ues.ponderacion.index         | sispg\Http\Controllers\PonderacionController@index                | web,auth   |
+|        | GET|HEAD  | ues/ponderacion/create                       | ues.ponderacion.create        | sispg\Http\Controllers\PonderacionController@create               | web,auth   |
+|        | PUT|PATCH | ues/ponderacion/{ponderacion}                | ues.ponderacion.update        | sispg\Http\Controllers\PonderacionController@update               | web,auth   |
+|        | GET|HEAD  | ues/ponderacion/{ponderacion}                | ues.ponderacion.show          | sispg\Http\Controllers\PonderacionController@show                 | web,auth   |
+|        | DELETE    | ues/ponderacion/{ponderacion}                | ues.ponderacion.destroy       | sispg\Http\Controllers\PonderacionController@destroy              | web,auth   |
+|        | GET|HEAD  | ues/ponderacion/{ponderacion}/edit           | ues.ponderacion.edit          | sispg\Http\Controllers\PonderacionController@edit                 | web,auth   |
+|        | POST      | ues/reload/roles/{idcarrera}                 | ues.reloadroles               | sispg\Http\Controllers\UsuarioController@reloadRoles              | web,auth   |
+|        | GET|HEAD  | ues/solicitudes                              | ues.solicitudes.index         | sispg\Http\Controllers\solicitudController@index                  | web,auth   |
+|        | POST      | ues/solicitudes                              | ues.solicitudes.spsistemas    | sispg\Http\Controllers\solicitudController@spsistemas             | web,auth   |
+|        | GET|HEAD  | ues/solicitudes/create                       | ues.solicitudes.create        | sispg\Http\Controllers\solicitudController@create                 | web,auth   |
+|        | DELETE    | ues/solicitudes/{solicitudes}                | ues.solicitudes.destroy       | sispg\Http\Controllers\solicitudController@destroy                | web,auth   |
+|        | PUT|PATCH | ues/solicitudes/{solicitudes}                | ues.solicitudes.update        | sispg\Http\Controllers\solicitudController@update                 | web,auth   |
+|        | GET|HEAD  | ues/solicitudes/{solicitudes}                | ues.solicitudes.show          | sispg\Http\Controllers\solicitudController@show                   | web,auth   |
+|        | GET|HEAD  | ues/solicitudes/{solicitudes}/edit           | ues.solicitudes.edit          | sispg\Http\Controllers\solicitudController@edit                   | web,auth   |
+|        | GET|HEAD  | ues/solicitudesconta                         | ues.solicitudesconta.index    | sispg\Http\Controllers\solicitudpicController@index               | web,auth   |
+|        | POST      | ues/solicitudesconta                         | ues.solicitudesconta.spiconta | sispg\Http\Controllers\solicitudpicController@spiconta            | web,auth   |
+|        | GET|HEAD  | ues/solicitudesconta/create                  | ues.solicitudesconta.create   | sispg\Http\Controllers\solicitudpicController@create              | web,auth   |
+|        | DELETE    | ues/solicitudesconta/{solicitudesconta}      | ues.solicitudesconta.destroy  | sispg\Http\Controllers\solicitudpicController@destroy             | web,auth   |
+|        | PUT|PATCH | ues/solicitudesconta/{solicitudesconta}      | ues.solicitudesconta.update   | sispg\Http\Controllers\solicitudpicController@update              | web,auth   |
+|        | GET|HEAD  | ues/solicitudesconta/{solicitudesconta}      | ues.solicitudesconta.show     | sispg\Http\Controllers\solicitudpicController@show                | web,auth   |
+|        | GET|HEAD  | ues/solicitudesconta/{solicitudesconta}/edit | ues.solicitudesconta.edit     | sispg\Http\Controllers\solicitudpicController@edit                | web,auth   |
+|        | GET|HEAD  | ues/tipoAsesores                             | ues.tipoAsesores.index        | sispg\Http\Controllers\TipoasesorController@index                 | web,auth   |
+|        | POST      | ues/tipoAsesores                             | ues.tipoAsesores.store        | sispg\Http\Controllers\TipoasesorController@store                 | web,auth   |
+|        | GET|HEAD  | ues/tipoAsesores/create                      | ues.tipoAsesores.create       | sispg\Http\Controllers\TipoasesorController@create                | web,auth   |
+|        | GET|HEAD  | ues/tipoAsesores/{tipoAsesores}              | ues.tipoAsesores.show         | sispg\Http\Controllers\TipoasesorController@show                  | web,auth   |
+|        | DELETE    | ues/tipoAsesores/{tipoAsesores}              | ues.tipoAsesores.destroy      | sispg\Http\Controllers\TipoasesorController@destroy               | web,auth   |
+|        | PUT|PATCH | ues/tipoAsesores/{tipoAsesores}              | ues.tipoAsesores.update       | sispg\Http\Controllers\TipoasesorController@update                | web,auth   |
+|        | GET|HEAD  | ues/tipoAsesores/{tipoAsesores}/edit         | ues.tipoAsesores.edit         | sispg\Http\Controllers\TipoasesorController@edit                  | web,auth   |
+|        | POST      | ues/tipoTemas                                | ues.tipoTemas.store           | sispg\Http\Controllers\TipotemaController@store                   | web,auth   |
+|        | GET|HEAD  | ues/tipoTemas                                | ues.tipoTemas.index           | sispg\Http\Controllers\TipotemaController@index                   | web,auth   |
+|        | GET|HEAD  | ues/tipoTemas/create                         | ues.tipoTemas.create          | sispg\Http\Controllers\TipotemaController@create                  | web,auth   |
+|        | GET|HEAD  | ues/tipoTemas/{tipoTemas}                    | ues.tipoTemas.show            | sispg\Http\Controllers\TipotemaController@show                    | web,auth   |
+|        | PUT|PATCH | ues/tipoTemas/{tipoTemas}                    | ues.tipoTemas.update          | sispg\Http\Controllers\TipotemaController@update                  | web,auth   |
+|        | DELETE    | ues/tipoTemas/{tipoTemas}                    | ues.tipoTemas.destroy         | sispg\Http\Controllers\TipotemaController@destroy                 | web,auth   |
+|        | GET|HEAD  | ues/tipoTemas/{tipoTemas}/edit               | ues.tipoTemas.edit            | sispg\Http\Controllers\TipotemaController@edit                    | web,auth   |
+|        | POST      | ues/usuario/addrol                           | ues.usuario.addrols           | sispg\Http\Controllers\UsuarioController@addrols                  | web,auth   |
+|        | DELETE    | ues/usuario/deleterol/{idrol}                | ues.usuario.deleterol         | sispg\Http\Controllers\UsuarioController@deleteRol                | web,auth   |
+|        | POST      | ues/usuario/removerol                        | ues.usuario.removerol         | sispg\Http\Controllers\UsuarioController@removeRol                | web,auth   |
+|        | POST      | ues/usuario/roles/{iddocente}                | ues.usuario.getdocenteroles   | sispg\Http\Controllers\UsuarioController@getDocenteRoles          | web,auth   |
+|        | GET|HEAD  | ues/usuarios                                 | ues.usuarios.index            | sispg\Http\Controllers\UsuarioController@index                    | web,auth   |
+|        | POST      | ues/usuarios                                 | ues.usuarios.store            | sispg\Http\Controllers\UsuarioController@store                    | web,auth   |
+|        | GET|HEAD  | ues/usuarios/create                          | ues.usuarios.create           | sispg\Http\Controllers\UsuarioController@create                   | web,auth   |
+|        | POST      | ues/usuarios/loadData/{iddocente}            | ues.usuarios.loaddata         | sispg\Http\Controllers\UsuarioController@listRols                 | web,auth   |
+|        | POST      | ues/usuarios/storerca                        | ues.usuarios.storerca         | sispg\Http\Controllers\UsuarioController@storerca                 | web,auth   |
+|        | POST      | ues/usuarios/user                            | ues.usuarios.user             | sispg\Http\Controllers\UsuarioController@user                     | web,auth   |
+|        | DELETE    | ues/usuarios/{usuarios}                      | ues.usuarios.destroy          | sispg\Http\Controllers\UsuarioController@destroy                  | web,auth   |
+|        | PUT|PATCH | ues/usuarios/{usuarios}                      | ues.usuarios.update           | sispg\Http\Controllers\UsuarioController@update                   | web,auth   |
+|        | GET|HEAD  | ues/usuarios/{usuarios}                      | ues.usuarios.show             | sispg\Http\Controllers\UsuarioController@show                     | web,auth   |
+|        | GET|HEAD  | ues/usuarios/{usuarios}/edit                 | ues.usuarios.edit             | sispg\Http\Controllers\UsuarioController@edit                     | web,auth   |
++--------+-----------+----------------------------------------------+-------------------------------+-------------------------------------------------------------------+------------+

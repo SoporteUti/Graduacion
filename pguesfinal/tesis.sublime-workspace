@@ -1,0 +1,2116 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"hora_",
+				"hora_inicio"
+			],
+			[
+				"Util",
+				"UtilFunctions"
+			],
+			[
+				"bs3-row",
+				"bs3-row-col\tbs3-row-col"
+			],
+			[
+				"form",
+				"formradio\t{!! Form::radio() !!}"
+			],
+			[
+				"for",
+				"for\tfor (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"Rlea",
+				"Relation::hasOne\tA one-to-one relationship."
+			],
+			[
+				"getU",
+				"getUserByRolAndCarrera"
+			],
+			[
+				"Rol",
+				"Rol_carrera〔namespace〕"
+			],
+			[
+				"rol_",
+				"$rol_name〔variable〕"
+			],
+			[
+				"Uti",
+				"UtilFunctions"
+			],
+			[
+				"rol",
+				"$rol_name〔variable〕"
+			],
+			[
+				"paddin",
+				"padding-top: 〔property〕"
+			],
+			[
+				"sty",
+				"style\tAttr"
+			],
+			[
+				"li",
+				"li\tTag"
+			],
+			[
+				"empt",
+				"empty"
+			],
+			[
+				"bill",
+				"bills_list"
+			],
+			[
+				"depart",
+				"departament_id"
+			],
+			[
+				"depar",
+				"departament_id"
+			],
+			[
+				"Bill",
+				"BillStoreRequest〔namespace〕"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"wi",
+				"withTooltips"
+			],
+			[
+				"id",
+				"id_folder"
+			],
+			[
+				"Techn",
+				"TechnicalFolderController"
+			],
+			[
+				"get",
+				"getFolderData"
+			],
+			[
+				"f",
+				"f\tAnonymous Function"
+			],
+			[
+				"col-",
+				"col-lg-12"
+			],
+			[
+				"met",
+				"method\tblade-method"
+			],
+			[
+				"folde",
+				"folderAccepted"
+			],
+			[
+				"sta",
+				"status"
+			],
+			[
+				"if",
+				"if\tblade-if"
+			],
+			[
+				"Auth",
+				"Auth::user\tGet the currently authenticated user."
+			],
+			[
+				"cre",
+				"create_bill.blade.php"
+			],
+			[
+				"bu",
+				"budget_id"
+			],
+			[
+				"Relation",
+				"Relation::belongsToMany\tA many-to-many relationship."
+			],
+			[
+				"Rela",
+				"Relation::hasMany\tA one-to-many relationship."
+			],
+			[
+				"v-el",
+				"v-else\t<div v-else>"
+			],
+			[
+				"div",
+				"div\tTag"
+			],
+			[
+				"mar",
+				"margin-bottom\tproperty"
+			],
+			[
+				"im",
+				"img-center"
+			],
+			[
+				"end",
+				"endsection"
+			],
+			[
+				"pag",
+				"page-break"
+			],
+			[
+				"Tec",
+				"Tecnìca"
+			],
+			[
+				"V",
+				"VueTimeago"
+			],
+			[
+				"compo",
+				"components"
+			],
+			[
+				"a",
+				"a\t<a>"
+			],
+			[
+				"cons",
+				"console.log"
+			],
+			[
+				"aux",
+				"$aux2〔variable〕"
+			],
+			[
+				"tech",
+				"$technicalFolder〔variable〕"
+			],
+			[
+				"empl",
+				"employee_supervisor"
+			],
+			[
+				"tec",
+				"$technicalFolder〔variable〕"
+			],
+			[
+				"readme",
+				"readme\tREADME - extended (issues, tag and flattr)"
+			],
+			[
+				"license",
+				"license\tMIT License"
+			],
+			[
+				"Rel",
+				"Relation::hasOne\tA one-to-one relationship."
+			],
+			[
+				"Aut",
+				"Auth::user\tGet the currently authenticated user."
+			],
+			[
+				"adem",
+				"addendum_id"
+			],
+			[
+				"adde",
+				"addendum_id"
+			],
+			[
+				"Relat",
+				"Relation::belongsTo\tA one-to-one inverse relationship."
+			],
+			[
+				"au",
+				"auth_user〔variable〕"
+			],
+			[
+				"Au",
+				"Auth::user\tGet the currently authenticated user."
+			],
+			[
+				"A",
+				"Auth::user\tGet the currently authenticated user."
+			],
+			[
+				"Route",
+				"Route::post\tBasic Post Route."
+			],
+			[
+				"even",
+				"events"
+			],
+			[
+				"cal",
+				"calculateSum〔function〕"
+			],
+			[
+				"bs3tab",
+				"bs3-tabs\tbs3-tabs"
+			],
+			[
+				"fomr",
+				"formdate\t{!! Form::date() !!}"
+			],
+			[
+				"fom",
+				"formdate\t{!! Form::date() !!}"
+			],
+			[
+				"fon",
+				"font-awesome"
+			],
+			[
+				"padd",
+				"padding-left\tproperty"
+			],
+			[
+				"se",
+				"sec\tblade-section"
+			],
+			[
+				"pdf",
+				"pdf_template.blade.php"
+			],
+			[
+				"sec",
+				"secy\tblade-section_yield"
+			],
+			[
+				"ht",
+				"html5\tSimple HTML5 Boilerplate"
+			],
+			[
+				"tab",
+				"table"
+			],
+			[
+				"page",
+				"div.page"
+			],
+			[
+				"tas",
+				"taskbark"
+			],
+			[
+				"mo",
+				"month"
+			],
+			[
+				"text-s",
+				"text-decoration-style\tproperty"
+			],
+			[
+				"text-",
+				"text-decoration\tproperty"
+			],
+			[
+				"budget",
+				"budget_id"
+			],
+			[
+				"eve",
+				"$event〔variable〕"
+			],
+			[
+				"act",
+				"$activity〔variable〕"
+			],
+			[
+				"find",
+				"findOrFail"
+			],
+			[
+				"remo",
+				"removeRow"
+			],
+			[
+				"valida",
+				"validator"
+			],
+			[
+				"tem",
+				"$temp〔variable〕"
+			],
+			[
+				"clea",
+				"clearInputs"
+			],
+			[
+				"cle",
+				"clearInputs〔function〕"
+			],
+			[
+				"consol",
+				"console"
+			],
+			[
+				"sup",
+				"supervision"
+			],
+			[
+				"de",
+				"department"
+			],
+			[
+				"em",
+				"employees.id"
+			],
+			[
+				"employee",
+				"employee_id"
+			],
+			[
+				"pro",
+				"protected"
+			],
+			[
+				"Routeg",
+				"Route::group\tCreate a Group of Routes"
+			],
+			[
+				"ev",
+				"$events〔variable〕"
+			],
+			[
+				"console",
+				"console.log(\"amm_cd"
+			],
+			[
+				"doc",
+				"document〔variable〕"
+			],
+			[
+				"technic",
+				"technicalFolder"
+			],
+			[
+				"bs3-col",
+				"bs3-col:12\tbs3-col-12"
+			],
+			[
+				"bs3r",
+				"bs3-row-col\tbs3-row-col"
+			],
+			[
+				"pul",
+				"pull-right"
+			],
+			[
+				"hei",
+				"height\tAttr"
+			],
+			[
+				"bs3ro",
+				"bs3-row\tbs3-row"
+			],
+			[
+				"base",
+				"base64_encode〔function〕"
+			],
+			[
+				"fu",
+				"full_name"
+			],
+			[
+				"html",
+				"$html2〔variable〕"
+			],
+			[
+				"htm",
+				"$html〔variable〕"
+			],
+			[
+				"ret",
+				"ret\treturn"
+			],
+			[
+				"carpt",
+				"$carpeta〔variable〕"
+			],
+			[
+				"sele",
+				"$select〔variable〕"
+			],
+			[
+				"ma",
+				"main\t<main>"
+			],
+			[
+				"fore",
+				"foreach\tblade-foreach"
+			],
+			[
+				"bs3ta",
+				"bs3-table:bordered\tbs3-table-bordered"
+			],
+			[
+				"bsr3",
+				"bs3-row-col\tbs3-row-col"
+			],
+			[
+				"text",
+				"text-center"
+			],
+			[
+				"pu",
+				"pull-right"
+			],
+			[
+				"bs3co",
+				"bs3-col:12\tbs3-col-12"
+			],
+			[
+				"auto",
+				"auto〔value〕"
+			],
+			[
+				"maging",
+				"margin-right: 〔property〕"
+			],
+			[
+				"tex",
+				"text-center"
+			],
+			[
+				"to",
+				"total"
+			],
+			[
+				"bs3-co",
+				"bs3-col:4\tbs3-col-4"
+			],
+			[
+				"bs3row",
+				"bs3-row-col\tbs3-row-col"
+			],
+			[
+				"bs3c",
+				"bs3-col:2\tbs3-col-2"
+			],
+			[
+				"fonts",
+				"font-size\tproperty"
+			],
+			[
+				"bs3col",
+				"bs3-col:2\tbs3-col-2"
+			],
+			[
+				"aut",
+				"auto\tmargin-top"
+			],
+			[
+				"p",
+				"p\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "resources/views/ues/grupos/cronograma.blade.php",
+			"settings":
+			{
+				"buffer_size": 4960,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/css/darkgantt.css",
+			"settings":
+			{
+				"buffer_size": 3265,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/HomeController.php",
+			"settings":
+			{
+				"buffer_size": 1683,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/plantillas/admin.blade.php",
+			"settings":
+			{
+				"buffer_size": 39725,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vendor/alcallej/darkgantt/src/Gantt.php",
+			"settings":
+			{
+				"buffer_size": 5883,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/routes.php",
+			"settings":
+			{
+				"buffer_size": 10984,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/GrupoController.php",
+			"settings":
+			{
+				"buffer_size": 15417,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 190.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"liver",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"Pa",
+				"Package Control: Install Package"
+			],
+			[
+				"GutterColor",
+				"GutterColor: Fix Current Color Scheme"
+			],
+			[
+				"Pac",
+				"Package Control: Install Package"
+			],
+			[
+				"P",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: In",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 524.0
+	},
+	"console":
+	{
+		"height": 124.0,
+		"history":
+		[
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/alcallej/MEGAsync Downloads/t31/tesisN",
+		"/home/alcallej/MEGAsync Downloads/t31/tesisN/app",
+		"/home/alcallej/MEGAsync Downloads/t31/tesisN/app/Http",
+		"/home/alcallej/MEGAsync Downloads/t31/tesisN/app/Http/Controllers",
+		"/home/alcallej/MEGAsync Downloads/t31/tesisN/resources",
+		"/home/alcallej/MEGAsync Downloads/t31/tesisN/resources/views",
+		"/home/alcallej/MEGAsync Downloads/t31/tesisN/resources/views/plantillas",
+		"/home/alcallej/MEGAsync Downloads/t31/tesisN/vendor",
+		"/home/alcallej/MEGAsync Downloads/t31/tesisN/vendor/alcallej",
+		"/home/alcallej/MEGAsync Downloads/t31/tesisN/vendor/alcallej/darkgantt",
+		"/home/alcallej/MEGAsync Downloads/t31/tesisN/vendor/alcallej/darkgantt/src",
+		"/home/alcallej/MEGAsync Downloads/t31/tesisN/vendor/alcallej/darkgantt/src/assets",
+		"/home/alcallej/MEGAsync Downloads/t31/tesisN/vendor/alcallej/darkgantt/src/assets/scss"
+	],
+	"file_history":
+	[
+		"/home/alcallej/MEGAsync Downloads/t31/tesisN/composer.json",
+		"/home/alcallej/Documentos/packages/darkgantt/composer.json",
+		"/home/alcallej/MEGAsync Downloads/tesisN/app/Http/Controllers/GrupoController.php",
+		"/home/alcallej/MEGAsync Downloads/t31/tesisN/vendor/alcallej/darkgantt/test.php",
+		"/home/alcallej/MEGAsync Downloads/tesisN2410/tesisN/resources/views/ues/grupos/cronograma.blade.php",
+		"/home/alcallej/MEGAsync Downloads/tesisN/storage/framework/views/cd8a0163e7e18b94ed156f2f1a46f38b0ed83350.php",
+		"/home/alcallej/MEGAsync Downloads/tesisN/resources/views/plantillas/admin.blade.php",
+		"/home/alcallej/MEGAsync Downloads/tesisN/resources/views/ues/grupos/vista_asesor.blade.php",
+		"/home/alcallej/MEGAsync Downloads/tesisN/resources/views/ues/grupos/asistencia.blade.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Utils/UtilFunctions.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Grupo.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Http/Controllers/HomeController.php",
+		"/home/alcallej/Documentos/t30/tesis20092/resources/views/ues/grupos/asistencia.blade.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Http/routes.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Http/Controllers/SelectFillController.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Http/Controllers/EstudianteController.php",
+		"/home/alcallej/Documentos/t30/tesis20092/resources/views/ues/grupos/vista_asesor.blade.php",
+		"/home/alcallej/Documentos/t30/tesis20092/resources/views/plantillas/admin.blade.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/grupo_solicitud.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Notifications/SolicitudAprobacionTema.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Http/Controllers/solicitudController.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/assets/js/components/NotificationItem.vue",
+		"/home/alcallej/Documentos/t30/tesis20092/resources/views/ues/grupos/imprimir4asesor.blade.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/nuevaetapa.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/GrupoDocente.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Notifications/SolicitudReprobacionAbandono.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Notifications/SolicitudRatificacionTribunal.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Notifications/SolicitudRatificacionResultados.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Notifications/SolicitudIrorrogaInterna.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Docente.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Rol_carrera.php",
+		"/home/alcallej/Documentos/t30/tesis20092/resources/assets/js/components/Notification.vue",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Http/Controllers/solicitudpicController.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/Http/Controllers/NotificationController.php",
+		"/home/alcallej/Documentos/t30/tesis20092/app/User.php",
+		"/home/alcallej/Documentos/t30/tesis20092/config/app.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Employee.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Http/Controllers/TechnicalFolderController.php",
+		"/home/alcallej/Documentos/5sep/proy232/routes/web.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/views/carpetastecnicas/index.blade.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Bill.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Budget.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Http/Controllers/Factura/BillController.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/views/facturas/inicio.blade.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/views/carpetastecnicas/create_bill.blade.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/views/pdf/gantt.blade.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Util/Gantt.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/views/layouts/app.blade.php",
+		"/home/alcallej/Documentos/5sep/proy232/public/css/gantt.css",
+		"/home/alcallej/Documentos/error.html",
+		"/home/alcallej/Documentos/5sep/proy232/resources/views/empleados/create.blade.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Http/Requests/EmployeeStoreRequest.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Http/Controllers/EmployeeController.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/views/empleados/inicio.blade.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/views/empleados/edit.blade.php",
+		"/home/alcallej/Documentos/5sep/proy232/public/js/pdf-preview.js",
+		"/home/alcallej/Documentos/5sep/proy232/public/css/image.css",
+		"/home/alcallej/Documentos/5sep/proy232/resources/views/proveedores/inicio.blade.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/views/procesos/inicio.blade.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/views/facturas/inicioPro.blade.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/views/departamentos/inicio.blade.php",
+		"/home/alcallej/Documentos/5sep/proy232/public/javascripts/main.js",
+		"/home/alcallej/Documentos/5sep/proy232/.env",
+		"/home/alcallej/Documentos/5sep/proy232/resources/views/carpetastecnicas/tabs/tab1.blade.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Notifications/folderAccepted.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/views/carpetastecnicas/create.blade.php",
+		"/home/alcallej/Documentos/5sep/proy232/database/migrations/2018_09_13_103104_create_budgets_bills_table.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Http/Controllers/PDF/PdfController.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/views/pdf/carperatecnica.blade.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/assets/js/components/Notification.vue",
+		"/home/alcallej/Documentos/5sep/proy232/app/User.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/TechnicalFolder.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/assets/js/app.js",
+		"/home/alcallej/Documentos/5sep/proy232/resources/assets/js/components/ModalComponent.vue",
+		"/home/alcallej/Documentos/5sep/proy232/resources/assets/js/components/ExampleComponent.vue",
+		"/home/alcallej/Documentos/5sep/proy232/package.json",
+		"/home/alcallej/Documentos/5sep/proy232/public/js/main-notification.js",
+		"/home/alcallej/Documentos/5sep/proy232/app/Http/Controllers/Usuario/UserController.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Notifications/newFolder.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Providers/EventServiceProvider.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Providers/AppServiceProvider.php",
+		"/home/alcallej/Documentos/5sep/proy232/resources/assets/js/components/ItemNotificationComponent.vue",
+		"/home/alcallej/.config/sublime-text-3/Installed Packages/VueFormatter.sublime-package/VUEFormatter.sublime-settings",
+		"/home/alcallej/Documentos/5sep/proy232/app/Rol.php",
+		"/home/alcallej/Documentos/5sep/proy232/vendor/laravel/framework/src/Illuminate/Http/Response.php",
+		"/home/alcallej/Documentos/5sep/proy232/vendor/laravel/framework/src/Illuminate/Support/Facades/Input.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Addendum.php",
+		"/home/alcallej/FrameworksProjects/PHP/darkdummy/src/app/core/Abstract/BaseController.php",
+		"/home/alcallej/Documentos/5sep/proy232/vendor/laravel/framework/src/Illuminate/Routing/ControllerMiddlewareOptions.php",
+		"/home/alcallej/Documentos/5sep/proy232/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/AddendumHistory.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Department.php",
+		"/home/alcallej/Documentos/5sep/proy232/app/Http/Controllers/Departamento/DepartmentController.php",
+		"/home/alcallej/Documentos/5sep/proy232/database/migrations/2018_08_19_151129_create_addendums_table.php",
+		"/home/alcallej/Documentos/5sep/proy232/database/migrations/2018_07_19_161754_create_budgets_table.php",
+		"/home/alcallej/Documentos/5sep/proy232/database/migrations/2018_08_19_154913_create_addendum_histories_table.php",
+		"/home/alcallej/Documentos/5sep/proy232/database/migrations/2018_07_19_161935_create_events_table.php",
+		"/home/alcallej/Documentos/5sep/proy232/database/migrations/2018_07_14_192314_create_technical_folders_table.php",
+		"/home/alcallej/Documentos/proy232/app/Http/Controllers/PDF/PdfController.php",
+		"/home/alcallej/Documentos/proy232/app/Util/Utils.php",
+		"/home/alcallej/Documentos/proy232/routes/web.php",
+		"/home/alcallej/Documentos/proy232/app/Http/Controllers/EmployeeController.php",
+		"/home/alcallej/Documentos/proy232/public/js/image-preview.js",
+		"/home/alcallej/Documentos/proy232/app/Http/Controllers/Departamento/DepartmentController.php",
+		"/home/alcallej/Documentos/proy232/resources/views/carpetastecnicas/index.blade.php",
+		"/home/alcallej/Documentos/proy232/public/javascripts/main.js",
+		"/home/alcallej/Documentos/proy232/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Guard.php",
+		"/home/alcallej/Documentos/proy232/app/Http/Controllers/Factura/BillController.php",
+		"/home/alcallej/Documentos/proy232/database/migrations/2018_08_19_151129_create_addendums_table.php",
+		"/home/alcallej/Documentos/proy232/app/AddendumHistory.php",
+		"/home/alcallej/Documentos/proy232/app/Addendum.php",
+		"/home/alcallej/Documentos/proy232/app/TechnicalFolder.php",
+		"/home/alcallej/Documentos/proy232/app/Http/Controllers/TechnicalFolderController.php",
+		"/home/alcallej/Documentos/proy232/app/Budget.php",
+		"/home/alcallej/Documentos/proy232/app/Event.php",
+		"/home/alcallej/Documentos/proy232/app/Employee.php",
+		"/home/alcallej/Documentos/proy232/database/migrations/2018_08_19_154913_create_addendum_histories_table.php",
+		"/home/alcallej/Documentos/proy232/resources/views/carpetastecnicas/tabs/tab3.blade.php",
+		"/home/alcallej/Documentos/proy232/resources/views/carpetastecnicas/tabs/tab7.blade.php",
+		"/home/alcallej/Documentos/proy232/resources/views/carpetastecnicas/create.blade.php",
+		"/home/alcallej/Documentos/proy232/resources/views/facturas/ver.blade.php",
+		"/home/alcallej/Documentos/proy232/resources/views/layouts/app.blade.php",
+		"/home/alcallej/Documentos/proy232/resources/views/pdf/pdf_header.blade.php",
+		"/home/alcallej/Documentos/proy232/resources/views/pdf/gantt.blade.php",
+		"/home/alcallej/Documentos/proy232/app/Util/Gantt.php",
+		"/home/alcallej/Documentos/proy232/resources/views/pdf/presupuesto.blade.php",
+		"/home/alcallej/Documentos/proy232/resources/views/pdf/carperatecnica.blade.php",
+		"/home/alcallej/Documentos/proy232/resources/views/pdf/pdf_template.blade.php"
+	],
+	"find":
+	{
+		"height": 34.8953140578
+	},
+	"find_in_files":
+	{
+		"height": 118.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"timepicker",
+			"loadAlumns",
+			"$grupos->",
+			"grupos",
+			"ues.grupos.imprimir4asesor",
+			"gs",
+			"Auth::user()",
+			"};\n",
+			"//$",
+			".navbar-nav > ",
+			"notifications",
+			"id",
+			"collapse1",
+			"collapse2",
+			"accordion",
+			"'id'",
+			"id=",
+			"id",
+			"'id'",
+			"image",
+			"image-preview",
+			"image",
+			"width=\"15%\"",
+			"class=\"hidden-xs\" width=\"15\"",
+			"class=\"hidden-xs\" width=\"12%\"",
+			"Notificaciones",
+			"Change",
+			"change",
+			"Empleado\\",
+			"f271",
+			"!!}\n",
+			"start_date",
+			"16",
+			"day",
+			"$folder->]",
+			"[$folder->",
+			"'",
+			",",
+			"' => ",
+			"employee",
+			".);\n",
+			"supervision",
+			":{",
+			"},",
+			"date:true",
+			" number:true",
+			"number: true",
+			"minlength: 3",
+			"required: true,",
+			"person",
+			"id",
+			"emp",
+			"());",
+			"id",
+			"carperatecnica",
+			">\n",
+			"gheader",
+			"header",
+			"gantt header",
+			"\">\n",
+			"auto",
+			"user-menu",
+			"dropdown user user-menu open",
+			"&nbsp;",
+			"id",
+			">\n",
+			"$this->add_equipment + $this->mm_equipment + $this->unexpected;",
+			"</h4>",
+			"<h4 style=\"text-decoration: underline;\">",
+			"<h4>",
+			"<h5 style=\"text-decoration: underline;\">",
+			"<h5>",
+			"</h5>",
+			"fuid",
+			"solid",
+			"rounded",
+			"asistio",
+			"no asistio",
+			");\n",
+			"=\"\">\n",
+			",",
+			"\"",
+			"-",
+			");\n",
+			"number:true",
+			" minlength: 3",
+			"required: true,",
+			"','",
+			"\n\t\t\t\t\t\t\t\t\t<li><a href=\"#tab7\" data-toggle=\"tab\">7</a></li> ",
+			"collapse3",
+			"collapse2",
+			"collapse1",
+			"accordion",
+			"collapse3",
+			"collapse2",
+			"collapse1",
+			"accordion",
+			"collapse1",
+			"collapse2",
+			"accordion",
+			"text",
+			"$value",
+			"$name",
+			"$text",
+			"$for",
+			"$name",
+			"$text",
+			"$for",
+			"$value",
+			"</form>",
+			"<form role=\"form\">",
+			"pager",
+			"select2able",
+			"<div class=\"col-xs-6 form-group\">\n\n            </div>{{-- input --}}",
+			"lastname",
+			"jquery",
+			">\n",
+			"col-sm-2",
+			"col-sm-9",
+			"fa-box",
+			":{",
+			"=",
+			"(object):",
+			"class ",
+			"form-control",
+			"binnacle($bill)",
+			"Binnacle",
+			"value"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"datepicker",
+			"auth()->user",
+			"",
+			"collapse1-ct",
+			"collapse2-ct",
+			"accordion-ct",
+			"pdf",
+			"",
+			"start_date",
+			"12",
+			"month",
+			"']",
+			"['",
+			"$folder->",
+			";",
+			" = ",
+			"\").val();",
+			"",
+			"header",
+			"gheader",
+			"gantt gheader",
+			"",
+			"1",
+			"0",
+			"'],",
+			" => $request[',",
+			"'",
+			"_",
+			"",
+			"collapse12",
+			"collapse11",
+			"collapse10",
+			"accordion4",
+			"collapse9",
+			"collapse8",
+			"collapse7",
+			"accordion3",
+			"collapse5",
+			"collapse6",
+			"accordion2",
+			"number",
+			"null",
+			"''",
+			"null",
+			"",
+			"lastName",
+			"col-sm-1",
+			"col-sm-5",
+			"fa-send",
+			"={",
+			":",
+			"",
+			"binnacle($bill->id)",
+			"department",
+			"name",
+			"'",
+			"idrol_carrera",
+			"rol_carreras",
+			"\"",
+			"docentesU",
+			"id",
+			"ues.usuario.getdocenteroles",
+			"asesor["
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "resources/views/ues/grupos/cronograma.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4960,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.20.region_keys":
+							[
+							],
+							"SL.38.region_keys":
+							[
+							],
+							"SL.50.region_keys":
+							[
+							],
+							"auto_complete": false,
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/css/darkgantt.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3265,
+						"regions":
+						{
+							"gutter_color_1061":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#efefef.png",
+								"regions":
+								[
+									[
+										1061,
+										1089
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_1107":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f9f9f9.png",
+								"regions":
+								[
+									[
+										1107,
+										1137
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_118":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#ccc.png",
+								"regions":
+								[
+									[
+										118,
+										145
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_1256":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#efefef.png",
+								"regions":
+								[
+									[
+										1256,
+										1284
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_1302":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f9f9f9.png",
+								"regions":
+								[
+									[
+										1302,
+										1332
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_1520":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/tan.png",
+								"regions":
+								[
+									[
+										1520,
+										1559
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_156":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#ccc.png",
+								"regions":
+								[
+									[
+										156,
+										183
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_1863":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/tan.png",
+								"regions":
+								[
+									[
+										1863,
+										1902
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_195":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/tan.png",
+								"regions":
+								[
+									[
+										195,
+										224
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_2208":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/tan.png",
+								"regions":
+								[
+									[
+										2208,
+										2247
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_2330":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/white.png",
+								"regions":
+								[
+									[
+										2330,
+										2358
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_2378":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/tan.png",
+								"regions":
+								[
+									[
+										2378,
+										2445
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_2490":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/tan.png",
+								"regions":
+								[
+									[
+										2490,
+										2555
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_2678":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#FFFFFF.png",
+								"regions":
+								[
+									[
+										2678,
+										2697
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_2698":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#000000.png",
+								"regions":
+								[
+									[
+										2698,
+										2722
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_3008":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#000000.png",
+								"regions":
+								[
+									[
+										3008,
+										3044
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_399":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#333.png",
+								"regions":
+								[
+									[
+										399,
+										415
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_416":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#fff.png",
+								"regions":
+								[
+									[
+										416,
+										443
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_605":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#333.png",
+								"regions":
+								[
+									[
+										605,
+										621
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_622":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f0f0f0.png",
+								"regions":
+								[
+									[
+										622,
+										652
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_695":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f9f9f9.png",
+								"regions":
+								[
+									[
+										695,
+										725
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_774":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#efefef.png",
+								"regions":
+								[
+									[
+										774,
+										802
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_890":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f9f9f9.png",
+								"regions":
+								[
+									[
+										890,
+										920
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_968":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#efefef.png",
+								"regions":
+								[
+									[
+										968,
+										996
+									]
+								],
+								"scope": "gutter_color"
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.44.region_keys":
+							[
+							],
+							"git_gutter_is_enabled": false,
+							"open_with_edit": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/Http/Controllers/HomeController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1683,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1611,
+								1611
+							]
+						],
+						"settings":
+						{
+							"SL.48.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"auto_complete": false,
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 561.316051844,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "resources/views/plantillas/admin.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 39725,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								35155,
+								35155
+							]
+						],
+						"settings":
+						{
+							"SL.75.region_keys":
+							[
+							],
+							"auto_complete": false,
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 12266.2013958,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "vendor/alcallej/darkgantt/src/Gantt.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5883,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								112,
+								112
+							]
+						],
+						"settings":
+						{
+							"SL.78.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"auto_complete": false,
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 50.8474576271,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/Http/routes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10984,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10851,
+								10851
+							]
+						],
+						"settings":
+						{
+							"SL.41.region_keys":
+							[
+							],
+							"SL.57.region_keys":
+							[
+							],
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3425.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/Http/Controllers/GrupoController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15417,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15414,
+								15414
+							]
+						],
+						"settings":
+						{
+							"SL.63.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"auto_complete": false,
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 9537.38783649,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 42.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 109.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "tesis.sublime-project",
+	"replace":
+	{
+		"height": 65.8025922233
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ro",
+				"app/Http/routes.php"
+			],
+			[
+				"cd8a0163e7e18b94ed156f2f1a46f38b0ed83350.php",
+				"storage/framework/views/cd8a0163e7e18b94ed156f2f1a46f38b0ed83350.php"
+			],
+			[
+				"admin",
+				"resources/views/plantillas/admin.blade.php"
+			],
+			[
+				"Home",
+				"app/Http/Controllers/HomeController.php"
+			],
+			[
+				"Gr",
+				"app/Grupo.php"
+			],
+			[
+				"asiste",
+				"resources/views/ues/grupos/asistencia.blade.php"
+			],
+			[
+				"vista_as",
+				"resources/views/ues/grupos/vista_asesor.blade.php"
+			],
+			[
+				"EstudianteC",
+				"app/Http/Controllers/EstudianteController.php"
+			],
+			[
+				"routes",
+				"app/Http/routes.php"
+			],
+			[
+				"Selec",
+				"app/Http/Controllers/SelectFillController.php"
+			],
+			[
+				"asesor",
+				"resources/views/ues/grupos/vista_asesor.blade.php"
+			],
+			[
+				"grupo_",
+				"app/grupo_solicitud.php"
+			],
+			[
+				"SolicitudA",
+				"app/Notifications/SolicitudAprobacionTema.php"
+			],
+			[
+				"Grupo",
+				"app/Grupo.php"
+			],
+			[
+				"utilsF",
+				"app/Utils/UtilFunctions.php"
+			],
+			[
+				"grup",
+				"app/grupo_solicitud.php"
+			],
+			[
+				"route",
+				"app/Http/routes.php"
+			],
+			[
+				"SelectF",
+				"app/Http/Controllers/SelectFillController.php"
+			],
+			[
+				"admin.bla",
+				"resources/views/plantillas/admin.blade.php"
+			],
+			[
+				"Notific",
+				"app/Http/Controllers/NotificationController.php"
+			],
+			[
+				"empl",
+				"app/Employee.php"
+			],
+			[
+				"bu",
+				"app/Budget.php"
+			],
+			[
+				"Bill",
+				"app/Bill.php"
+			],
+			[
+				"web",
+				"routes/web.php"
+			],
+			[
+				"app.b",
+				"resources/views/layouts/app.blade.php"
+			],
+			[
+				"tech",
+				"app/Http/Controllers/TechnicalFolderController.php"
+			],
+			[
+				"Empl",
+				"app/Http/Controllers/EmployeeController.php"
+			],
+			[
+				"main.",
+				"public/javascripts/main.js"
+			],
+			[
+				"Tech",
+				"app/Http/Controllers/TechnicalFolderController.php"
+			],
+			[
+				"bill",
+				"app/Http/Controllers/Factura/BillController.php"
+			],
+			[
+				"Bud",
+				"app/Budget.php"
+			],
+			[
+				"budg",
+				"app/Budget.php"
+			],
+			[
+				"U",
+				"app/User.php"
+			],
+			[
+				"Tec",
+				"app/TechnicalFolder.php"
+			],
+			[
+				"we",
+				"routes/web.php"
+			],
+			[
+				"app.js",
+				"resources/assets/js/app.js"
+			],
+			[
+				"User",
+				"app/User.php"
+			],
+			[
+				"Response.php",
+				"vendor/laravel/framework/src/Illuminate/Http/Response.php"
+			],
+			[
+				"Input.ph",
+				"vendor/laravel/framework/src/Illuminate/Support/Facades/Input.php"
+			],
+			[
+				"ControllerMiddlewareOptions",
+				"vendor/laravel/framework/src/Illuminate/Routing/ControllerMiddlewareOptions.php"
+			],
+			[
+				"Controller",
+				"vendor/laravel/framework/src/Illuminate/Routing/Controller.php"
+			],
+			[
+				"",
+				"untitled"
+			],
+			[
+				"depart",
+				"app/Http/Controllers/Departamento/DepartmentController.php"
+			],
+			[
+				"image-",
+				"public/js/image-preview.js"
+			],
+			[
+				"Techni",
+				"app/TechnicalFolder.php"
+			],
+			[
+				"Adde",
+				"app/AddendumHistory.php"
+			],
+			[
+				"Adden",
+				"app/Addendum.php"
+			],
+			[
+				"Gantt",
+				"app/Util/Gantt.php"
+			],
+			[
+				"rou",
+				"routes.txt"
+			],
+			[
+				"Depart",
+				"app/Department.php"
+			],
+			[
+				"main.js",
+				"public/javascripts/main.js"
+			],
+			[
+				"Billb",
+				"app/BillBinnacle.php"
+			],
+			[
+				"composer",
+				"composer.json"
+			],
+			[
+				"processC",
+				"app/Http/Controllers/Proceso/ProcessController.php"
+			],
+			[
+				"ProcessC",
+				"app/Http/Controllers/Proceso/ProcessController.php"
+			],
+			[
+				"Em",
+				"app/Http/Controllers/Empleado/EmployeeController.php"
+			],
+			[
+				"Pdf",
+				"app/Http/Controllers/PDF/PdfController.php"
+			],
+			[
+				"Emp",
+				"app/Http/Controllers/Empleado/EmployeeController.php"
+			],
+			[
+				"Userc",
+				"app/Http/Controllers/Usuario/UserController.php"
+			],
+			[
+				"Doce",
+				"app/Docente.php"
+			],
+			[
+				"user",
+				"app/User.php"
+			],
+			[
+				"Ut",
+				"app/Utils/UtilFunctions.php"
+			],
+			[
+				"Fac",
+				"app/Http/Controllers/FacultadController.php"
+			],
+			[
+				"Est",
+				"app/Estudiante.php"
+			],
+			[
+				"Auth",
+				"app/Http/Controllers/Auth/AuthController.php"
+			],
+			[
+				"auth",
+				"app/Http/Controllers/Auth/AuthController.php"
+			],
+			[
+				"AuthC",
+				"app/Http/Controllers/Auth/AuthController.php"
+			],
+			[
+				"Usu",
+				"app/Http/Controllers/UsuarioController.php"
+			],
+			[
+				"home",
+				"app/Http/Controllers/HomeController.php"
+			],
+			[
+				"ad",
+				"resources/views/plantillas/admin.blade.php"
+			],
+			[
+				"nue",
+				"app/Http/Controllers/nuevaetapaController.php"
+			],
+			[
+				"Uti",
+				"app/Utils/UtilFunctions.php"
+			],
+			[
+				"Do",
+				"app/Docente.php"
+			],
+			[
+				"Rol",
+				"app/Rol.php"
+			],
+			[
+				"D",
+				"app/Docente.php"
+			],
+			[
+				"Ponde",
+				"app/Http/Controllers/PonderacionController.php"
+			],
+			[
+				"tipo",
+				"app/Http/Controllers/TipotemaController.php"
+			],
+			[
+				"usu",
+				"app/Http/Controllers/UsuarioController.php"
+			],
+			[
+				"adm",
+				"resources/views/plantillas/admin.blade.php"
+			],
+			[
+				"ne",
+				"vendor/symfony/dom-crawler/Tests/Fixtures/no-extension"
+			],
+			[
+				"usuar",
+				"app/Http/Controllers/UsuarioController.php"
+			],
+			[
+				"Grup",
+				"app/GrupoDocentes.php"
+			],
+			[
+				"Gru",
+				"app/Http/Controllers/GrupoController.php"
+			],
+			[
+				"ues/gru",
+				"resources/views/ues/grupos/index.blade.php"
+			],
+			[
+				"Core",
+				"app/Core/Core.php"
+			],
+			[
+				"b",
+				"app/bootstrap.php"
+			],
+			[
+				"Co",
+				"app/libraries/Core.php"
+			],
+			[
+				"boo",
+				"app/bootstrap.php"
+			],
+			[
+				"bo",
+				"app/bootstrap.php"
+			],
+			[
+				"ponderacionC",
+				"app/Http/Controllers/PonderacionController.php"
+			],
+			[
+				"Ponder",
+				"app/Http/Requests/PonderacionRequest.php"
+			],
+			[
+				"Pondera",
+				"app/Http/Requests/PonderacionRequest.php"
+			],
+			[
+				"Pon",
+				"app/Http/Controllers/PonderacionController.php"
+			],
+			[
+				"Tipot",
+				"app/TipoTema.php"
+			],
+			[
+				"T",
+				"app/Http/Controllers/TipotemaController.php"
+			],
+			[
+				"Carrer",
+				"app/Carrera.php"
+			],
+			[
+				"nueva",
+				"app/nuevaetapa.php"
+			],
+			[
+				"login",
+				"app/Http/Controllers/Auth/LoginController.php"
+			],
+			[
+				"userstableseeder",
+				"database/seeds/UsersTableSeeder.php"
+			],
+			[
+				"web.",
+				"routes/web.php"
+			],
+			[
+				"lo",
+				"app/Http/Controllers/Auth/LoginController.php"
+			],
+			[
+				"loginco",
+				"app/Http/Controllers/Auth/LoginController.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 229.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
