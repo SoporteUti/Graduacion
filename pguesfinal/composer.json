@@ -15,15 +15,6 @@
 		"spatie/laravel-backup": "3.0.0",
 		"alcallej/darkgantt": "@dev"
 	},
-	"repositories": {
-      "dev-package": {
-        "type": "path",
-        "url": "/home/alcallej/Documentos/packages/darkgantt/",
-        "options": {
-          "symlink": true
-        }
-      }
-    },
 	"require-dev": {
 		"fzaninotto/faker": "~1.4",
 		"mockery/mockery": "0.9.*",
