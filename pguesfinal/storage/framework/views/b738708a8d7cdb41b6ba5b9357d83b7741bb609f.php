@@ -1,6 +1,5 @@
-@extends('plantillas.admin')
-@section('contenido')
-    @if (Auth::user()->idrol == 3 || Auth::user()->idrol == 1 || Auth::user()->idrol == 2)
+<?php $__env->startSection('contenido'); ?>
+    <?php if(Auth::user()->idrol == 3 || Auth::user()->idrol == 1 || Auth::user()->idrol == 2): ?>
 
         <style type="text/css">
             .table-wrapper-scroll-y {
@@ -33,17 +32,17 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solicitudes <b
                                         class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    @if ($consulta1 == 0)
+                                    <?php if($consulta1 == 0): ?>
                                         <li><a href="#solicitud-1" data-toggle="modal" data-target="#solicitud-1">Aprobación
                                                 de Modalidad</a></li>
-                                    @endif
-                                    @foreach ($gsol as $gs)
-                                        @foreach ($etapaactiva as $ea)
-                                            @if ($ea->idgrupo == $grupos->idgrupo && $ea->idnuevaetapa == 3 && $ea->estado == 1 && $gs->idgrupo == $grupos->idgrupo && $gs->idsolicitud == 4 && $gs->estado != 1)
+                                    <?php endif; ?>
+                                    <?php foreach($gsol as $gs): ?>
+                                        <?php foreach($etapaactiva as $ea): ?>
+                                            <?php if($ea->idgrupo == $grupos->idgrupo && $ea->idnuevaetapa == 3 && $ea->estado == 1 && $gs->idgrupo == $grupos->idgrupo && $gs->idsolicitud == 4 && $gs->estado != 1): ?>
 
-                                            @endif
-                                        @endforeach
-                                    @endforeach
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    <?php endforeach; ?>
                                     <li><a href="" data-target="#solicitud-4" data-toggle="modal">Ratificación Tribunal
                                             Calificador</a></li>
                                     <li><a href="#solicitud-5" data-toggle="modal" data-target="#solicitud-5">Ratificación
@@ -62,9 +61,9 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="#cronograma" data-toggle="modal" data-target="#cronograma">Registro de
                                             Fechas</a></li>
-                                    <li><a href="#" onclick="ventanaP('{{ $grupos->idgrupo }}')">Imprimir Expediente</a>
+                                    <li><a href="#" onclick="ventanaP('<?php echo e($grupos->idgrupo); ?>')">Imprimir Expediente</a>
                                     </li>
-                                    {{-- <li><a href="#" onclick="ventanaC('{{ $grupos->idgrupo}}')" >Imprimir Cronograma</a></li> --}}
+                                    <?php /* <li><a href="#" onclick="ventanaC('<?php echo e($grupos->idgrupo); ?>')" >Imprimir Cronograma</a></li> */ ?>
                                 </ul>
                             </li>
                         </ul>
@@ -76,14 +75,14 @@
                                         class="caret"></b></a>
                                 <ul class="dropdown-menu">
 
-                                    @if ($consulta2 != 0)
+                                    <?php if($consulta2 != 0): ?>
                                         <li><a href="#notas" data-toggle="modal" data-target="#notas">Registro de Notas</a>
                                         </li>
-                                    @endif
+                                    <?php endif; ?>
                                     <li><a href="#pdfnotas" data-toggle="modal" data-target="#pdfnotas">Imprimir Notas
                                             (Etapas)</a></li>
 
-                                    <li><a href="#" onclick="ventanaN('{{ $grupos->idgrupo }}')">Imprimir Notas </a></li>
+                                    <li><a href="#" onclick="ventanaN('<?php echo e($grupos->idgrupo); ?>')">Imprimir Notas </a></li>
 
 
                                     <li><a href="#editarnotas" data-toggle="modal" onclick=""
@@ -112,7 +111,7 @@
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-database"></i></span>
                     <input id="codigoG" readonly="" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"
-                        value="{{ $grupos->codigoG }}" class="form-control" name="codigoG" maxlength="11" autofocus>
+                        value="<?php echo e($grupos->codigoG); ?>" class="form-control" name="codigoG" maxlength="11" autofocus>
                 </div>
             </div>
         </div>
@@ -122,13 +121,13 @@
                 <label>Tipo de Proceso </label>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-text-width"></i></span>
-                    @foreach ($tiproceso as $tip)
-                        @if ($tip->idtipotema == $grupos->idtipotema)
+                    <?php foreach($tiproceso as $tip): ?>
+                        <?php if($tip->idtipotema == $grupos->idtipotema): ?>
                             <input id="tiproceso" readonly="" onkeyup="javascript:this.value=this.value.toUpperCase();"
-                                type="text" value="{{ $tip->tema }}" class="form-control" name="tiproceso" maxlength="11"
+                                type="text" value="<?php echo e($tip->tema); ?>" class="form-control" name="tiproceso" maxlength="11"
                                 autofocus>
-                        @endif
-                    @endforeach
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -138,8 +137,8 @@
                 <label>Tema </label>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-text-width"></i></span>
-                    <textarea id="tema" readonly="" value="{{ $grupos->tema }}" class="form-control"
-                        name="tema">{{ $grupos->tema }}</textarea>
+                    <textarea id="tema" readonly="" value="<?php echo e($grupos->tema); ?>" class="form-control"
+                        name="tema"><?php echo e($grupos->tema); ?></textarea>
                 </div>
             </div>
         </div>
@@ -157,20 +156,20 @@
                 <ul class="nav nav-tabs" role="tablist">
 
                     <?php $var = 0; ?>
-                    @foreach ($tiproceso as $tip)
-                        @if ($tip->idtipotema == $grupos->idtipotema)
-                            @foreach ($etapas as $et)
-                                @if ($et->idtipotrabajo == $tip->idtipotema && $et->condicion == true)
+                    <?php foreach($tiproceso as $tip): ?>
+                        <?php if($tip->idtipotema == $grupos->idtipotema): ?>
+                            <?php foreach($etapas as $et): ?>
+                                <?php if($et->idtipotrabajo == $tip->idtipotema && $et->condicion == true): ?>
                                     <li class="nav-item" id="$et->idetapa">
 
                                         <a o class="nav-link" data-toggle="tab"
-                                            href="#page-{{ $et->idetapa }}"><strong>{{ $et->idnombreetapa }}</strong></a>
+                                            href="#page-<?php echo e($et->idetapa); ?>"><strong><?php echo e($et->idnombreetapa); ?></strong></a>
                                         <?php $var++; ?>
                                     </li>
-                                @endif
-                            @endforeach
-                        @endif
-                    @endforeach
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                     <li class="nav-item" id="cronograma-tbl">
                         <a o class="nav-link" data-toggle="tab" href="#page-cronograma"><strong>Cronograma</strong></a>
                         <br />
@@ -185,11 +184,11 @@
 
                 <div class="tab-content">
 
-                    @for ($i = 1; $i <= $var; $i++)
+                    <?php for($i = 1; $i <= $var; $i++): ?>
 
-                        <div id="page-{{ $i }}" class="tab-pane fade">
+                        <div id="page-<?php echo e($i); ?>" class="tab-pane fade">
                             <div class="table-wrapper-scroll-y">
-                                <table class="table table-bordered table-striped" id="{{ $et->idetapa }}">
+                                <table class="table table-bordered table-striped" id="<?php echo e($et->idetapa); ?>">
                                     <thead>
                                         <tr>
 
@@ -206,84 +205,88 @@
                                     </thead>
                                     <tbody>
                                         <?php $cont = 0; ?>
-                                        @foreach ($gsol as $gs)
-                                            @if ($gs->idgrupo == $grupos->idgrupo && $gs->etapa == $i)
-                                                @foreach ($Solicitudes as $sol)
-                                                    @if ($sol->idsolicitud == $gs->idsolicitud)
+                                        <?php foreach($gsol as $gs): ?>
+                                            <?php if($gs->idgrupo == $grupos->idgrupo && $gs->etapa == $i): ?>
+                                                <?php foreach($Solicitudes as $sol): ?>
+                                                    <?php if($sol->idsolicitud == $gs->idsolicitud): ?>
                                                         <tr>
                                                             <?php $cont++; ?>
-                                                            <td hidden="">{{ $gs->idgrupsol }} </td>
-                                                            <td>{{ $cont }} </td>
+                                                            <td hidden=""><?php echo e($gs->idgrupsol); ?> </td>
+                                                            <td><?php echo e($cont); ?> </td>
 
-                                                            <td>{{ $sol->nombre }}</td>
-                                                            <td>{{ \Carbon\Carbon::parse($gs->fecha)->format('d-m-Y') }}
+                                                            <td><?php echo e($sol->nombre); ?></td>
+                                                            <td><?php echo e(\Carbon\Carbon::parse($gs->fecha)->format('d-m-Y')); ?>
+
                                                             </td>
 
-                                                            @if ($gs->condicion == false)
+                                                            <?php if($gs->condicion == false): ?>
                                                                 <td>Cancelado </td>
-                                                            @else
-                                                                @if ($gs->estado == 0)
+                                                            <?php else: ?>
+                                                                <?php if($gs->estado == 0): ?>
                                                                     <td>Enviado a: Junta Directiva </td>
-                                                                @else
-                                                                    @if ($gs->estado == 1)
+                                                                <?php else: ?>
+                                                                    <?php if($gs->estado == 1): ?>
                                                                         <td>Aprobado </td>
-                                                                    @else
-                                                                        @foreach ($roles as $rl)
-                                                                            @if ($gs->estado == $rl->idrol)
+                                                                    <?php else: ?>
+                                                                        <?php foreach($roles as $rl): ?>
+                                                                            <?php if($gs->estado == $rl->idrol): ?>
 
-                                                                                @if ($gs->estado == Auth::user()->idrol)
+                                                                                <?php if($gs->estado == Auth::user()->idrol): ?>
                                                                                     <td>Recibido de Asesor:
-                                                                                        @foreach ($personas as $per)
-                                                                                            @if ($gs->idpersona == $per->idpersona)
-                                                                                                {{ $per->nombres }}
-                                                                                                {{ $per->apellidos }}
-                                                                                            @endif
-                                                                                        @endforeach
+                                                                                        <?php foreach($personas as $per): ?>
+                                                                                            <?php if($gs->idpersona == $per->idpersona): ?>
+                                                                                                <?php echo e($per->nombres); ?>
 
-                                                                                        ({{ $gs->fechaenv }})
+                                                                                                <?php echo e($per->apellidos); ?>
+
+                                                                                            <?php endif; ?>
+                                                                                        <?php endforeach; ?>
+
+                                                                                        (<?php echo e($gs->fechaenv); ?>)
                                                                                     </td>
-                                                                                @else
-                                                                                    <td>Enviado a: {{ $rl->nombre }}
+                                                                                <?php else: ?>
+                                                                                    <td>Enviado a: <?php echo e($rl->nombre); ?>
+
                                                                                     </td>
-                                                                                @endif
+                                                                                <?php endif; ?>
 
 
-                                                                            @endif
-                                                                        @endforeach
-                                                                    @endif
-                                                                @endif
+                                                                            <?php endif; ?>
+                                                                        <?php endforeach; ?>
+                                                                    <?php endif; ?>
+                                                                <?php endif; ?>
 
-                                                            @endif
+                                                            <?php endif; ?>
 
 
                                                             <td><a data-backdrop="static" data-keyboard="false" href=""
-                                                                    data-target="#imprimirc-{{ $sol->idsolicitud }}-{{ $gs->idgrupsol }}"
+                                                                    data-target="#imprimirc-<?php echo e($sol->idsolicitud); ?>-<?php echo e($gs->idgrupsol); ?>"
                                                                     data-toggle="modal">
                                                                     <button class="btn btn-warning"><i
                                                                             class="fa fa-print"></i></button></a>
-                                                                @if ($gs->estado == 3 && $gs->condicion == true)
-                                                                    <a href="" data-target="#cancelar-{{ $gs->idgrupsol }}"
+                                                                <?php if($gs->estado == 3 && $gs->condicion == true): ?>
+                                                                    <a href="" data-target="#cancelar-<?php echo e($gs->idgrupsol); ?>"
                                                                         data-toggle="modal"> <button
                                                                             class="btn btn-danger"><i
                                                                                 class="fa fa-ban"></i></button></a>
-                                                                    @include('ues.grupos.cancelarsolicitud')
+                                                                    <?php echo $__env->make('ues.grupos.cancelarsolicitud', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
 
 
 
-                                                                @endif
+                                                                <?php endif; ?>
 
-                                                                @if ($gs->condicion == false)
-                                                                    <a href="" data-target="#motivo-{{ $gs->idgrupsol }}"
+                                                                <?php if($gs->condicion == false): ?>
+                                                                    <a href="" data-target="#motivo-<?php echo e($gs->idgrupsol); ?>"
                                                                         data-toggle="modal"> <button
                                                                             class="btn btn-danger"><i class="fa fa-question-circle 
     "></i></button></a>
 
 
 
-                                                                @endif
-                                                                <a href="" data-target="#verpdfs-{{ $gs->idgrupsol }}"
+                                                                <?php endif; ?>
+                                                                <a href="" data-target="#verpdfs-<?php echo e($gs->idgrupsol); ?>"
                                                                     data-toggle="modal">
                                                                     <button class="btn btn-success"><i
                                                                             class=" fa fa-folder-open"></i></button></a>
@@ -291,24 +294,24 @@
 
 
 
-                                                            @include('ues.grupos.motivo')
-                                                            @include('ues.grupos.imprimir1cordinador')
-                                                            @include('ues.grupos.imprimirRScordinador')
-                                                            @include('ues.grupos.imprimirPIcordinador')
-                                                            @include('ues.grupos.imprimir3coordinador')
-                                                            @include('ues.grupos.imprimir6coordinador')
-                                                            @include('ues.grupos.imprimir4coordinador')
-                                                            @include('ues.grupos.imprimir7coordinador')
-                                                            @include('ues.grupos.imprimir8coordinador')
-                                                            @include('ues.grupos.imprimir9coordinador')
-                                                            @include('ues.grupos.imprimir10coordinador')
+                                                            <?php echo $__env->make('ues.grupos.motivo', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                                                            <?php echo $__env->make('ues.grupos.imprimir1cordinador', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                                                            <?php echo $__env->make('ues.grupos.imprimirRScordinador', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                                                            <?php echo $__env->make('ues.grupos.imprimirPIcordinador', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                                                            <?php echo $__env->make('ues.grupos.imprimir3coordinador', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                                                            <?php echo $__env->make('ues.grupos.imprimir6coordinador', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                                                            <?php echo $__env->make('ues.grupos.imprimir4coordinador', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                                                            <?php echo $__env->make('ues.grupos.imprimir7coordinador', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                                                            <?php echo $__env->make('ues.grupos.imprimir8coordinador', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                                                            <?php echo $__env->make('ues.grupos.imprimir9coordinador', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                                                            <?php echo $__env->make('ues.grupos.imprimir10coordinador', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-                                                            @include('ues.grupos.verpdfs')
+                                                            <?php echo $__env->make('ues.grupos.verpdfs', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                                                         </tr>
-                                                    @endif
-                                                @endforeach
-                                            @endif
-                                        @endforeach
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
 
                                     </tbody>
                                 </table>
@@ -318,19 +321,20 @@
 
                         </div>
 
-                    @endfor
+                    <?php endfor; ?>
 
 
-                    {{-- CRONOGRAMA --}}
+                    <?php /* CRONOGRAMA */ ?>
                     <div id="page-cronograma" class="tab-pane fade">
                         <div class="table-wrapper-scroll">
-                            {!! $gantt !!}
+                            <?php echo $gantt; ?>
+
 
 
                         </div>
 
                     </div>
-                    {{-- CRONOGRAMA --}}
+                    <?php /* CRONOGRAMA */ ?>
 
 
 
@@ -341,12 +345,13 @@
         </div>
         </div>
 
-        @include('ues.grupos.cronograma')
+        <?php echo $__env->make('ues.grupos.cronograma', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
 
         <div class="modal fade" id="solicitud-5">
-            {{ Form::Open(['action' => ['solicitudController@ratiResul'], 'route' => ['ues.solicitudes.ratiResul'], 'method' => 'post', 'files' => 'true']) }}
+            <?php echo e(Form::Open(['action' => ['solicitudController@ratiResul'], 'route' => ['ues.solicitudes.ratiResul'], 'method' => 'post', 'files' => 'true'])); ?>
+
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="background:#00a65a; color:white">
@@ -367,7 +372,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-database"></i></span>
                                 <input id="idgrupo" type="text" class="form-control" name="idgrupo"
-                                    value="{{ $grupos->idgrupo }}">
+                                    value="<?php echo e($grupos->idgrupo); ?>">
                             </div>
                         </div>
                     </div>
@@ -376,7 +381,7 @@
                             <label>numero de etapas</label>
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                <input readonly="" type="text" value="{{ $var }}" name="netapas" id="netapas"
+                                <input readonly="" type="text" value="<?php echo e($var); ?>" name="netapas" id="netapas"
                                     class="form-control">
                             </div>
                         </div>
@@ -388,7 +393,7 @@
                                 <label>Código de Grupo</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input readonly="" type="text" value="{{ $grupos->codigoG }}" name="codigo" id="codigo"
+                                    <input readonly="" type="text" value="<?php echo e($grupos->codigoG); ?>" name="codigo" id="codigo"
                                         class="form-control">
                                 </div>
                             </div>
@@ -399,78 +404,79 @@
                                     <tr>
                                         <?php $cet = 0; ?>
                                         <th>Integrantes</th>
-                                        @foreach ($tiproceso as $tip)
-                                            @if ($tip->idtipotema == $grupos->idtipotema)
-                                                @foreach ($etapas as $et)
-                                                    @if ($et->idtipotrabajo == $tip->idtipotema)
-                                                        @foreach ($porc as $pr)
-                                                            @if ($pr->idetapa == $et->idnuevaetapa && $et->condicion == true)
-                                                                <th>Etapa {{ $et->idetapa }} ({{ $pr->porcentaje }}%)
+                                        <?php foreach($tiproceso as $tip): ?>
+                                            <?php if($tip->idtipotema == $grupos->idtipotema): ?>
+                                                <?php foreach($etapas as $et): ?>
+                                                    <?php if($et->idtipotrabajo == $tip->idtipotema): ?>
+                                                        <?php foreach($porc as $pr): ?>
+                                                            <?php if($pr->idetapa == $et->idnuevaetapa && $et->condicion == true): ?>
+                                                                <th>Etapa <?php echo e($et->idetapa); ?> (<?php echo e($pr->porcentaje); ?>%)
                                                                 </th>
                                                                 <?php $cet++; ?>
-                                                            @endif
-                                                        @endforeach
-                                                    @endif
-                                                @endforeach
-                                            @endif
-                                        @endforeach
+                                                            <?php endif; ?>
+                                                        <?php endforeach; ?>
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
                                         <th>Promedio</th>
 
 
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($mostraintegrante as $mint)
-                                        @if ($mint->idgrupo == $grupos->idgrupo)
-                                            @foreach ($estudiantes as $est)
-                                                @if ($mint->idestudiante == $est->idestudiante)
-                                                    @foreach ($personas as $per)
-                                                        @if ($per->idpersona == $est->idpersona)
+                                    <?php foreach($mostraintegrante as $mint): ?>
+                                        <?php if($mint->idgrupo == $grupos->idgrupo): ?>
+                                            <?php foreach($estudiantes as $est): ?>
+                                                <?php if($mint->idestudiante == $est->idestudiante): ?>
+                                                    <?php foreach($personas as $per): ?>
+                                                        <?php if($per->idpersona == $est->idpersona): ?>
                                                             <tr>
 
-                                                                <td>{{ $est->carnet . ' ' . $per->nombres . ' ' . $per->apellidos }}
+                                                                <td><?php echo e($est->carnet . ' ' . $per->nombres . ' ' . $per->apellidos); ?>
+
                                                                 </td>
-                                                                @for ($j = 1; $j <= $cet; $j++)
+                                                                <?php for($j = 1; $j <= $cet; $j++): ?>
                                                                     <td>
-                                                                        @foreach ($notas as $not)
-                                                                            @if ($not->idestudiante == $est->idestudiante && $not->idetapa == $j && $not->idgrupo == $grupos->idgrupo)
+                                                                        <?php foreach($notas as $not): ?>
+                                                                            <?php if($not->idestudiante == $est->idestudiante && $not->idetapa == $j && $not->idgrupo == $grupos->idgrupo): ?>
                                                                                 <?php $notaet = $not->nota;
                                                                                 
                                                                                 echo round($notaet, 2); ?>
 
 
-                                                                            @endif
-                                                                        @endforeach
+                                                                            <?php endif; ?>
+                                                                        <?php endforeach; ?>
                                                                     </td>
-                                                                @endfor
+                                                                <?php endfor; ?>
 
 
 
                                                                 <?php $prom = 0; ?>
-                                                                @foreach ($tiproceso as $tip)
-                                                                    @if ($tip->idtipotema == $grupos->idtipotema)
-                                                                        @foreach ($etapas as $et)
-                                                                            @if ($et->idtipotrabajo == $tip->idtipotema)
-                                                                                @foreach ($porc as $pr)
-                                                                                    @if ($pr->idetapa == $et->idnuevaetapa)
+                                                                <?php foreach($tiproceso as $tip): ?>
+                                                                    <?php if($tip->idtipotema == $grupos->idtipotema): ?>
+                                                                        <?php foreach($etapas as $et): ?>
+                                                                            <?php if($et->idtipotrabajo == $tip->idtipotema): ?>
+                                                                                <?php foreach($porc as $pr): ?>
+                                                                                    <?php if($pr->idetapa == $et->idnuevaetapa): ?>
 
-                                                                                        @foreach ($notas as $not)
-                                                                                            @if ($not->idestudiante == $est->idestudiante && $not->idetapa == $et->idetapa && $not->idgrupo == $grupos->idgrupo)
+                                                                                        <?php foreach($notas as $not): ?>
+                                                                                            <?php if($not->idestudiante == $est->idestudiante && $not->idetapa == $et->idetapa && $not->idgrupo == $grupos->idgrupo): ?>
 
 
                                                                                                 <?php $prom = $prom + $not->nota * ($pr->porcentaje / 100); ?>
 
-                                                                                            @endif
-                                                                                        @endforeach
+                                                                                            <?php endif; ?>
+                                                                                        <?php endforeach; ?>
 
 
 
-                                                                                    @endif
-                                                                                @endforeach
-                                                                            @endif
-                                                                        @endforeach
-                                                                    @endif
-                                                                @endforeach
+                                                                                    <?php endif; ?>
+                                                                                <?php endforeach; ?>
+                                                                            <?php endif; ?>
+                                                                        <?php endforeach; ?>
+                                                                    <?php endif; ?>
+                                                                <?php endforeach; ?>
 
                                                                 <td><strong><?php echo round($prom, 1); ?></strong></td>
 
@@ -478,12 +484,12 @@
 
 
                                                             </tr>
-                                                        @endif
-                                                    @endforeach
-                                                @endif
-                                            @endforeach
-                                        @endif
-                                    @endforeach
+                                                        <?php endif; ?>
+                                                    <?php endforeach; ?>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
 
                                 </tbody>
                             </table>
@@ -495,7 +501,7 @@
 
 
                                         <input type="date" name="fechar" id="fechar" class="form-control"
-                                            value="{{ \Carbon\Carbon::now()->format('Y-m-d') }}" required="required"
+                                            value="<?php echo e(\Carbon\Carbon::now()->format('Y-m-d')); ?>" required="required"
                                             title="">
                                     </div>
 
@@ -512,14 +518,16 @@
                     </div>
                 </div>
             </div>
-            {{ Form::Close() }}
+            <?php echo e(Form::Close()); ?>
+
         </div>
 
 
         <!-- solicitudes: impugnacion de resultadis  -->
 
         <div class="modal fade" id="solicitud-10">
-            {{ Form::Open(['action' => ['solicitudController@impugnacionResultados'], 'route' => ['ues.solicitudes.impugnacionResultados'], 'method' => 'post', 'files' => 'true']) }}
+            <?php echo e(Form::Open(['action' => ['solicitudController@impugnacionResultados'], 'route' => ['ues.solicitudes.impugnacionResultados'], 'method' => 'post', 'files' => 'true'])); ?>
+
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="background:#00a65a; color:white">
@@ -540,7 +548,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-database"></i></span>
                                 <input id="idgrupo" type="text" class="form-control" name="idgrupo"
-                                    value="{{ $grupos->idgrupo }}">
+                                    value="<?php echo e($grupos->idgrupo); ?>">
                             </div>
                         </div>
                     </div>
@@ -549,7 +557,7 @@
                             <label>numero de etapas</label>
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                <input readonly="" type="text" value="{{ $var }}" name="netapas" id="netapas"
+                                <input readonly="" type="text" value="<?php echo e($var); ?>" name="netapas" id="netapas"
                                     class="form-control">
                             </div>
                         </div>
@@ -561,7 +569,7 @@
                                 <label>Código de Grupo</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input readonly="" type="text" value="{{ $grupos->codigoG }}" name="codigo" id="codigo"
+                                    <input readonly="" type="text" value="<?php echo e($grupos->codigoG); ?>" name="codigo" id="codigo"
                                         class="form-control">
                                 </div>
                             </div>
@@ -572,76 +580,78 @@
                                     <tr>
                                         <?php $cet = 0; ?>
                                         <th>Integrantes</th>
-                                        @foreach ($tiproceso as $tip)
-                                            @if ($tip->idtipotema == $grupos->idtipotema)
-                                                @foreach ($etapas as $et)
-                                                    @if ($et->idtipotrabajo == $tip->idtipotema && $et->condicion == true)
-                                                        @foreach ($porc as $pr)
-                                                            @if ($pr->idetapa == $et->idnuevaetapa)
-                                                                <th>Etapa {{ $et->idetapa }} ({{ $pr->porcentaje }}%)
+                                        <?php foreach($tiproceso as $tip): ?>
+                                            <?php if($tip->idtipotema == $grupos->idtipotema): ?>
+                                                <?php foreach($etapas as $et): ?>
+                                                    <?php if($et->idtipotrabajo == $tip->idtipotema && $et->condicion == true): ?>
+                                                        <?php foreach($porc as $pr): ?>
+                                                            <?php if($pr->idetapa == $et->idnuevaetapa): ?>
+                                                                <th>Etapa <?php echo e($et->idetapa); ?> (<?php echo e($pr->porcentaje); ?>%)
                                                                 </th>
                                                                 <?php $cet++; ?>
-                                                            @endif
-                                                        @endforeach
-                                                    @endif
-                                                @endforeach
-                                            @endif
-                                        @endforeach
+                                                            <?php endif; ?>
+                                                        <?php endforeach; ?>
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
                                         <th>Promedio</th>
 
 
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($mostraintegrante as $mint)
-                                        @if ($mint->idgrupo == $grupos->idgrupo)
-                                            @foreach ($estudiantes as $est)
-                                                @if ($mint->idestudiante == $est->idestudiante)
-                                                    @foreach ($personas as $per)
-                                                        @if ($per->idpersona == $est->idpersona)
+                                    <?php foreach($mostraintegrante as $mint): ?>
+                                        <?php if($mint->idgrupo == $grupos->idgrupo): ?>
+                                            <?php foreach($estudiantes as $est): ?>
+                                                <?php if($mint->idestudiante == $est->idestudiante): ?>
+                                                    <?php foreach($personas as $per): ?>
+                                                        <?php if($per->idpersona == $est->idpersona): ?>
                                                             <tr>
 
-                                                                <td>{{ $est->carnet . ' ' . $per->nombres . ' ' . $per->apellidos }}
+                                                                <td><?php echo e($est->carnet . ' ' . $per->nombres . ' ' . $per->apellidos); ?>
+
                                                                 </td>
-                                                                @for ($j = 1; $j <= $cet; $j++)
+                                                                <?php for($j = 1; $j <= $cet; $j++): ?>
                                                                     <td>
-                                                                        @foreach ($notas as $not)
-                                                                            @if ($not->idestudiante == $est->idestudiante && $not->idetapa == $j && $not->idgrupo == $grupos->idgrupo)
+                                                                        <?php foreach($notas as $not): ?>
+                                                                            <?php if($not->idestudiante == $est->idestudiante && $not->idetapa == $j && $not->idgrupo == $grupos->idgrupo): ?>
 
-                                                                                {{ $not->nota }}
+                                                                                <?php echo e($not->nota); ?>
 
-                                                                            @endif
-                                                                        @endforeach
+
+                                                                            <?php endif; ?>
+                                                                        <?php endforeach; ?>
                                                                     </td>
-                                                                @endfor
+                                                                <?php endfor; ?>
 
 
 
                                                                 <?php $prom = 0; ?>
-                                                                @foreach ($tiproceso as $tip)
-                                                                    @if ($tip->idtipotema == $grupos->idtipotema)
-                                                                        @foreach ($etapas as $et)
-                                                                            @if ($et->idtipotrabajo == $tip->idtipotema)
-                                                                                @foreach ($porc as $pr)
-                                                                                    @if ($pr->idetapa == $et->idnuevaetapa)
+                                                                <?php foreach($tiproceso as $tip): ?>
+                                                                    <?php if($tip->idtipotema == $grupos->idtipotema): ?>
+                                                                        <?php foreach($etapas as $et): ?>
+                                                                            <?php if($et->idtipotrabajo == $tip->idtipotema): ?>
+                                                                                <?php foreach($porc as $pr): ?>
+                                                                                    <?php if($pr->idetapa == $et->idnuevaetapa): ?>
 
-                                                                                        @foreach ($notas as $not)
-                                                                                            @if ($not->idestudiante == $est->idestudiante && $not->idetapa == $et->idetapa && $not->idgrupo == $grupos->idgrupo)
+                                                                                        <?php foreach($notas as $not): ?>
+                                                                                            <?php if($not->idestudiante == $est->idestudiante && $not->idetapa == $et->idetapa && $not->idgrupo == $grupos->idgrupo): ?>
 
 
                                                                                                 <?php $prom = $prom + $not->nota * ($pr->porcentaje / 100); ?>
 
-                                                                                            @endif
-                                                                                        @endforeach
+                                                                                            <?php endif; ?>
+                                                                                        <?php endforeach; ?>
 
 
 
-                                                                                    @endif
-                                                                                @endforeach
-                                                                            @endif
-                                                                        @endforeach
-                                                                    @endif
-                                                                @endforeach
+                                                                                    <?php endif; ?>
+                                                                                <?php endforeach; ?>
+                                                                            <?php endif; ?>
+                                                                        <?php endforeach; ?>
+                                                                    <?php endif; ?>
+                                                                <?php endforeach; ?>
 
                                                                 <td><strong><?php echo round($prom, 1); ?></strong></td>
 
@@ -649,12 +659,12 @@
 
 
                                                             </tr>
-                                                        @endif
-                                                    @endforeach
-                                                @endif
-                                            @endforeach
-                                        @endif
-                                    @endforeach
+                                                        <?php endif; ?>
+                                                    <?php endforeach; ?>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
 
                                 </tbody>
                             </table>
@@ -668,7 +678,7 @@
 
 
                                     <input type="date" name="fechar" id="fechar" class="form-control"
-                                        value="{{ \Carbon\Carbon::now()->format('Y-m-d') }}" required="required"
+                                        value="<?php echo e(\Carbon\Carbon::now()->format('Y-m-d')); ?>" required="required"
                                         title="">
                                 </div>
 
@@ -682,12 +692,14 @@
                     </div>
                 </div>
             </div>
-            {{ Form::Close() }}
+            <?php echo e(Form::Close()); ?>
+
         </div>
 
         <!-- solicitudes: aprobacion de modalidad -->
         <div class="modal fade" id="solicitud-1">
-            {{ Form::Open(['action' => ['solicitudController@aprovaciont'], 'route' => ['ues.solicitudes.aprovaciont'], 'method' => 'post', 'files' => 'true']) }}
+            <?php echo e(Form::Open(['action' => ['solicitudController@aprovaciont'], 'route' => ['ues.solicitudes.aprovaciont'], 'method' => 'post', 'files' => 'true'])); ?>
+
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="background:#00a65a; color:white">
@@ -710,7 +722,7 @@
                                 <label>idgrupo</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input readonly="" type="text" value="{{ $grupos->idgrupo }}" name="idgrupo"
+                                    <input readonly="" type="text" value="<?php echo e($grupos->idgrupo); ?>" name="idgrupo"
                                         id="idgrupo" class="form-control">
                                 </div>
                             </div>
@@ -720,7 +732,7 @@
                                 <label>numero de etapas</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input readonly="" type="text" value="{{ $var }}" name="netapas" id="netapas"
+                                    <input readonly="" type="text" value="<?php echo e($var); ?>" name="netapas" id="netapas"
                                         class="form-control">
                                 </div>
                             </div>
@@ -731,7 +743,7 @@
                                 <label>Código de Grupo</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input readonly="" type="text" value="{{ $grupos->codigoG }}" name="codigo" id="codigo"
+                                    <input readonly="" type="text" value="<?php echo e($grupos->codigoG); ?>" name="codigo" id="codigo"
                                         class="form-control">
                                 </div>
                             </div>
@@ -741,8 +753,8 @@
                                 <label>Tema</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                    <textarea id="tema" readonly="" value="{{ $grupos->tema }}" class="form-control"
-                                        name="tema">{{ $grupos->tema }}</textarea>
+                                    <textarea id="tema" readonly="" value="<?php echo e($grupos->tema); ?>" class="form-control"
+                                        name="tema"><?php echo e($grupos->tema); ?></textarea>
                                 </div>
                             </div>
                         </div>
@@ -752,20 +764,20 @@
                                 <label>Integrantes </label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-group"></i></span>
-                                    @foreach ($mostraintegrante as $mint)
-                                        @if ($mint->idgrupo == $grupos->idgrupo)
-                                            @foreach ($estudiantes as $est)
-                                                @if ($mint->idestudiante == $est->idestudiante)
-                                                    @foreach ($personas as $per)
-                                                        @if ($per->idpersona == $est->idpersona)
+                                    <?php foreach($mostraintegrante as $mint): ?>
+                                        <?php if($mint->idgrupo == $grupos->idgrupo): ?>
+                                            <?php foreach($estudiantes as $est): ?>
+                                                <?php if($mint->idestudiante == $est->idestudiante): ?>
+                                                    <?php foreach($personas as $per): ?>
+                                                        <?php if($per->idpersona == $est->idpersona): ?>
                                                             <input disabled="" type="text" class="form-control"
-                                                                value="{{ $est->carnet . ' ' . $per->nombres . ' ' . $per->apellidos }}">
-                                                        @endif
-                                                    @endforeach
-                                                @endif
-                                            @endforeach
-                                        @endif
-                                    @endforeach
+                                                                value="<?php echo e($est->carnet . ' ' . $per->nombres . ' ' . $per->apellidos); ?>">
+                                                        <?php endif; ?>
+                                                    <?php endforeach; ?>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         </div>
@@ -775,24 +787,24 @@
                                 <label>Asesor/es </label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    @foreach ($asesores as $ase)
-                                        @if ($ase->idgrupo == $grupos->idgrupo)
-                                            @foreach ($docentes as $doc)
-                                                @if ($ase->iddocente == $doc->iddocente)
-                                                    @foreach ($personas as $per)
-                                                        @if ($per->idpersona == $doc->idpersona)
-                                                            @foreach ($tipoasesor as $tias)
-                                                                @if ($tias->idtipoasesor == $ase->idtipoasesor)
+                                    <?php foreach($asesores as $ase): ?>
+                                        <?php if($ase->idgrupo == $grupos->idgrupo): ?>
+                                            <?php foreach($docentes as $doc): ?>
+                                                <?php if($ase->iddocente == $doc->iddocente): ?>
+                                                    <?php foreach($personas as $per): ?>
+                                                        <?php if($per->idpersona == $doc->idpersona): ?>
+                                                            <?php foreach($tipoasesor as $tias): ?>
+                                                                <?php if($tias->idtipoasesor == $ase->idtipoasesor): ?>
                                                                     <input disabled type="text" class="form-control"
-                                                                        value="{{ $doc->titulo . ' ' . $per->nombres . ' ' . $per->apellidos . ' - ' . $tias->tipoasesor }}">
-                                                                @endif
-                                                            @endforeach
-                                                        @endif
-                                                    @endforeach
-                                                @endif
-                                            @endforeach
-                                        @endif
-                                    @endforeach
+                                                                        value="<?php echo e($doc->titulo . ' ' . $per->nombres . ' ' . $per->apellidos . ' - ' . $tias->tipoasesor); ?>">
+                                                                <?php endif; ?>
+                                                            <?php endforeach; ?>
+                                                        <?php endif; ?>
+                                                    <?php endforeach; ?>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         </div>
@@ -804,7 +816,7 @@
 
 
                                     <input type="date" name="fechar" id="fechar" class="form-control"
-                                        value="{{ \Carbon\Carbon::now()->format('Y-m-d') }}" required="required"
+                                        value="<?php echo e(\Carbon\Carbon::now()->format('Y-m-d')); ?>" required="required"
                                         title="">
                                 </div>
 
@@ -821,7 +833,8 @@
                     </div>
                 </div>
             </div>
-            {{ Form::Close() }}
+            <?php echo e(Form::Close()); ?>
+
         </div>
         <!-- solicitudes: imprimir aprovacion modalidad -->
 
@@ -829,7 +842,8 @@
 
         <!-- solicitudes: Prorroga interna -->
         <div class="modal fade" id="solicitud-2">
-            {{ Form::Open(['action' => ['solicitudController@spsistemas'], 'route' => ['ues.solicitudes.spsistemas'], 'method' => 'post', 'files' => 'true']) }}
+            <?php echo e(Form::Open(['action' => ['solicitudController@spsistemas'], 'route' => ['ues.solicitudes.spsistemas'], 'method' => 'post', 'files' => 'true'])); ?>
+
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="background:#00a65a; color:white">
@@ -841,7 +855,7 @@
                                 <label>Código de Grupo</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input type="text" value="{{ $grupos->codigoG }}" name="codigo" id="codigo"
+                                    <input type="text" value="<?php echo e($grupos->codigoG); ?>" name="codigo" id="codigo"
                                         class="form-control">
                                 </div>
                             </div>
@@ -883,12 +897,14 @@
                     </div>
                 </div>
             </div>
-            {{ Form::Close() }}
+            <?php echo e(Form::Close()); ?>
+
         </div>
 
         <!-- solicitudes: Ratificacion de resultados -->
         <div class="modal fade" id="solicitud-5">
-            {{ Form::Open(['action' => ['solicitudController@ratiResul'], 'route' => ['ues.solicitudes.ratiResul'], 'method' => 'post', 'files' => 'true']) }}
+            <?php echo e(Form::Open(['action' => ['solicitudController@ratiResul'], 'route' => ['ues.solicitudes.ratiResul'], 'method' => 'post', 'files' => 'true'])); ?>
+
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="background:#00a65a; color:white">
@@ -909,7 +925,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-database"></i></span>
                                 <input id="idgrupo" type="text" class="form-control" name="idgrupo"
-                                    value="{{ $grupos->idgrupo }}">
+                                    value="<?php echo e($grupos->idgrupo); ?>">
                             </div>
                         </div>
                     </div>
@@ -920,7 +936,7 @@
                                 <label>Código de Grupo</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input type="text" value="{{ $grupos->codigoG }}" name="codigo" id="codigo"
+                                    <input type="text" value="<?php echo e($grupos->codigoG); ?>" name="codigo" id="codigo"
                                         class="form-control">
                                 </div>
                             </div>
@@ -935,11 +951,13 @@
                     </div>
                 </div>
             </div>
-            {{ Form::Close() }}
+            <?php echo e(Form::Close()); ?>
+
         </div>
         <!-- solicitudes: Repobacion por abandono -->
         <div class="modal fade" id="solicitud-8">
-            {{ Form::Open(['action' => ['solicitudController@repabandono'], 'route' => ['ues.solicitudes.repabandono'], 'method' => 'post', 'files' => 'true']) }}
+            <?php echo e(Form::Open(['action' => ['solicitudController@repabandono'], 'route' => ['ues.solicitudes.repabandono'], 'method' => 'post', 'files' => 'true'])); ?>
+
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="background:#00a65a; color:white">
@@ -960,7 +978,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-database"></i></span>
                                 <input id="idgrupo" type="text" class="form-control" name="idgrupo"
-                                    value="{{ $grupos->idgrupo }}">
+                                    value="<?php echo e($grupos->idgrupo); ?>">
                             </div>
                         </div>
                     </div>
@@ -971,7 +989,7 @@
                                 <label>Código de Grupo</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input type="text" value="{{ $grupos->codigoG }}" name="codigo" id="codigo"
+                                    <input type="text" value="<?php echo e($grupos->codigoG); ?>" name="codigo" id="codigo"
                                         class="form-control">
                                 </div>
                             </div>
@@ -985,21 +1003,22 @@
                                     <span class="input-group-addon"><i class="fa fa-group"></i></span>
                                     <select name="estudianteselec" id="estudianteselec" class="form-inline form-control">
                                         <option value="">[Seleccione]</option>
-                                        @foreach ($mostraintegrante as $mint)
-                                            @if ($mint->idgrupo == $grupos->idgrupo)
-                                                @foreach ($estudiantes as $est)
-                                                    @if ($mint->idestudiante == $est->idestudiante)
-                                                        @foreach ($personas as $per)
-                                                            @if ($per->idpersona == $est->idpersona)
-                                                                <option value="{{ $est->idestudiante }}">
-                                                                    {{ $est->carnet . ' ' . $per->nombres . ' ' . $per->apellidos }}
+                                        <?php foreach($mostraintegrante as $mint): ?>
+                                            <?php if($mint->idgrupo == $grupos->idgrupo): ?>
+                                                <?php foreach($estudiantes as $est): ?>
+                                                    <?php if($mint->idestudiante == $est->idestudiante): ?>
+                                                        <?php foreach($personas as $per): ?>
+                                                            <?php if($per->idpersona == $est->idpersona): ?>
+                                                                <option value="<?php echo e($est->idestudiante); ?>">
+                                                                    <?php echo e($est->carnet . ' ' . $per->nombres . ' ' . $per->apellidos); ?>
+
                                                                 </option>
-                                                            @endif
-                                                        @endforeach
-                                                    @endif
-                                                @endforeach
-                                            @endif
-                                        @endforeach
+                                                            <?php endif; ?>
+                                                        <?php endforeach; ?>
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
                                     </select>
                                 </div>
                             </div>
@@ -1024,14 +1043,16 @@
                     </div>
                 </div>
             </div>
-            {{ Form::Close() }}
+            <?php echo e(Form::Close()); ?>
+
         </div>
 
 
 
-        {{-- cambio tema y tribunal --}}
+        <?php /* cambio tema y tribunal */ ?>
         <div class="modal fade" id="solicitud-6">
-            {{ Form::Open(['action' => ['solicitudpicController@spicontaCoordinador'], 'route' => ['ues.solicitudesconta.spicontaCoordinador'], 'method' => 'post', 'files' => 'true']) }}
+            <?php echo e(Form::Open(['action' => ['solicitudpicController@spicontaCoordinador'], 'route' => ['ues.solicitudesconta.spicontaCoordinador'], 'method' => 'post', 'files' => 'true'])); ?>
+
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="background:#00a65a; color:white">
@@ -1054,7 +1075,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-database"></i></span>
                                     <input id="idgrupo" type="text" class="form-control" name="idgrupo"
-                                        value="{{ $grupos->idgrupo }}">
+                                        value="<?php echo e($grupos->idgrupo); ?>">
                                 </div>
                             </div>
                         </div>
@@ -1067,7 +1088,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
                                     <input id="codigo" readonly="" onkeyup="javascript:this.value=this.value.toUpperCase();"
-                                        type="text" value="{{ $grupos->codigoG }}" class="form-control" name="codigo"
+                                        type="text" value="<?php echo e($grupos->codigoG); ?>" class="form-control" name="codigo"
                                         maxlength="11" autofocus>
                                 </div>
                             </div>
@@ -1102,11 +1123,13 @@
                     </div>
                 </div>
             </div>
-            {{ Form::Close() }}
+            <?php echo e(Form::Close()); ?>
+
         </div>
 
         <div class="modal fade" id="solicitud-4">
-            {{ Form::Open(['action' => ['solicitudpicController@sRatificaciondeTribunal'], 'route' => ['ues.solicitudesconta.sRatificaciondeTribunal'], 'method' => 'post', 'files' => 'true']) }}
+            <?php echo e(Form::Open(['action' => ['solicitudpicController@sRatificaciondeTribunal'], 'route' => ['ues.solicitudesconta.sRatificaciondeTribunal'], 'method' => 'post', 'files' => 'true'])); ?>
+
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="background:#00a65a; color:white">
@@ -1119,7 +1142,7 @@
                                 <label>numero de etapas</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input readonly="" type="text" value="{{ $var }}" name="netapas" id="netapas"
+                                    <input readonly="" type="text" value="<?php echo e($var); ?>" name="netapas" id="netapas"
                                         class="form-control">
                                 </div>
                             </div>
@@ -1143,7 +1166,7 @@
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
 
                                     <input id="idgrupo" type="text" class="form-control" name="idgrupo"
-                                        value="{{ $grupos->idgrupo }}">
+                                        value="<?php echo e($grupos->idgrupo); ?>">
                                 </div>
                             </div>
                         </div>
@@ -1155,7 +1178,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
                                     <input id="codigo" readonly="" onkeyup="javascript:this.value=this.value.toUpperCase();"
-                                        type="text" value="{{ $grupos->codigoG }}" class="form-control" name="codigo"
+                                        type="text" value="<?php echo e($grupos->codigoG); ?>" class="form-control" name="codigo"
                                         maxlength="11" autofocus>
                                 </div>
                             </div>
@@ -1170,17 +1193,18 @@
                                     <select data-placeholder="Seleccione docentes" multiple
                                         class="chosen-select form-control" name="docentes[]" id="docentes">
                                         <option value="-99">[Seleccione Docentes]</option>
-                                        @foreach ($personas as $per)
-                                            @foreach ($docentes as $docente)
-                                                @if ($per->idpersona == $docente->idpersona)
-                                                    @if ($per->condicion == true)
-                                                        <option value="{{ $docente->iddocente }}">
-                                                            {{ $docente->titulo . ' ' . $per->nombres . ' ' . $per->apellidos }}
+                                        <?php foreach($personas as $per): ?>
+                                            <?php foreach($docentes as $docente): ?>
+                                                <?php if($per->idpersona == $docente->idpersona): ?>
+                                                    <?php if($per->condicion == true): ?>
+                                                        <option value="<?php echo e($docente->iddocente); ?>">
+                                                            <?php echo e($docente->titulo . ' ' . $per->nombres . ' ' . $per->apellidos); ?>
+
                                                         </option>
-                                                    @endif
-                                                @endif
-                                            @endforeach
-                                        @endforeach
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                        <?php endforeach; ?>
                                     </select>
                                 </div>
                             </div>
@@ -1193,7 +1217,7 @@
 
 
                                     <input type="date" name="fechar" id="fechar" class="form-control"
-                                        value="{{ \Carbon\Carbon::now()->format('Y-m-d') }}" required="required"
+                                        value="<?php echo e(\Carbon\Carbon::now()->format('Y-m-d')); ?>" required="required"
                                         title="">
                                 </div>
 
@@ -1208,7 +1232,8 @@
                     </div>
                 </div>
             </div>
-            {{ Form::Close() }}
+            <?php echo e(Form::Close()); ?>
+
         </div>
 
 
@@ -1216,7 +1241,8 @@
 
         <!-- modal notas -->
         <div class="modal fade" id="notas">
-            {{ Form::Open(['action' => ['GrupoController@gnotas'], 'route' => ['ues.grupos.gnotas'], 'method' => 'post', 'files' => 'true']) }}
+            <?php echo e(Form::Open(['action' => ['GrupoController@gnotas'], 'route' => ['ues.grupos.gnotas'], 'method' => 'post', 'files' => 'true'])); ?>
+
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="background:#00a65a; color:white">
@@ -1229,7 +1255,7 @@
                                 <label>idgrupo</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input readonly="" type="text" value="{{ $grupos->idgrupo }}" name="idgrupo"
+                                    <input readonly="" type="text" value="<?php echo e($grupos->idgrupo); ?>" name="idgrupo"
                                         id="idgrupo" class="form-control">
                                 </div>
                             </div>
@@ -1241,7 +1267,7 @@
                                 <label>Código de Grupo</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input readonly="" type="text" value="{{ $grupos->codigoG }}" name="codigo" id="codigo"
+                                    <input readonly="" type="text" value="<?php echo e($grupos->codigoG); ?>" name="codigo" id="codigo"
                                         class="form-control">
                                 </div>
                             </div>
@@ -1251,8 +1277,8 @@
                                 <label>Tema</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                    <textarea id="tema" readonly="" value="{{ $grupos->tema }}" class="form-control"
-                                        name="tema">{{ $grupos->tema }}</textarea>
+                                    <textarea id="tema" readonly="" value="<?php echo e($grupos->tema); ?>" class="form-control"
+                                        name="tema"><?php echo e($grupos->tema); ?></textarea>
                                 </div>
                             </div>
                         </div>
@@ -1260,57 +1286,57 @@
 
                         <!-- guardar etapa activa 1 al crear el grupo no al generar la solicitud de ap. tema -->
 
-                        @foreach ($etapaactiva as $ea)
-                            @if ($ea->idgrupo == $grupos->idgrupo && $ea->estado == 1)
+                        <?php foreach($etapaactiva as $ea): ?>
+                            <?php if($ea->idgrupo == $grupos->idgrupo && $ea->estado == 1): ?>
                                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                                     <div class="form-group">
                                         <label>Etapa</label>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                            @foreach ($etapas as $et)
-                                                @if ($et->idtipotrabajo == $grupos->idtipotema)
-                                                    @if ($et->idetapa == $ea->idnuevaetapa)
-                                                        <input readonly="" type="text" value="{{ $et->idnombreetapa }}"
+                                            <?php foreach($etapas as $et): ?>
+                                                <?php if($et->idtipotrabajo == $grupos->idtipotema): ?>
+                                                    <?php if($et->idetapa == $ea->idnuevaetapa): ?>
+                                                        <input readonly="" type="text" value="<?php echo e($et->idnombreetapa); ?>"
                                                             name="etapa" id="etapa" class="form-control">
-                                                        <input type="hidden" value="{{ $et->idetapa }}" name="idetapa"
+                                                        <input type="hidden" value="<?php echo e($et->idetapa); ?>" name="idetapa"
                                                             id="idetapa" class="form-control">
-                                                    @endif
-                                                @endif
-                                            @endforeach
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
                                         </div>
                                     </div>
                                 </div>
-                            @endif
-                        @endforeach
+                            <?php endif; ?>
+                        <?php endforeach; ?>
 
                         <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                             <div class="form-group">
                                 <label>Integrantes </label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-group"></i></span>
-                                    @foreach ($mostraintegrante as $mint)
-                                        @if ($mint->idgrupo == $grupos->idgrupo)
-                                            @foreach ($estudiantes as $est)
-                                                @if ($mint->idestudiante == $est->idestudiante)
-                                                    @foreach ($personas as $per)
-                                                        @if ($per->idpersona == $est->idpersona)
+                                    <?php foreach($mostraintegrante as $mint): ?>
+                                        <?php if($mint->idgrupo == $grupos->idgrupo): ?>
+                                            <?php foreach($estudiantes as $est): ?>
+                                                <?php if($mint->idestudiante == $est->idestudiante): ?>
+                                                    <?php foreach($personas as $per): ?>
+                                                        <?php if($per->idpersona == $est->idpersona): ?>
                                                             <div class="col-lg-9 col-md-9 col-xs-9 col-sm-9">
                                                                 <input disabled="" type="text" class="form-control"
-                                                                    value="{{ $est->carnet . ' ' . $per->nombres . ' ' . $per->apellidos }}">
+                                                                    value="<?php echo e($est->carnet . ' ' . $per->nombres . ' ' . $per->apellidos); ?>">
                                                             </div>
                                                             <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
                                                                 <input type="number" min="0" max="10" step=".01"
-                                                                    id="{{ $est->idestudiante }}"
-                                                                    name="{{ $est->idestudiante }}" class="form-control"
+                                                                    id="<?php echo e($est->idestudiante); ?>"
+                                                                    name="<?php echo e($est->idestudiante); ?>" class="form-control"
                                                                     value="" placeholder="Nota">
                                                             </div>
                                                             <br>
-                                                        @endif
-                                                    @endforeach
-                                                @endif
-                                            @endforeach
-                                        @endif
-                                    @endforeach
+                                                        <?php endif; ?>
+                                                    <?php endforeach; ?>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         </div>
@@ -1327,13 +1353,15 @@
                     </div>
                 </div>
             </div>
-            {{ Form::Close() }}
+            <?php echo e(Form::Close()); ?>
+
         </div>
 
 
-        {{-- pdf notas --}}
+        <?php /* pdf notas */ ?>
         <div class="modal fade modal-slide-in-right" aria-hidden="true" role="dialog" tabindex="-1" id="pdfnotas">
-            {{ Form::Open(['action' => ['GrupoController@pdfNotas'], 'route' => ['ues.grupos.impNotas'], 'method' => 'post', 'files' => 'true']) }}
+            <?php echo e(Form::Open(['action' => ['GrupoController@pdfNotas'], 'route' => ['ues.grupos.impNotas'], 'method' => 'post', 'files' => 'true'])); ?>
+
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="background:#00a65a; color:white">
@@ -1346,7 +1374,7 @@
                                 <label>idgrupo</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input readonly="" type="text" value="{{ $grupos->idgrupo }}" name="idgrupo"
+                                    <input readonly="" type="text" value="<?php echo e($grupos->idgrupo); ?>" name="idgrupo"
                                         id="idgrupo" class="form-control">
                                 </div>
                             </div>
@@ -1357,7 +1385,7 @@
                                 <label>numero de etapas</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input readonly="" type="text" value="{{ $var }}" name="idne" id="idne"
+                                    <input readonly="" type="text" value="<?php echo e($var); ?>" name="idne" id="idne"
                                         class="form-control">
                                 </div>
                             </div>
@@ -1371,27 +1399,28 @@
                                     <select name="etapas" id="etapas" class="form-inline form-control">
 
                                         <option value="">[Seleccione una Etapa]</option>
-                                        @if ($idetapa1)<?php $idetapa1 = $idetapa1->idetapa; ?> @else <?php $idetapa1 = 0; ?>@endif
+                                        <?php if($idetapa1): ?><?php $idetapa1 = $idetapa1->idetapa; ?> <?php else: ?> <?php $idetapa1 = 0; ?><?php endif; ?>
 
-                                        @foreach ($tiproceso as $tip)
-                                            @if ($tip->idtipotema == $grupos->idtipotema)
-                                                @foreach ($etapas as $et)
+                                        <?php foreach($tiproceso as $tip): ?>
+                                            <?php if($tip->idtipotema == $grupos->idtipotema): ?>
+                                                <?php foreach($etapas as $et): ?>
 
-                                                    @if ($et->idtipotrabajo == $tip->idtipotema)
+                                                    <?php if($et->idtipotrabajo == $tip->idtipotema): ?>
 
 
-                                                        @if ($idetapa1 > 0 && $et->idetapa <= $idetapa1)
+                                                        <?php if($idetapa1 > 0 && $et->idetapa <= $idetapa1): ?>
 
-                                                            <option value="{{ $et->idnuevaetapa }}">
-                                                                {{ $et->idnombreetapa }}
+                                                            <option value="<?php echo e($et->idnuevaetapa); ?>">
+                                                                <?php echo e($et->idnombreetapa); ?>
+
 
                                                             </option>
-                                                        @endif
+                                                        <?php endif; ?>
 
-                                                    @endif
-                                                @endforeach
-                                            @endif
-                                        @endforeach
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
 
                                     </select>
                                 </div>
@@ -1410,14 +1439,16 @@
                     </div>
                 </div>
             </div>
-            {{ Form::Close() }}
+            <?php echo e(Form::Close()); ?>
+
         </div>
 
 
 
         <!-- modal notas -->
         <div class="modal fade" id="editarnotas">
-            {{ Form::Open(['action' => ['GrupoController@editarnotas'], 'route' => ['ues.grupos.editarnotas'], 'method' => 'post', 'files' => 'true']) }}
+            <?php echo e(Form::Open(['action' => ['GrupoController@editarnotas'], 'route' => ['ues.grupos.editarnotas'], 'method' => 'post', 'files' => 'true'])); ?>
+
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="background:#00a65a; color:white">
@@ -1430,7 +1461,7 @@
                                 <label>idgrupo</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input readonly="" type="text" value="{{ $grupos->idgrupo }}" name="idgrupo"
+                                    <input readonly="" type="text" value="<?php echo e($grupos->idgrupo); ?>" name="idgrupo"
                                         id="idgrupo" class="form-control">
                                 </div>
                             </div>
@@ -1442,7 +1473,7 @@
                                 <label>Código de Grupo</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input readonly="" type="text" value="{{ $grupos->codigoG }}" name="codigo" id="codigo"
+                                    <input readonly="" type="text" value="<?php echo e($grupos->codigoG); ?>" name="codigo" id="codigo"
                                         class="form-control">
                                 </div>
                             </div>
@@ -1463,21 +1494,22 @@
                                         class="form-control" required="">
                                         <option value="">[Seleccione una Etapa]</option>
 
-                                        @if ($idetapa)<?php $idetapa = $idetapa->idetapa; ?> @else <?php $idetapa = 0; ?>@endif
+                                        <?php if($idetapa): ?><?php $idetapa = $idetapa->idetapa; ?> <?php else: ?> <?php $idetapa = 0; ?><?php endif; ?>
 
-                                        @foreach ($tiproceso as $tip)
-                                            @if ($tip->idtipotema == $grupos->idtipotema)
-                                                @foreach ($etapas as $et)
-                                                    @if ($et->idtipotrabajo == $tip->idtipotema)
-                                                        @if ($idetapa > 0 && $et->idetapa <= $idetapa)
-                                                            <option value="{{ $et->idetapa }}">{{ $et->idnombreetapa }}
+                                        <?php foreach($tiproceso as $tip): ?>
+                                            <?php if($tip->idtipotema == $grupos->idtipotema): ?>
+                                                <?php foreach($etapas as $et): ?>
+                                                    <?php if($et->idtipotrabajo == $tip->idtipotema): ?>
+                                                        <?php if($idetapa > 0 && $et->idetapa <= $idetapa): ?>
+                                                            <option value="<?php echo e($et->idetapa); ?>"><?php echo e($et->idnombreetapa); ?>
+
                                                             </option>
-                                                        @endif
-                                                    @endif
-                                                @endforeach
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?>
 
-                                            @endif
-                                        @endforeach
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
 
                                     </select>
                                 </div>
@@ -1490,15 +1522,15 @@
                                 <label>Integrantes </label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-group"></i></span>
-                                    @foreach ($mostraintegrante as $mint)
-                                        @if ($mint->idgrupo == $grupos->idgrupo)
-                                            @foreach ($estudiantes as $est)
-                                                @if ($mint->idestudiante == $est->idestudiante)
-                                                    @foreach ($personas as $per)
-                                                        @if ($per->idpersona == $est->idpersona)
+                                    <?php foreach($mostraintegrante as $mint): ?>
+                                        <?php if($mint->idgrupo == $grupos->idgrupo): ?>
+                                            <?php foreach($estudiantes as $est): ?>
+                                                <?php if($mint->idestudiante == $est->idestudiante): ?>
+                                                    <?php foreach($personas as $per): ?>
+                                                        <?php if($per->idpersona == $est->idpersona): ?>
                                                             <div class="col-lg-9 col-md-9 col-xs-9 col-sm-9">
                                                                 <input disabled="" type="text" class="form-control"
-                                                                    value="{{ $est->carnet . ' ' . $per->nombres . ' ' . $per->apellidos }}">
+                                                                    value="<?php echo e($est->carnet . ' ' . $per->nombres . ' ' . $per->apellidos); ?>">
                                                             </div>
                                                             <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
                                                                 <?php $idupdate = 'u' . $est->idestudiante; ?>
@@ -1510,12 +1542,12 @@
                                                             </div>
 
                                                             <br>
-                                                        @endif
-                                                    @endforeach
-                                                @endif
-                                            @endforeach
-                                        @endif
-                                    @endforeach
+                                                        <?php endif; ?>
+                                                    <?php endforeach; ?>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         </div>
@@ -1532,12 +1564,14 @@
                     </div>
                 </div>
             </div>
-            {{ Form::Close() }}
+            <?php echo e(Form::Close()); ?>
+
         </div>
 
         <!-- solicitud 9 -->
         <div class="modal fade" id="solicitud-9">
-            {{ Form::Open(['action' => ['solicitudController@renuncia'], 'route' => ['ues.solicitudes.renuncia'], 'method' => 'post', 'files' => 'true']) }}
+            <?php echo e(Form::Open(['action' => ['solicitudController@renuncia'], 'route' => ['ues.solicitudes.renuncia'], 'method' => 'post', 'files' => 'true'])); ?>
+
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="background:#00a65a; color:white">
@@ -1550,32 +1584,32 @@
                                 <label>idgrupo</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input readonly="" type="text" value="{{ $grupos->idgrupo }}" name="idgrupo"
+                                    <input readonly="" type="text" value="<?php echo e($grupos->idgrupo); ?>" name="idgrupo"
                                         id="idgrupo" class="form-control">
                                 </div>
                             </div>
                         </div>
-                        @foreach ($etapaactiva as $ea)
-                            @if ($ea->idgrupo == $grupos->idgrupo && $ea->estado == 1)
+                        <?php foreach($etapaactiva as $ea): ?>
+                            <?php if($ea->idgrupo == $grupos->idgrupo && $ea->estado == 1): ?>
                                 <div hidden="" class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                                     <div class="form-group">
                                         <label>Etapa</label>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                            @foreach ($etapas as $et)
-                                                @if ($et->idtipotrabajo == $grupos->idtipotema)
-                                                    @if ($et->idetapa == $ea->idnuevaetapa)
+                                            <?php foreach($etapas as $et): ?>
+                                                <?php if($et->idtipotrabajo == $grupos->idtipotema): ?>
+                                                    <?php if($et->idetapa == $ea->idnuevaetapa): ?>
 
-                                                        <input type="hidden" value="{{ $et->idetapa }}" name="idetapa"
+                                                        <input type="hidden" value="<?php echo e($et->idetapa); ?>" name="idetapa"
                                                             id="idetapa" class="form-control">
-                                                    @endif
-                                                @endif
-                                            @endforeach
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
                                         </div>
                                     </div>
                                 </div>
-                            @endif
-                        @endforeach
+                            <?php endif; ?>
+                        <?php endforeach; ?>
 
 
                         <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
@@ -1583,7 +1617,7 @@
                                 <label>Código de Grupo</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-info"></i></span>
-                                    <input readonly="" type="text" value="{{ $grupos->codigoG }}" name="codigo"
+                                    <input readonly="" type="text" value="<?php echo e($grupos->codigoG); ?>" name="codigo"
                                         id="codigo" class="form-control">
                                 </div>
                             </div>
@@ -1604,20 +1638,20 @@
                                         required="">
                                         <option value="">[Seleccione un Estudiante]</option>
 
-                                        @foreach ($mostraintegrante as $mint)
-                                            @if ($mint->idgrupo == $grupos->idgrupo)
-                                                @foreach ($estudiantes as $est)
-                                                    @if ($mint->idestudiante == $est->idestudiante)
-                                                        @foreach ($personas as $per)
-                                                            @if ($per->idpersona == $est->idpersona)
-                                                                <option value="{{ $est->idestudiante }}">
-                                                                    {{ $per->nombres }} {{ $per->apellidos }}</option>
-                                                            @endif
-                                                        @endforeach
-                                                    @endif
-                                                @endforeach
-                                            @endif
-                                        @endforeach
+                                        <?php foreach($mostraintegrante as $mint): ?>
+                                            <?php if($mint->idgrupo == $grupos->idgrupo): ?>
+                                                <?php foreach($estudiantes as $est): ?>
+                                                    <?php if($mint->idestudiante == $est->idestudiante): ?>
+                                                        <?php foreach($personas as $per): ?>
+                                                            <?php if($per->idpersona == $est->idpersona): ?>
+                                                                <option value="<?php echo e($est->idestudiante); ?>">
+                                                                    <?php echo e($per->nombres); ?> <?php echo e($per->apellidos); ?></option>
+                                                            <?php endif; ?>
+                                                        <?php endforeach; ?>
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
 
                                     </select>
                                 </div>
@@ -1632,7 +1666,7 @@
 
 
                                     <input type="date" name="fechar" id="fechar" class="form-control"
-                                        value="{{ \Carbon\Carbon::now()->format('Y-m-d') }}" required="required"
+                                        value="<?php echo e(\Carbon\Carbon::now()->format('Y-m-d')); ?>" required="required"
                                         title="">
                                 </div>
 
@@ -1650,7 +1684,8 @@
                     </div>
                 </div>
             </div>
-            {{ Form::Close() }}
+            <?php echo e(Form::Close()); ?>
+
         </div>
 
 
@@ -1658,28 +1693,28 @@
 
 
 
-    @endif
-@endsection
+    <?php endif; ?>
+<?php $__env->stopSection(); ?>
 
 
-@section('script')
+<?php $__env->startSection('script'); ?>
     <script type="text/javascript">
         function ventanaP(id) {
-            ventana1 = window.open("{{ url('ues/grupos/steps/perfilGrup') }}" + "/" + id,
+            ventana1 = window.open("<?php echo e(url('ues/grupos/steps/perfilGrup')); ?>" + "/" + id,
                 'scrollbars=yes,width=800,height=1000,titlebar=no');
         }
     </script>
 
     <script type="text/javascript">
         function ventanaN(id) {
-            ventana1 = window.open("{{ url('ues/grupos/notasG') }}" + "/" + id,
+            ventana1 = window.open("<?php echo e(url('ues/grupos/notasG')); ?>" + "/" + id,
                 'scrollbars=yes,width=800,height=1000,titlebar=no');
         }
     </script>
 
     <script type="text/javascript">
         function ventanaC(id) {
-            ventana1 = window.open("{{ url('ues/grupos/cronogramapdf') }}" + "/" + id,
+            ventana1 = window.open("<?php echo e(url('ues/grupos/cronogramapdf')); ?>" + "/" + id,
                 'scrollbars=yes,width=800,height=1000,titlebar=no');
         }
     </script>
@@ -1696,35 +1731,35 @@
 
 
 
-        {{-- Sirve para limitar elemntos seleccionados
+        <?php /* Sirve para limitar elemntos seleccionados
       $(".chosen-select").chosen("destroy")
         
 
         $('.chosen-select').chosen({ max_selected_options: 2,width: "100%"}); 
-        $('.chosen-select').trigger("chosen:updated"); --}}
+        $('.chosen-select').trigger("chosen:updated"); */ ?>
     </script>
 
 
     <script>
-        @if (Session::has('message'))
-            var type = "{{ Session::get('alert-type', 'info') }}";
+        <?php if(Session::has('message')): ?>
+            var type = "<?php echo e(Session::get('alert-type', 'info')); ?>";
             switch(type){
             case 'info':
-            // toastr.info("{{ Session::get('message') }}");
-            toastr.info('{{ Session::get('message') }}', '',{progressBar:true});
+            // toastr.info("<?php echo e(Session::get('message')); ?>");
+            toastr.info('<?php echo e(Session::get('message')); ?>', '',{progressBar:true});
             break;
         
             case 'warning':
-            toastr.warning('{{ Session::get('message') }}', '',{progressBar:true});
+            toastr.warning('<?php echo e(Session::get('message')); ?>', '',{progressBar:true});
             break;
             case 'success':
-            toastr.success('{{ Session::get('message') }}', '',{progressBar:true});
+            toastr.success('<?php echo e(Session::get('message')); ?>', '',{progressBar:true});
             break;
             case 'error':
-            toastr.error('{{ Session::get('message') }}', '',{progressBar:true});
+            toastr.error('<?php echo e(Session::get('message')); ?>', '',{progressBar:true});
             break;
             }
-        @endif
+        <?php endif; ?>
     </script>
 
     <script>
@@ -1732,7 +1767,7 @@
             var idetapa = $('#etapaselect option:selected').val();
             var idgrupo = document.getElementById('idgrupo').value;
             if (idetapa > -1) {
-                var url = "{{ route('ues.getnotas') }}";
+                var url = "<?php echo e(route('ues.getnotas')); ?>";
 
                 $.ajaxSetup({
                     headers: {
@@ -1770,4 +1805,6 @@
             }
         }
     </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('plantillas.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
