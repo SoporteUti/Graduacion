@@ -143,15 +143,7 @@
 
     {!! Form::open(['route' => 'ues.grupos.store', 'method' => 'POST', 'autocomplete' => 'off', 'files' => 'true']) !!}
     {{ Form::token() }}
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+  
     <div id="modalagregargrupo" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -169,6 +161,17 @@
         ======================================-->
                     <div class="modal-body">
                         <div class="box-body">
+                            <!--par mostrar los errores del validacion-->
+                            @if (count($errors) > 0)
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                            <!--find de mostrar los errores de validación-->
                             <!-- ENTRADA PARA EL NOMBRE -->
                             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
                                 <div class="form-group">
