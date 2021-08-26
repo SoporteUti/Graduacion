@@ -200,7 +200,9 @@ class solicitudController extends Controller
     {
         $query = Input::get('codigo');
         $motivo = Input::get('motivo');
-
+        $idgrupoJc = Input::get('idgrupo');
+        //echo dd($query);
+        // echo dd($idgrupoJc);
         $fi = date("d/m/Y", strtotime(Input::get('fechai')));
         $ff = date("d/m/Y", strtotime(Input::get('fechaf')));
         $estudianteg = EstudianteGrupos::all();
@@ -209,7 +211,6 @@ class solicitudController extends Controller
         $personas = Persona::all();
         $docentes = Docente::all();
         $tipotema = TipoTema::all();
-
         $tipoasesor = TipoAsesor::all();
         $enunciado = Enunciado::all();
 
@@ -221,7 +222,7 @@ class solicitudController extends Controller
         $rol_carrera = Rol_carrera::all();
         //aqui manda todos los datos para la nota
         $pdf = \PDF::loadview('ues.solicitudes.aprobaciont', ["codigo" => $query, "fechai" => $fi, "fechaf" => $ff, "motivo" => $motivo], compact('departamento', 'rol', 'carrera', 'tipoasesor', 'rol_carrera', 'grupo', 'estudianteg', 'estudiante', 'tipotema', 'personas', 'asesores', 'docentes', 'user', 'enunciado'));
-        return $pdf->download('Aprobacion_Tema_Coordinador_' . $query . '.pdf');
+        return $pdf->download('Aprobacion_modalidad_Coordinador_' . $query . '.pdf');
     }
     public function imprimiraprovaciontd()
     {

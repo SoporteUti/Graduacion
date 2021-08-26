@@ -698,7 +698,7 @@
 
         <!-- solicitudes: aprobacion de modalidad -->
         <div class="modal fade" id="solicitud-1">
-            <?php echo e(Form::Open(['action' => [''], 'route' => ['ues.solicitudes.aprovaciont'], 'method' => 'post', 'files' => 'true'])); ?>
+            <?php echo e(Form::Open(['action' => ['solicitudController@aprovaciont'], 'route' => ['ues.solicitudes.aprovaciont'], 'method' => 'post', 'files' => 'true'])); ?>
 
             <div class="modal-dialog">
                 <div class="modal-content">

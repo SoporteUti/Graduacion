@@ -111,7 +111,17 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
 		<!--MODALIDAD A LA QUE APLICA-->
         <p align="justify">
             <h>
-               Modalidad:
+                <?php foreach($grupo as $gr): ?>
+                    <?php if($gr->codigoG==$codigo): ?>
+                        <?php foreach($tipotema as $mod): ?>
+                            <?php if($gr->idtipotema==$mod->idtipotema): ?>
+                            Modalidad: <?php echo e($mod->tema); ?>  
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+               
+                <?php endforeach; ?>
+              
             </h>
         </p>
 		<!--FINDE DE LA MODALIDAD A LA QUE APLICA-->

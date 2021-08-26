@@ -687,7 +687,7 @@
 
         <!-- solicitudes: aprobacion de modalidad -->
         <div class="modal fade" id="solicitud-1">
-            {{ Form::Open(['action' => [''], 'route' => ['ues.solicitudes.aprovaciont'], 'method' => 'post', 'files' => 'true']) }}
+            {{ Form::Open(['action' => ['solicitudController@aprovaciont'], 'route' => ['ues.solicitudes.aprovaciont'], 'method' => 'post', 'files' => 'true']) }}
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="background:#00a65a; color:white">

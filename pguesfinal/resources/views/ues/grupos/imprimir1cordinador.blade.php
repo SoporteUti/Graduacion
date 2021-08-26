@@ -4,7 +4,7 @@ role="dialog" tabindex="-1"  id="imprimirc-1-{{$gs->idgrupsol}}">
 <div class="modal-dialog">
   <div class="modal-content">
     <div class="modal-header" style="background:#00a65a; color:white">
-      <h4 class="modal-title">Imprimir  Aprobación de Tema</h4>
+      <h4 class="modal-title">Imprimir  Aprobación de Modalidad</h4>
     </div>
     <div class="modal-body">
 
