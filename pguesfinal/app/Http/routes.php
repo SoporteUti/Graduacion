@@ -72,6 +72,7 @@ Route::get('ues/grupos/notasG/{id}', 'GrupoController@notasTot')->name('ues.grup
 	Route::resource('ues/gruposoff','gruposoffController');
 	Route::post('/codigoGrupoValid','GrupoController@postCodigoGrupoValid');
 	Route::post('/temaValid','GrupoController@postTemaValid');
+	Route::post('/institucionValid','GrupoController@postInstitucionValid');
 
 	Route::get('ues/grupos/steps/{id}' , 'GrupoController@llenargrupos')->name('ues.grupos.steps');
 	Route::get('ues/grupos/stepsAsesoria/{id}', 'GrupoController@llenargruposAsesoria')->name('ues.grupos.stepsAsesoria');

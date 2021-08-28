@@ -85,6 +85,16 @@ role="dialog" tabindex="-1" id="modal-ver-{{$grup->idgrupo}}">
             </div>
         </div>
 
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" > 
+          <div class="form-group"> 
+            <label>Institución</label>
+                <div class="input-group">                   
+                    <span class="input-group-addon"><i class="fa fa-database"></i></span>
+                    <input id="institucion" disabled type="text"  value="{{$grup->institucion}}"  class="form-control" name="institucion"  placeholder="Ingresar Institución">
+                </div>          
+          </div>
+          </div>
+
         <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">  
           <div class="form-group"> 
                 <label>Integrantes </label>

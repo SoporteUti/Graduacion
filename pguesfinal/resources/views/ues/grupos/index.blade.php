@@ -143,7 +143,17 @@
 
     {!! Form::open(['route' => 'ues.grupos.store', 'method' => 'POST', 'autocomplete' => 'off', 'files' => 'true']) !!}
     {{ Form::token() }}
-  
+    <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    </div>
     <div id="modalagregargrupo" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -161,17 +171,6 @@
         ======================================-->
                     <div class="modal-body">
                         <div class="box-body">
-                            <!--par mostrar los errores del validacion-->
-                            @if (count($errors) > 0)
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-                            <!--find de mostrar los errores de validación-->
                             <!-- ENTRADA PARA EL NOMBRE -->
                             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
                                 <div class="form-group">
@@ -236,6 +235,18 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--INSTITUCION DONDE SE DESARRORLLARA LA MODALIDAD-->
+                            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <label>Institución(*)</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-black-tie"></i></span>
+                                        <input id="institucion" type="text" class="form-control" name="institucion"
+                                       placeholder="Ingresar Institución">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--FIN DE INSTITUCION DONDE SE DESARROLLARA LA MODALIDAD-->
 
                             <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                                 <div class="form-group">
@@ -302,7 +313,7 @@
 
                             <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                                 <div class="form-group">
-                                    <label>Propuesta de Tema(*)</label>
+                                    <label>Atestados(*) </label><h6>Perfil, Dictamen de aprobación de modalidad, carta de la institución, constancia de inscripción por parte de la académica</h6>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-file-pdf-o"></i></span>
                                         <input type="file" accept="application/pdf" id="propuesta" name="propuesta"
@@ -349,6 +360,9 @@
                             <!--celda-->
                             <th width="25%">Tema</th>
                             <!--celda-->
+                             <!--celda-->
+                             <th width="20%">Institución</th>
+                             <!--celda-->
 
                             <th>Tipo de Proceso</th>
                             <!--celda-->
@@ -371,7 +385,7 @@
                                     <td hidden="">{{ $grup->idgrupo }}</td>
                                     <td>{{ $grup->codigoG }}</td>
                                     <td>{{ $grup->tema }}</td>
-
+                                    <td>{{ $grup->institucion }}</td>
                                     <td>
                                         @foreach ($tiproceso as $tip)
                                             @if ($tip->idtipotema == $grup->idtipotema)
@@ -455,6 +469,9 @@
                             <!--celda-->
                             <th width="25%">Tema</th>
                             <!--celda-->
+                             <!--celda-->
+                             <th width="20%">Institución</th>
+                             <!--celda-->
 
                             <th>Tipo de Proceso</th>
                             <!--celda-->
@@ -475,6 +492,7 @@
                                 <td hidden="">{{ $grup->idgrupo }}</td>
                                 <td>{{ $grup->codigoG }}</td>
                                 <td>{{ $grup->tema }}</td>
+                                <td>{{ $grup->institucion }}</td>
                                 <td>
                                     @foreach ($tiproceso as $tip)
                                         @if ($tip->idtipotema == $grup->idtipotema)
@@ -550,7 +568,10 @@
                             <!--celda-->
                             <th width="25%">Tema</th>
                             <!--celda-->
-
+                             <!--celda-->
+                             <th width="20%">Institución</th>
+                             <!--celda-->
+                        
                             <th>Tipo de Proceso</th>
                             <!--celda-->
 
@@ -571,6 +592,7 @@
                                     <td hidden="">{{ $grup->idgrupo }}</td>
                                     <td>{{ $grup->codigoG }}</td>
                                     <td>{{ $grup->tema }}</td>
+                                    <td>{{ $grup->institucion}}</td>
                                     <td>
                                         @foreach ($tiproceso as $tip)
                                             @if ($tip->idtipotema == $grup->idtipotema)
@@ -642,6 +664,9 @@
                             <!--celda-->
                             <th width="25%">Tema</th>
                             <!--celda-->
+                             <!--celda-->
+                             <th width="20%">Institución</th>
+                             <!--celda-->
 
                             <th>Tipo de Proceso</th>
                             <!--celda-->
@@ -663,6 +688,7 @@
                                     <td hidden="">{{ $grup->idgrupo }}</td>
                                     <td>{{ $grup->codigoG }}</td>
                                     <td>{{ $grup->tema }}</td>
+                                    <td>{{ $grup->institucion }}</td>
                                     <td>
                                         @foreach ($tiproceso as $tip)
                                             @if ($tip->idtipotema == $grup->idtipotema)
@@ -744,7 +770,9 @@
                             <!--celda-->
                             <th width="25%">Tema</th>
                             <!--celda-->
-
+                             <!--celda-->
+                             <th width="20%">Institución</th>
+                             <!--celda-->
                             <th>Tipo de Proceso</th>
                             <!--celda-->
 
@@ -772,6 +800,7 @@
                                                     <td hidden="">{{ $grup->idgrupo }}</td>
                                                     <td>{{ $grup->codigoG }}</td>
                                                     <td>{{ $grup->tema }}</td>
+                                                    <td>{{ $grup->institucion }}</td>
                                                     <td>
                                                         @foreach ($tiproceso as $tip)
                                                             @if ($tip->idtipotema == $grup->idtipotema)
@@ -865,7 +894,9 @@
                             <!--celda-->
                             <th width="25%">Tema</th>
                             <!--celda-->
-
+                             <!--celda-->
+                             <th width="20%">Institución</th>
+                             <!--celda-->
                             <th>Tipo de Proceso</th>
                             <!--celda-->
 
@@ -893,6 +924,7 @@
                                                     <td hidden="">{{ $grup->idgrupo }}</td>
                                                     <td>{{ $grup->codigoG }}</td>
                                                     <td>{{ $grup->tema }}</td>
+                                                    <td>{{ $grup->institucion}}</td>
                                                     <td>
                                                         @foreach ($tiproceso as $tip)
                                                             @if ($tip->idtipotema == $grup->idtipotema)
@@ -950,7 +982,7 @@
                                                 @include('ues.grupos.ver')
 
                                                 <!-- @include('ues.grupos.modal')
-                   @include('ues.grupos.modalup') -->
+                                                 @include('ues.grupos.modalup') -->
                                             @endif
                                         @endif
                                     @endforeach
@@ -1104,7 +1136,30 @@
 
                         }
                     },
+                    institucion: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Ingrese la institucion del Grupo '
+                            },
+                            stringLength: {
+                                min: 11,
+                                //                        max:11,
+                                // message: 'Debe ingresar 11 caracteres'
+                            },
+                            remote: {
+                                message: 'codigo no disponible',
+                                url: "{{ url('/institucionValid/') }}",
+                                type: 'POST',
+                                data: {
+                                    _token: function() {
+                                        return "{{ csrf_token() }}";
+                                    }
+                                }
 
+                            }
+
+                        }
+                    },
                 }
             }).on('success.form.bv', function(e) {
 

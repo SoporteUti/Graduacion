@@ -106,11 +106,12 @@ class GrupoController extends Controller
   //////////funcion guardar
   public function store(GrupoFormRequest $request)
   {
-
+   // echo dd($request);
     $grupos = new Grupo;
     $nuevaetapa = nuevaetapa::all();
     $grupos->codigoG = $request->get('codigoG');
     $grupos->tema = $request->get('tema');
+    $grupos->institucion = $request->get('institucion');
     $grupos->fecharegistro = $request->get('fecharegistro');
     $grupos->idtipotema = $request->get('idtipoT');
     $grupos->idcarrera = Input::get('idcarrera');
@@ -708,6 +709,38 @@ class GrupoController extends Controller
     }
   }
 
+  //para validar la institucion
+   /*--Valida Codigo depto--*/
+   public function postInstitucionValid(Request $request)
+   {
+ 
+     
+    $id = $request->input('id');
+
+    if (isset($id)) {
+      $usuR = $request->input('institucion');
+      $isAvailable = true;
+      $resultado = Grupo::where('institucion', '=', $usuR)->where('id', '!=', $id)->count();
+      if ($resultado == 1) {
+        $isAvailable = false;
+      }
+      echo json_encode(array(
+        'valid' => $isAvailable,
+      ));
+    } else {
+      $usuR = $request->input('institucion');
+      $isAvailable = true;
+      $resultado = Grupo::where('institucion', '=', $usuR)->count();
+      if ($resultado == 1) {
+        $isAvailable = false;
+      }
+      echo json_encode(array(
+        'valid' => $isAvailable,
+      ));
+    }
+   }
+
+  //para validar la institucion fin
 
 
   /*--Valida Codigo depto--*/
