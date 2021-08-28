@@ -758,6 +758,18 @@
                                 </div>
                             </div>
                         </div>
+                        <!--para mostrar la institucion-->
+                        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                            <div class="form-group">
+                                <label>Institución</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input readonly="" type="text" value="<?php echo e($grupos->institucion); ?>" name="institucion" id="institucion"
+                                        class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <!--fin de mostrar institucion-->
 
                         <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                             <div class="form-group">
