@@ -138,8 +138,12 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
 
         <?php foreach($grupo as $gru): ?>
             <?php if($gru->codigoG == $codigo): ?>
-                <?php $tema = $gru->tema;
-                $idgrupo = $gru->idgrupo;
+                <?php 
+                //aqui extraen informacion del grupo entonces obtendre la institucion aqui
+                //porque estan en la misma tabla
+                $tema       = $gru->tema;
+                $idgrupo    = $gru->idgrupo;
+                $institucion = $gru->institucion;
                 ?>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -205,20 +209,16 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
                         <?php endforeach; ?>
                     <?php endif; ?>
                 <?php endforeach; ?>
-
-
-
-
             </tbody>
-
-
-
-
         </table>
+<!--fin de mostrar a los alumnos-->
+<!--muestra el tema-->
         <p align="justify">
             <h> Tema: <?php echo e($tema); ?></h>
         </p>
+<!--fin de mostrar el tema-->
 
+<!--inicio para mostrar los docentes asesores-->
         <p align="justify">
             <h> Docente/es Asesor/es:</h>
         </p>
@@ -262,10 +262,19 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
                 <?php endforeach; ?>
             </tbody>
         </table>
+<!--fin de mostrar docentes asesores-->
+
+<!--Inicio de mostrar institucion-->
+<p align="justify">
+    <h>institución: <?php echo e($institucion); ?></h>
+</p>
+<!--fin de mostrar el nombre de la institucion-->
+
+<!--informacion adicional-->
         <p align="justify">
             <h><?php echo e($en->infoad); ?></h>
         </p>
-
+<!--fin de informacion adicional-->
 
         <p align="justify">
             <h><?php echo e($en->despedida); ?></h>

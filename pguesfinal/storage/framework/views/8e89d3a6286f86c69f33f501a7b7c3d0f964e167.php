@@ -68,9 +68,17 @@ role="dialog" tabindex="-1"  id="imprimirc-1-<?php echo e($gs->idgrupsol); ?>">
                     <textarea id="tema" readonly=""    value="<?php echo e($grupos->tema); ?>"  class="form-control" name="tema"  ><?php echo e($grupos->tema); ?></textarea>
                 </div>          
             </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" >
+            <div class="form-group"> 
+            <label>Institución</label>
+                <div class="input-group">                   
+                    <span class="input-group-addon"><i class="fa fa-black-tie"></i></span>
+                    <input readonly="" type="text" value="<?php echo e($grupos->institucion); ?>" name="institucion" id="institucion" class="form-control"  >
+                </div>          
             </div>
-
-            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">  
+        </div>
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">  
           <div class="form-group"> 
                 <label>Integrantes </label>
                 <div class="input-group">
