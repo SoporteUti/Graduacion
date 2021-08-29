@@ -1585,8 +1585,8 @@ class solicitudController extends Controller
             $nombre = $file->getClientOriginalName();
             $ruta = $request->get('idgrupo');
             //indicamos que queremos guardar un nuevo archivo en el disco local
-            \Storage::disk('documentosenviados')->put('/' . $ruta . '/' . $ruta . '-solicitud-aprobaciontema.pdf',  \File::get($file));
-            $gs->pdf = $ruta . '/' . $ruta . '-solicitud-aprobaciontema.pdf';
+            \Storage::disk('documentosenviados')->put('/' . $ruta . '/' . $ruta . '-solicitud-aprobacionModalidad.pdf',  \File::get($file));
+            $gs->pdf = $ruta . '/' . $ruta . '-solicitud-aprobacionModalidad.pdf';
             $gs->update();
         }
 
@@ -1596,8 +1596,8 @@ class solicitudController extends Controller
             $nombre = $file->getClientOriginalName();
             $ruta = $request->get('idgrupo');
             //indicamos que queremos guardar un nuevo archivo en el disco local
-            \Storage::disk('documentosrecibidos')->put('/' . $ruta . '/' . $ruta . '-aprobaciontema.pdf',  \File::get($file));
-            $gs->pdfrecibido = $ruta . '/' . $ruta . '-aprobaciontema.pdf';
+            \Storage::disk('documentosrecibidos')->put('/' . $ruta . '/' . $ruta . '-aprobacionModalidad.pdf',  \File::get($file));
+            $gs->pdfrecibido = $ruta . '/' . $ruta . '-aprobacionModalidad.pdf';
             $gs->update();
         }
         if ($request['nacuerdo'] != null) {
