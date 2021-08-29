@@ -626,6 +626,7 @@ class GrupoController extends Controller
     $grupos->codigoG = $request->get('codigoG');
     $grupos->fecharegistro = $request->get('fecharegistro');
     $grupos->tema = $request->get('tema');
+    $grupos->institucion = $request->get('institucion');
     $grupos->idtipotema = $request->get('idtipoT');
     //$grupos->idcarrera=$request->get('carr');
     $grupos->condicion = true;
