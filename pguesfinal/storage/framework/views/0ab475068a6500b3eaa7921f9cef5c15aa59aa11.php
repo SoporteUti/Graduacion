@@ -70,7 +70,18 @@ role="dialog" tabindex="-1" id="modal-edit-<?php echo e($grup->idgrupo); ?>">
                 </div>          
             </div>
           </div>
-
+          <!--para modificar institucion-->
+          <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" >  
+            <div class="form-group"> 
+               <label>Tema </label>
+               <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-black-tie"></i></span>
+                <input id="institucion" type="text" value="<?php echo e($grup->institucion); ?>" class="form-control" name="institucion"
+               placeholder="Ingresar Institución">
+               </div>          
+           </div>
+         </div>
+          <!--fin de para modificar institucion-->
         <!--=====================================
         Editar Integrantes
         ======================================-->
