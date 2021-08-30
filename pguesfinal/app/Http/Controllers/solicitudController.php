@@ -247,7 +247,7 @@ class solicitudController extends Controller
         $rol = Rol::all();
         $rol_carrera = Rol_carrera::all();
         $pdf = \PDF::loadview('ues.solicitudes.aprobaciontd', ["codigo" => $query], compact('departamento', 'rol', 'carrera', 'rol_carrera', 'grupo', 'estudianteg', 'estudiante', 'tipotema', 'personas', 'asesores', 'docentes', 'user', 'enunciado'));
-        return $pdf->download('Aprobacion_Tema_Director_' . $query . '.pdf');
+        return $pdf->download('Aprobacion_Modalidad_Director_' . $query . '.pdf');
     }
 
 
