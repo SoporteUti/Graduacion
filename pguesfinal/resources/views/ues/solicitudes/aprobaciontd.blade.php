@@ -126,7 +126,7 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
     @endforeach
 
 
-    <h>En atenci&oacute;n a la solicitud presentada por el Coordinador General de Trabajos de Graduaci&oacute;n del
+    <h>En atenci&oacute;n a la solicitud presentada por el Coordinador General de Trabajos de Grado del
         departamento de {{ $depto }}, {{ $coor }} y con el Visto Bueno del Jefe del departamento de
         {{ $depto }}, {{ $jefe }} y
         <!--enunciado de la solucitud-->
@@ -135,7 +135,7 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
                 {{ $en->enunciado }}
             @endif
         @endforeach, tengo a bien solicitarles muy respetuosamente la aprobaci&oacute;n del trabajo
-        de graduaci&oacute;n que se detalla a continuaci&oacute;n as&iacute; como el nombramiento de los Docentes
+        de grado que se detalla a continuaci&oacute;n as&iacute; como el nombramiento de los Docentes
         Asesores:
     </h>
     <!--fin de enunciado-->
@@ -163,7 +163,7 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
 @foreach ($grupo as $gru)
     @if ($gru->codigoG == $codigo)
         <p align="justify">
-            <h>Trabajo de Graduaci&oacute;n código: {{ $gru->codigoG }}</h>
+            <h>Trabajo de Grado código: {{ $gru->codigoG }}</h>
         </p>
     @endif
 @endforeach
@@ -295,7 +295,7 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
 
 <p align="justify">
     <h>Anexo la correspondencia relacionada a la solicitud enviada por el Coordinador General de Trabajos de
-        Graduaci&oacute;n del departamento de {{ $depto }} con el respectivo visto bueno del Jefe de
+        Grado del departamento de {{ $depto }} con el respectivo visto bueno del Jefe de
         Departamento</h>
 </p>
 
@@ -348,7 +348,7 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
                         @endforeach
                         @foreach ($rol as $r)
                             @if ($r->idrol == $rlc->idrol)
-                                <br>{{ $r->nombre }} DE PROCESOS DE GRADUACI&Oacute;N
+                                <br>{{ $r->nombre }} DE PROCESOS DE GRADO
                             @endif
                         @endforeach
                     @endif

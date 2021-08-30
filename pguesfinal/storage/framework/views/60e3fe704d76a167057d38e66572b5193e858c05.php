@@ -79,7 +79,7 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
                         <?php foreach($rol as $r): ?>
                             <?php if($r->idrol == $rlc->idrol && $r->idrol == 4): ?>
                                 <br>
-                                Director general de trabajos de graduaci&oacute;n
+                                Director general de trabajos de grado
                             <?php endif; ?>
                         <?php endforeach; ?>
                     <?php endif; ?>
@@ -362,7 +362,7 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
                                 <?php endforeach; ?>
                                 <?php foreach($rol as $r): ?>
                                     <?php if($r->idrol == $rlc->idrol && $r->idrol == 3): ?>
-                                        <br> Coordinador general de trabajos de graduaci&oacute;n
+                                        <br> Coordinador general de trabajos de grado
                                     <?php endif; ?>
                                 <?php endforeach; ?>
                             <?php endif; ?>
