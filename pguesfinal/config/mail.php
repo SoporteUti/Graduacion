@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'aapgues2018@gmail.com', 'name' => 'APG.UES'],
+    'from' => ['address' => 'mensajerotg.fmp@ues.edu.sv', 'name' => 'Control y Seguimiento de trabajo de graduación'],
 
     /*
     |--------------------------------------------------------------------------

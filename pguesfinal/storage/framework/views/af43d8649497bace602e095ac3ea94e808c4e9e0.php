@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
  
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <title>APGUES</title>
+ <title>STG</title>
  <!-- Tell the browser to be responsive to screen width -->
  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
  <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
@@ -801,7 +801,7 @@ border-radius: 50%;
     "sProcessing":     "Procesando...",
     "sLengthMenu":     "Mostrar _MENU_ registros",
     "sZeroRecords":    "No se encontraron resultados",
-    "sEmptyTable":     "Ningún dato disponible en esta tabla",
+    "sEmptyTable":     "Ningï¿½n dato disponible en esta tabla",
     "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
     "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
     "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
@@ -812,7 +812,7 @@ border-radius: 50%;
     "sLoadingRecords": "Cargando...",
     "oPaginate": {
         "sFirst":    "Primero",
-        "sLast":     "Último",
+        "sLast":     "ï¿½ltimo",
         "sNext":     "Siguiente",
         "sPrevious": "Anterior"
     },

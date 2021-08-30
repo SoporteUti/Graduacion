@@ -266,7 +266,7 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
 
 <!--Inicio de mostrar institucion-->
 <p align="justify">
-    <h>institución: <?php echo e($institucion); ?></h>
+    <h>Institución: <?php echo e($institucion); ?></h>
 </p>
 <!--fin de mostrar el nombre de la institucion-->
 
