@@ -139,8 +139,26 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
         Asesores:
     </h>
     <!--fin de enunciado-->
+<!--MODALIDAD A LA QUE APLICA-->
+<p align="justify">
+	<h>
+		@foreach ($grupo as $gr)
+			@if ($gr->codigoG==$codigo)
+				@foreach ($tipotema as $mod)
+					@if ($gr->idtipotema==$mod->idtipotema)
+					Modalidad: {{$mod->tema}}  
+					@endif
+				@endforeach
+			@endif
+	   
+		@endforeach
+	  
+	</h>
+</p>
+<!--FINDE DE LA MODALIDAD A LA QUE APLICA-->
 
-    <!--para colocar el codigo de grupo-->
+
+	<!--para colocar el codigo de grupo-->
 </p>
 @foreach ($grupo as $gru)
     @if ($gru->codigoG == $codigo)
@@ -152,10 +170,13 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
 <!--fin de colocar el codigo-->
 
 
-
+<!--PARA MOSTRAR EL NOMBRE LOS ALUMNOS QUE CONFORMAN EL GRUPO-->
 @foreach ($grupo as $gru)
     @if ($gru->codigoG == $codigo)
-        <?php $tema = $gru->tema; ?>
+        <?php 
+		$tema 		 = $gru->tema;
+		$institucion = $gru->institucion;
+		?>
     @endif
 @endforeach
 <table class="table table-hover" width="600px" cellspacing="1px" cellpadding="1px" align="center">
@@ -187,9 +208,6 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
             @endforeach
         @endif
     @endforeach
-
-
-
     <tbody>
         <?php $t = 0; ?>
         @foreach ($grupo as $gru)
@@ -218,20 +236,17 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
                 @endforeach
             @endif
         @endforeach
-
-
-
-
     </tbody>
-
-
-
-
 </table>
+<!--FIN DE MOSTRAR LOS ALUMNOS-->
+
+<!--PARA MOSTRAR EL TEMA-->
 <p align="justify">
     <h> Tema: {{ $tema }}</h>
 </p>
+<!--FIN DE MOSTRAR EL TEMA-->
 
+<!--COMIENZAN LOS DOCENTES ASESORES-->
 <p align="justify">
     <h> Docente/es Asesor/es propuestos:</h>
 </p>
@@ -270,6 +285,14 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
         @endforeach
     </tbody>
 </table>
+<!--FIN DE DOCENTES DE ASESORES PROPUESTO-->
+
+<!--INSTITUCIÓN EN LA QUE REALIZAR LA MODALIDAD-->
+<p align="justify">
+    <h>Institución: {{ $institucion }}</h>
+</p>
+<!--FIN DE LA INSTITUCIÓN-->
+
 <p align="justify">
     <h>Anexo la correspondencia relacionada a la solicitud enviada por el Coordinador General de Trabajos de
         Graduaci&oacute;n del departamento de {{ $depto }} con el respectivo visto bueno del Jefe de
