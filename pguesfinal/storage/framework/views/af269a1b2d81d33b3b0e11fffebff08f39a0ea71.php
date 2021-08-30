@@ -5,7 +5,7 @@ role="dialog" tabindex="-1" id="imprimird-1-<?php echo e($gs->idgrupsol); ?>">
 <div class="modal-dialog">
   <div class="modal-content">
     <div class="modal-header" style="background:#00a65a; color:white">
-      <h4 class="modal-title">Imprimir Aprobación de Tema</h4>
+      <h4 class="modal-title">Imprimir Aprobación de Modalidad</h4>
     </div>
     <div class="modal-body">
 
@@ -49,7 +49,7 @@ role="dialog" tabindex="-1" id="imprimird-1-<?php echo e($gs->idgrupsol); ?>">
             </div>
             </div>
             
-      <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" >
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" >
             <div class="form-group"> 
             <label>Tema</label>
                 <div class="input-group">                   
@@ -57,7 +57,17 @@ role="dialog" tabindex="-1" id="imprimird-1-<?php echo e($gs->idgrupsol); ?>">
                     <textarea id="tema" readonly=""    value="<?php echo e($grupos->tema); ?>"  class="form-control" name="tema"  ><?php echo e($grupos->tema); ?></textarea>
                 </div>          
             </div>
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" >
+            <div class="form-group"> 
+            <label>Institución</label>
+                <div class="input-group">                   
+                    <span class="input-group-addon"><i class="fa fa-black-tie"></i></span>
+                    <input readonly="" type="text" value="<?php echo e($grupos->institucion); ?>" name="institucion" id="institucion" class="form-control"  >
+                </div>          
             </div>
+        </div>
 
             <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">  
           <div class="form-group"> 
