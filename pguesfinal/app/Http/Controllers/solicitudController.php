@@ -289,7 +289,7 @@ class solicitudController extends Controller
 
         return Redirect()->back()->with($notificacion);
     }
-
+//*******************PARA IMPRIMIR LA SOLICITUD DE RENUNUNCIA
     public function imprimir9coordinador()
     {
         $query = Input::get('codigo');
@@ -344,7 +344,7 @@ class solicitudController extends Controller
         $pdf = \PDF::loadview('ues.solicitudes.renunciaD', ["codigo" => $query, "estudianteR" => $estudianteR], compact('departamento', 'rol', 'carrera', 'rol_carrera', 'grupo', 'estudianteg', 'estudiante', 'tipotema', 'personas', 'asesores', 'docentes', 'user', 'gs1', 'enunciado'));
         return $pdf->download('Solicitud_Renuncia_Director ' . $estudianteR . '.pdf');
     }
-
+//***********FIN DE IMPRIMIR SOLICITUD DE RENUNCIA */
     public function registrar9director(Request $request)
     {
 

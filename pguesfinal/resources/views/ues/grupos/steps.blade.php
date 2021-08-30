@@ -51,7 +51,7 @@
                                     <li><a href="#solicitud-10" data-toggle="modal" data-target="#solicitud-10">Impugnación
                                             de resultados</a></li>
                                     <li><a href="#solicitud-9" data-toggle="modal" data-target="#solicitud-9">Renuncia al
-                                            Proceso de Graduación</a></li>
+                                            Proceso de Grado</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -1547,13 +1547,13 @@
             {{ Form::Close() }}
         </div>
 
-        <!-- solicitud 9 -->
+        <!-- solicitud 9 renuncia de modalidad -->
         <div class="modal fade" id="solicitud-9">
             {{ Form::Open(['action' => ['solicitudController@renuncia'], 'route' => ['ues.solicitudes.renuncia'], 'method' => 'post', 'files' => 'true']) }}
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="background:#00a65a; color:white">
-                        <h4 class="modal-title">Renuncia al Proceso de Graduación</h4>
+                        <h4 class="modal-title">Renuncia al Proceso de Grado</h4>
                     </div>
                     <div class="modal-body">
 
