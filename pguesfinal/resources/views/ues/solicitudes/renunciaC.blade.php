@@ -65,7 +65,7 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
                 @foreach ($rol as $r)
                     @if ($r->idrol == $rlc->idrol && $r->idrol == 4)
                         <br>
-                        Director General de Trabajos de Graduaci&oacute;n
+                        Director General de Trabajos de Grado
                     @endif
                 @endforeach
             @endif
@@ -92,7 +92,7 @@ Universidad de El Salvador -->
                 {{ $en->enunciado }}
             @endif
         @endforeach. Le solicitamos interponga sus buenos oficios para que se gestione ante la
-        Junta Directiva de esta Facultad la <strong>Renuncia al Proceso de Graduaci&oacute;n</strong> y autorice la
+        Junta Directiva de esta Facultad la <strong>Renuncia al Proceso de Grado</strong> y autorice la
         <strong>Inscripci&oacute;n de un nuevo Proceso</strong> para el estudiante miembro del grupo que se detalla
         acontinuaci&oacute;n:
     </h>
@@ -102,7 +102,7 @@ Universidad de El Salvador -->
 @foreach ($grupo as $gru)
     @if ($gru->codigoG == $codigo)
         <p align="justify">
-            <h>Trabajo de Graduaci&oacute;n código: {{ $gru->codigoG }}</h>
+            <h>Trabajo de Grado código: {{ $gru->codigoG }}</h>
         </p>
     @endif
 @endforeach
@@ -232,7 +232,7 @@ Universidad de El Salvador -->
         if ($gs1) {
             switch ($gs1->idsolicitud) {
                 case 1:
-                    echo 'Acuerdo de Aprobaci&oacute;n de Tema: ' . $gs1->nacuerdo;
+                    echo 'Acuerdo de Aprobaci&oacute;n de Modalidad: ' . $gs1->nacuerdo;
                     break;
                 case 3:
                     echo 'Acuerdo de Pr&oacute;rroga a Junta Directiva: ' . $gs1->nacuerdo;
@@ -244,7 +244,7 @@ Universidad de El Salvador -->
                     echo 'Acuerdo de Ratificaci&oacute;n de los Resultados: ' . $gs1->nacuerdo;
                     break;
                 case 6:
-                    echo 'Acuerdo de Modificaci&oacute;n del Tema: ' . $gs1->nacuerdo;
+                    echo 'Acuerdo de Modificaci&oacute;n de Modalidad: ' . $gs1->nacuerdo;
                     break;
         
                 case 8:
@@ -252,7 +252,7 @@ Universidad de El Salvador -->
                     break;
         
                 case 9:
-                    echo 'Acuerdo de Renuncia al Proceso de Graduaci&oacute;n: ' . $gs1->nacuerdo;
+                    echo 'Acuerdo de Renuncia al Proceso de Grado: ' . $gs1->nacuerdo;
                     break;
             }
         }
@@ -316,7 +316,7 @@ Universidad de El Salvador -->
                         @endforeach
                         @foreach ($rol as $r)
                             @if ($r->idrol == $rlc->idrol && $r->idrol == 3)
-                                Coordinador General de Trabajos de Graduaci&oacute;n
+                                Coordinador General de Trabajos de Grado
                             @endif
                         @endforeach
                     @endif
