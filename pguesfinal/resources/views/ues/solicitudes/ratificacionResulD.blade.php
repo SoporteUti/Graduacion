@@ -115,21 +115,17 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
    @endforeach
 
 
-<h >En atenci&oacute;n a la solicitud presentada por el Coordinador General de Trabajos de Graduaci&oacute;n del {{$depto}}, {{$coor}} y con el Visto Bueno del Jefe del {{$depto}}, {{$jefe}} y 
+<h >En atenci&oacute;n a la solicitud presentada por el Coordinador General de Trabajos de Grado del {{$depto}}, {{$coor}} y con el Visto Bueno del Jefe del {{$depto}}, {{$jefe}} y 
   @foreach($enunciado as $en)
   @if($en->idsolicitud==5 && $en->idrol==4)
   {{$en->enunciado}}
   @endif
-  @endforeach, tengo a bien solicitarles muy respetuosamente la <strong>Ratificación de Resultados</strong> del trabajo de graduaci&oacute;n que se detalla a continuaci&oacute;n:</h>
+  @endforeach, tengo a bien solicitarles muy respetuosamente la <strong>Ratificación de Resultados</strong> del trabajo de grado que se detalla a continuaci&oacute;n:</h>
 </p>@foreach($grupo as $gru)
 	@if($gru->codigoG==$codigo)
-<p align="justify"><h>Trabajo de Graduaci&oacute;n código: {{$gru->codigoG}}</h></p>	
+<p align="justify"><h>Trabajo de Grado código: {{$gru->codigoG}}</h></p>	
 	@endif
 	@endforeach
-
-
-
-
 			@foreach($grupo as $gru)
 			@if($gru->codigoG==$codigo)
 			 <?php $tema =$gru->tema;	$tipotema=$gru->idtipotema; $idgrupo=$gru->idgrupo?>
@@ -231,7 +227,7 @@ if($gs1){
 switch ($gs1->idsolicitud) {
 
 case 1:
-echo "Acuerdo de Aprobaci&oacute;n de Tema: ".$gs1->nacuerdo;
+echo "Acuerdo de Aprobaci&oacute;n de Modalidad: ".$gs1->nacuerdo;
 break;
 	case 3:
 	echo "Acuerdo de Pr&oacute;rroga a Junta Directiva: ".$gs1->nacuerdo;
@@ -251,7 +247,7 @@ echo "Acuerdo de Reprobaci&oacute;n por abandono: ".$gs1->nacuerdo;
            break;
 
 case 9:
-echo "Acuerdo de Renuncia al Proceso de Graduaci&oacute;n: ".$gs1->nacuerdo;
+echo "Acuerdo de Renuncia al Proceso de Grado: ".$gs1->nacuerdo;
 break;
         }
 }
@@ -262,9 +258,7 @@ break;
 <p align="justify"><h >Sin otro particular. Atentamente.</h></p>
 
 <h4 align="center">"HACIA LA LIBERTAD POR LA CULTURA"</h4>
-<br>
-<br>
-<br>
+{{--quite un br--}}
 <div><h align="center"> 
 	@foreach($rol_carrera as $rlc)
    	@if($rlc->idrol==4 )
@@ -279,7 +273,7 @@ break;
    @endforeach
    @foreach($rol as $r)
    @if($r->idrol==$rlc->idrol)
-   <br>{{$r->nombre}} DE PROCESOS DE GRADUACI&Oacute;N
+   <br>{{$r->nombre}} DE PROCESOS DE GRADO
    @endif
    @endforeach
    @endif

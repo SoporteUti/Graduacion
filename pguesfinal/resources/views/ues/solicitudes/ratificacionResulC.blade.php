@@ -61,7 +61,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
    @foreach($rol as $r)
    @if($r->idrol==$rlc->idrol && $r->idrol==4)
    <br>
-    Director General de Trabajos de Graduación
+    Director General de Trabajos de Grado
    @endif
    @endforeach
    @endif
@@ -75,7 +75,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
 	@if($en->idsolicitud==5 && $en->idrol==3)
 	{{$en->enunciado}}
 	@endif
-	@endforeach, le solicitamos  que interponga sus buenos oficios ante la Junta Directiva de ésta Facultad para que sean ratificados los resultados obtenidos en los  trabajos de graduaci&oacute;n.</h></p>
+	@endforeach, le solicitamos  que interponga sus buenos oficios ante la Junta Directiva de ésta Facultad para que sean ratificados los resultados obtenidos en los  trabajos de grado.</h></p>
 
 @foreach($grupo as $gru)
  @if($gru->codigoG==$codigo)
@@ -149,7 +149,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
          </tbody>
    </table>
 <br>
-<p align="justify"><h >Se anexa el Acta de Final  de Trabajo de Graduaci&oacute;n, la cual incluye el cuadro resumen de las notas obtenidas por los Bachilleres en cada una de las etapas de su proyecto.</h></p>
+<p align="justify"><h >Se anexa el Acta de Final  de Trabajo de Grado, la cual incluye el cuadro resumen de las notas obtenidas por los Bachilleres en cada una de las etapas de su proyecto.</h></p>
 <h >Sin otro particular. Atentamente.</h>
 <br>
 
@@ -195,7 +195,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
    @foreach($rol as $r)
    @if($r->idrol==$rlc->idrol && $r->idrol==3)
    <br>
-   Coordinador General de Trabajos de Graduaci&oacute;n
+   Coordinador General de Trabajos de Grado
    @endif
    @endforeach
    @endif
