@@ -61,7 +61,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
    @foreach($rol as $r)
    @if($r->idrol==$rlc->idrol && $r->idrol==4)
    <br>
-    Director general de trabajos de graduación
+    Director general de trabajos de grado
    @endif
    @endforeach
    @endif
@@ -75,7 +75,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
 	@if($en->idsolicitud==10 && $en->idrol==3)
 	{{$en->enunciado}}
 	@endif
-	@endforeach, solicitamos  que interponga sus buenos oficios ante la Junta Directiva de &eacute;sta Facultad para que sean <strong>Impugnados los Resultados</strong> obtenidos en el  Trabajo de Graduaci&oacute;n.</h></p>
+	@endforeach, solicitamos  que interponga sus buenos oficios ante la Junta Directiva de &eacute;sta Facultad para que sean <strong>Impugnados los Resultados</strong> obtenidos en el  Trabajo de Grado.</h></p>
 
 @foreach($grupo as $gru)
  @if($gru->codigoG==$codigo)
@@ -152,9 +152,6 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
 <p align="justify"><h >Se anexa la solicitud  presentada por los Bachilleres en donde expresan los motivos por los cuales estan inconformes con las calificaciones obtenidas.</h></p>
 <h >Sin otro particular. Atentamente.</h>
 <br>
-
-
-
 <div class="panel panel-default">
 	<div class="panel-body">
 		
@@ -194,7 +191,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
    @endforeach
    @foreach($rol as $r)
    @if($r->idrol==$rlc->idrol && $r->idrol==3)
-   <br>Coordinador General de Trabajos de Graduación
+   <br>Coordinador General de Trabajos de Grado
    @endif
    @endforeach
    @endif
