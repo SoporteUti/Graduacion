@@ -120,20 +120,17 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
    @endforeach
 
 
-<h >< En atenci&oacute;n a la solicitud presentada por el Coordinador General de Trabajos de Graduaci&oacute;n del {{$depto}}, {{$coor}} y con el Visto Bueno del Jefe del {{$depto}}, {{$jefe}} y  
+<h >< En atenci&oacute;n a la solicitud presentada por el Coordinador General de Trabajos de Grado del {{$depto}}, {{$coor}} y con el Visto Bueno del Jefe del {{$depto}}, {{$jefe}} y  
 @foreach($enunciado as $en)
 	@if($en->idsolicitud==9 && $en->idrol==4)
 	{{$en->enunciado}}
 	@endif
-	@endforeach, tengo a bien solicitarles muy respetuosamente se tramite el  <strong>abandono al Trabajo de Graduaci&oacute;n</strong> que se detalla a continuaci&oacute;n:</h>
+	@endforeach, tengo a bien solicitarles muy respetuosamente se tramite el  <strong>abandono al Trabajo de Grado</strong> que se detalla a continuaci&oacute;n:</h>
 </p>@foreach($grupo as $gru)
 	@if($gru->codigoG==$codigo)
-<p align="justify"><h>Trabajo de Graduaci&oacute;n código: {{$gru->codigoG}}</h></p>	
+<p align="justify"><h>Trabajo de Grado código: {{$gru->codigoG}}</h></p>	
 	@endif
 	@endforeach
-
-
-
 
 			@foreach($grupo as $gru)
 			@if($gru->codigoG==$codigo)
@@ -144,7 +141,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
 <br>
 <br>
 
-<h>Nombre del Estudiante que interpone la renuncia al Trabajo de Graduaci&oacute;n: <strong>{{$estudianteR}}</strong> </h>
+<h>Nombre del Estudiante que interpone la renuncia al Trabajo de Grado <strong>{{$estudianteR}}</strong> </h>
 <br>
 <br>
 <h> <strong>
@@ -153,7 +150,7 @@ if($gs1){
 switch ($gs1->idsolicitud) {
 
 case 1:
-echo "Acuerdo de Aprobaci&oacute;n de Tema: ".$gs1->nacuerdo;
+echo "Acuerdo de Aprobaci&oacute;n de Modalidad: ".$gs1->nacuerdo;
 break;
 	case 3:
 	echo "Acuerdo de Pr&oacute;rroga a Junta Directiva: ".$gs1->nacuerdo;
@@ -173,7 +170,7 @@ echo "Acuerdo de Reprobaci&oacute;n por abandono: ".$gs1->nacuerdo;
            break;
 
 case 9:
-echo "Acuerdo de Renuncia al Proceso de Graduaci&oacute;n: ".$gs1->nacuerdo;
+echo "Acuerdo de Renuncia al Proceso de Grado: ".$gs1->nacuerdo;
 break;
         }
 }
@@ -201,7 +198,7 @@ break;
    @endforeach
    @foreach($rol as $r)
    @if($r->idrol==$rlc->idrol)
-   <br>{{$r->nombre}} DE PROCESOS DE GRADUACI&Oacute;N
+   <br>{{$r->nombre}} DE PROCESOS DE GRADO
    @endif
    @endforeach
    @endif
