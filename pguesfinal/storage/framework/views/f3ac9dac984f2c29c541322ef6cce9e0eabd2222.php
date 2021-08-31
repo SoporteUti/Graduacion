@@ -126,7 +126,7 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
     <?php endforeach; ?>
 
 
-    <h>En atenci&oacute;n a la solicitud presentada por el Coordinador General de Trabajos de Graduaci&oacute;n del
+    <h>En atenci&oacute;n a la solicitud presentada por el Coordinador General de Trabajos de Grado del
         departamento de <?php echo e($depto); ?>, <?php echo e($coor); ?> y con el Visto Bueno del Jefe del departamento de
         <?php echo e($depto); ?>, <?php echo e($jefe); ?> y
         <!--enunciado de la solucitud-->
@@ -136,7 +136,7 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
 
             <?php endif; ?>
         <?php endforeach; ?>, tengo a bien solicitarles muy respetuosamente la aprobaci&oacute;n del trabajo
-        de graduaci&oacute;n que se detalla a continuaci&oacute;n as&iacute; como el nombramiento de los Docentes
+        de grado que se detalla a continuaci&oacute;n as&iacute; como el nombramiento de los Docentes
         Asesores:
     </h>
     <!--fin de enunciado-->
@@ -164,7 +164,7 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
 <?php foreach($grupo as $gru): ?>
     <?php if($gru->codigoG == $codigo): ?>
         <p align="justify">
-            <h>Trabajo de Graduaci&oacute;n código: <?php echo e($gru->codigoG); ?></h>
+            <h>Trabajo de Grado código: <?php echo e($gru->codigoG); ?></h>
         </p>
     <?php endif; ?>
 <?php endforeach; ?>
@@ -297,7 +297,7 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
 
 <p align="justify">
     <h>Anexo la correspondencia relacionada a la solicitud enviada por el Coordinador General de Trabajos de
-        Graduaci&oacute;n del departamento de <?php echo e($depto); ?> con el respectivo visto bueno del Jefe de
+        Grado del departamento de <?php echo e($depto); ?> con el respectivo visto bueno del Jefe de
         Departamento</h>
 </p>
 
@@ -351,7 +351,7 @@ echo $meses[idate('m') - 1]; ?> de <?php echo date('Y'); ?></h5>
                         <?php endforeach; ?>
                         <?php foreach($rol as $r): ?>
                             <?php if($r->idrol == $rlc->idrol): ?>
-                                <br><?php echo e($r->nombre); ?> DE PROCESOS DE GRADUACI&Oacute;N
+                                <br><?php echo e($r->nombre); ?> DE PROCESOS DE GRADO
                             <?php endif; ?>
                         <?php endforeach; ?>
                     <?php endif; ?>

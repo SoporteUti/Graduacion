@@ -20,7 +20,7 @@ Universidad de El Salvador<br>
 Facultad Multidisciplinaria Paracentral<br>
 Departamento de {{$grupo->carrera->departamento->nombre}}
 <br>
-Coordinación General de Trabajos de Graduación
+Coordinación General de Trabajos de Grado
 <br>
 
 <?php
@@ -58,7 +58,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
    @foreach($rol as $r)
    @if($r->idrol==$rlc->idrol && $r->idrol==4)
    <br>
-    Director General de Trabajos de Graduación
+    Director General de Trabajos de Grado
    
             @else
                @if($r->idrol==$rlc->idrol)
@@ -74,13 +74,11 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
 
 <p align="justify"><h >Estimado/a<br>Reciban un afectuoso saludo, deseándole éxito en sus funciones cotidianas.</h></p>
 <p align="justify">
-
-
 <h >@foreach($enunciado as $en)
   @if($en->idsolicitud==4 && $en->idrol==3)
   {{$en->enunciado}}
   @endif
-  @endforeach, le solicitamos interponga sus buenos oficios para que se gestione ante la Junta Directiva de esta Facultad <STRONG>la Ratificación del Tribunal Calificador</STRONG>  para el  Trabajo de Graduación siguiente:</h>
+  @endforeach, le solicitamos interponga sus buenos oficios para que se gestione ante la Junta Directiva de esta Facultad <STRONG>la Ratificación del Tribunal Calificador</STRONG>  para el  Trabajo de Grado siguiente:</h>
 
 <p align="justify"><h></h>
          
@@ -137,8 +135,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
          </tbody>
    </table>
 <p align="justify"><h >Sin otro particular. Atentamente.</h></p>
-
-<br>
+{{--quite un <br>--}}
 <h4 align="center">"HACIA LA LIBERTAD POR LA CULTURA"</h4>
 
 <div style="width: 250px; float: left;"> 
@@ -156,7 +153,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
   @endforeach
  @foreach($rol as $r)
  @if($r->idrol==$rlc->idrol && $r->idrol==3)<br>
-   Coordinador General de Trabajos de Graduación
+   Coordinador General de Trabajos de Grado
 @endif
 @endforeach
 @endif

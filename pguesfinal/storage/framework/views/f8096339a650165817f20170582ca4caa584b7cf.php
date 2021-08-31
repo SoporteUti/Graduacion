@@ -1,5 +1,5 @@
 <div style="width: 20px;float: left;">
-<img src="{{ public_path('img/minerva2.png') }}"  width="100px" height="110px"  ></img>
+<img src="<?php echo e(public_path('img/minerva2.png')); ?>"  width="100px" height="110px"  ></img>
 </div>
 <style type="text/css">
 	p{
@@ -46,17 +46,18 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
 <p align="justify">
 
 
-<h >@foreach($enunciado as $en)
-  @if($en->idsolicitud==4 && $en->idrol==4)
-  {{$en->enunciado}}
-  @endif
-  @endforeach, le solicito interpongan sus buenos oficios para <STRONG>la Ratificación del Tribunal Calificador</STRONG>  para el  Trabajo de Grado siguiente:</h>
+<h ><?php foreach($enunciado as $en): ?>
+  <?php if($en->idsolicitud==4 && $en->idrol==4): ?>
+  <?php echo e($en->enunciado); ?>
+
+  <?php endif; ?>
+  <?php endforeach; ?>, le solicito interpongan sus buenos oficios para <STRONG>la Ratificación del Tribunal Calificador</STRONG>  para el  Trabajo de Grado siguiente:</h>
 
 <p align="justify"><h></h>
          
 
-         Código: {{$grupo->codigoG}}<br>
-         <br><h >Tema:{{$grupo->tema}}</h>   
+         Código: <?php echo e($grupo->codigoG); ?><br>
+         <br><h >Tema:<?php echo e($grupo->tema); ?></h>   
          
 </p>
 
@@ -73,14 +74,14 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
          <tbody>
          <?php $cont=1; ?>
          
-         @foreach($grupo->estudiantes_grupo as $per)
+         <?php foreach($grupo->estudiantes_grupo as $per): ?>
             <tr>
             <td><?php echo $cont; $cont++ ?>  </td>
-            <td>Br.{{$per->estudiante->persona->full_name}}</td>
-            <td>{{$per->estudiante->carnet}}</td>        
+            <td>Br.<?php echo e($per->estudiante->persona->full_name); ?></td>
+            <td><?php echo e($per->estudiante->carnet); ?></td>        
             </tr>
          
-         @endforeach
+         <?php endforeach; ?>
          
          </tbody>
    </table> 
@@ -95,40 +96,41 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
          </thead>
          <tbody>
          <?php $cont=1; ?>
-               @foreach ($dt as $d)
-               @if($d->idgrupsol==$gruposol->idgrupsol)
+               <?php foreach($dt as $d): ?>
+               <?php if($d->idgrupsol==$gruposol->idgrupsol): ?>
                <tr>
                   <td><?php echo $cont; $cont++ ?>  </td>
-                  <td>{{$d->docente->titulo}}{{ $d->docente->persona->full_name}}</td>
+                  <td><?php echo e($d->docente->titulo); ?><?php echo e($d->docente->persona->full_name); ?></td>
                </tr>
-               @endif
-         @endforeach
+               <?php endif; ?>
+         <?php endforeach; ?>
          </tbody>
    </table>
 <p align="justify"><h >Sin otro particular. Atentamente.</h></p>
-{{--quite un <br>--}}
+<?php /*quite un <br>*/ ?>
 <h4 align="center">"HACIA LA LIBERTAD POR LA CULTURA"</h4>
 
 <br>
 <div style="width: 500px;float: left;">
-      @foreach($rol_carrera as $rlc)
-    @if($rlc->idrol==4 )
-   @foreach($docentes as $d)
-        @if($d->iddocente==$rlc->iddocente)
-          @foreach($personas as $p)
-          @if($p->idpersona==$d->idpersona)
-          {{$d->titulo}}{{" "}}{{$p->nombres}}{{" "}}{{$p->apellidos}}
-          @endif
-          @endforeach
-        @endif
-   @endforeach
-   @foreach($rol as $r)
-   @if($r->idrol==$rlc->idrol)
-   <br>{{$r->nombre}} DE PROCESOS DE GRADO
-   @endif
-   @endforeach
-   @endif
-   @endforeach
+      <?php foreach($rol_carrera as $rlc): ?>
+    <?php if($rlc->idrol==4 ): ?>
+   <?php foreach($docentes as $d): ?>
+        <?php if($d->iddocente==$rlc->iddocente): ?>
+          <?php foreach($personas as $p): ?>
+          <?php if($p->idpersona==$d->idpersona): ?>
+          <?php echo e($d->titulo); ?><?php echo e(" "); ?><?php echo e($p->nombres); ?><?php echo e(" "); ?><?php echo e($p->apellidos); ?>
+
+          <?php endif; ?>
+          <?php endforeach; ?>
+        <?php endif; ?>
+   <?php endforeach; ?>
+   <?php foreach($rol as $r): ?>
+   <?php if($r->idrol==$rlc->idrol): ?>
+   <br><?php echo e($r->nombre); ?> DE PROCESOS DE GRADO
+   <?php endif; ?>
+   <?php endforeach; ?>
+   <?php endif; ?>
+   <?php endforeach; ?>
 </div>
 
 <br>

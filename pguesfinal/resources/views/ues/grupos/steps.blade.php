@@ -143,13 +143,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
         <!-- Tab panes -->
         <div class="tab-content">
             <div class="tab-pane active" id="home" role="tabpanel">
@@ -1039,8 +1032,6 @@
             {{ Form::Close() }}
         </div>
 
-
-
         {{-- cambio tema y tribunal --}}
         <div class="modal fade" id="solicitud-6">
             {{ Form::Open(['action' => ['solicitudpicController@spicontaCoordinador'], 'route' => ['ues.solicitudesconta.spicontaCoordinador'], 'method' => 'post', 'files' => 'true']) }}
@@ -1116,7 +1107,7 @@
             </div>
             {{ Form::Close() }}
         </div>
-
+        {{--Ratificacion del tribunal evaluador "crea la solicitud para que aparezca en la tabla"--}}
         <div class="modal fade" id="solicitud-4">
             {{ Form::Open(['action' => ['solicitudpicController@sRatificaciondeTribunal'], 'route' => ['ues.solicitudesconta.sRatificaciondeTribunal'], 'method' => 'post', 'files' => 'true']) }}
             <div class="modal-dialog">
@@ -1222,7 +1213,7 @@
             </div>
             {{ Form::Close() }}
         </div>
-
+        {{--fin de ratificacion de tribunar evaluador--}}
 
 
 

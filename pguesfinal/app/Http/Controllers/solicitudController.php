@@ -378,6 +378,7 @@ class solicitudController extends Controller
             $nombre = $file->getClientOriginalName();
             $ruta = $request->get('idgrupo');
             //indicamos que queremos guardar un nuevo archivo en el disco local
+            //pdfrecibido es un campo en la base de datos.....
             \Storage::disk('documentosrecibidos')->put('/' . $ruta . '/' . $ruta . '-renuncia al proceso' . $gs->idgrupsol . '.pdf',  \File::get($file));
             $gs->pdfrecibido = $ruta . '/' . $ruta . '-renuncia al proceso' . $gs->idgrupsol . '.pdf';
             $gs->update();

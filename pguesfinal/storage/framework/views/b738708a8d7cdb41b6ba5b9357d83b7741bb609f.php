@@ -50,7 +50,7 @@
                                     <li><a href="#solicitud-10" data-toggle="modal" data-target="#solicitud-10">Impugnación
                                             de resultados</a></li>
                                     <li><a href="#solicitud-9" data-toggle="modal" data-target="#solicitud-9">Renuncia al
-                                            Proceso de Graduación</a></li>
+                                            Proceso de Grado</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -142,13 +142,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
         <!-- Tab panes -->
         <div class="tab-content">
             <div class="tab-pane active" id="home" role="tabpanel">
@@ -1059,8 +1052,6 @@
 
         </div>
 
-
-
         <?php /* cambio tema y tribunal */ ?>
         <div class="modal fade" id="solicitud-6">
             <?php echo e(Form::Open(['action' => ['solicitudpicController@spicontaCoordinador'], 'route' => ['ues.solicitudesconta.spicontaCoordinador'], 'method' => 'post', 'files' => 'true'])); ?>
@@ -1138,7 +1129,7 @@
             <?php echo e(Form::Close()); ?>
 
         </div>
-
+        <?php /*Ratificacion del tribunal evaluador "crea la solicitud para que aparezca en la tabla"*/ ?>
         <div class="modal fade" id="solicitud-4">
             <?php echo e(Form::Open(['action' => ['solicitudpicController@sRatificaciondeTribunal'], 'route' => ['ues.solicitudesconta.sRatificaciondeTribunal'], 'method' => 'post', 'files' => 'true'])); ?>
 
@@ -1247,7 +1238,7 @@
             <?php echo e(Form::Close()); ?>
 
         </div>
-
+        <?php /*fin de ratificacion de tribunar evaluador*/ ?>
 
 
 
@@ -1580,14 +1571,14 @@
 
         </div>
 
-        <!-- solicitud 9 -->
+        <!-- solicitud 9 renuncia de modalidad -->
         <div class="modal fade" id="solicitud-9">
             <?php echo e(Form::Open(['action' => ['solicitudController@renuncia'], 'route' => ['ues.solicitudes.renuncia'], 'method' => 'post', 'files' => 'true'])); ?>
 
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="background:#00a65a; color:white">
-                        <h4 class="modal-title">Renuncia al Proceso de Graduación</h4>
+                        <h4 class="modal-title">Renuncia al Proceso de Grado</h4>
                     </div>
                     <div class="modal-body">
 
