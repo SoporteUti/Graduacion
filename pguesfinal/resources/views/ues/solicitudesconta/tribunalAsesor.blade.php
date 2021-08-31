@@ -12,7 +12,7 @@ Universidad de El Salvador<br>
 Facultad Multidisciplinaria Paracentral<br>
 Departamento de {{$grupo->carrera->departamento->nombre}}
 <br>
-Coordinación General de Trabajos de graduación
+Coordinación General de Trabajos de grado
 <br>
 
 <?php
@@ -72,7 +72,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
   @if($en->idsolicitud==4 && $en->idrol==5)
   {{$en->enunciado}}
   @endif
-  @endforeach, le solicitamos interponga sus buenos oficios para que se gestione ante la Junta Directiva de esta Facultad <STRONG>la ratificación del Tribunal Calificador</STRONG>  para el  Trabajo de Graduación siguiente:</h>
+  @endforeach, le solicitamos interponga sus buenos oficios para que se gestione ante la Junta Directiva de esta Facultad <STRONG>la ratificación del Tribunal Calificador</STRONG>  para el  Trabajo de Grado siguiente:</h>
 
 <p align="justify"><h></h>
          
@@ -147,7 +147,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
   @endforeach
  @foreach($rol as $r)
  @if($r->idrol==$rlc->idrol && $r->idrol==3)
-   Coordinador General de Trabajos de Graduación
+   Coordinador General de Trabajos de Grado
 @endif
 @endforeach
 @endif
