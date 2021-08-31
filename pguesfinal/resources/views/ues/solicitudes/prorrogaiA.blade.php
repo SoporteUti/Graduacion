@@ -56,7 +56,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
    @foreach($rol as $r)
    @if($r->idrol==$rlc->idrol && $r->idrol==3)
    <br>
-    Coordinador General de Trabajos de Graduación
+    Coordinador General de Trabajos de Grado
    @endif
    @endforeach
    @endif
@@ -107,7 +107,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
  debido a: {{$motivo}}</h>
 </p>@foreach($grupo as $gru)
 	@if($gru->codigoG==$codigo)
-<p align="justify"><h>Trabajo de Graduaci&oacute;n código: {{$gru->codigoG}}</h></p>	
+<p align="justify"><h>Trabajo de Grado código: {{$gru->codigoG}}</h></p>	
 	@endif
 	@endforeach
 

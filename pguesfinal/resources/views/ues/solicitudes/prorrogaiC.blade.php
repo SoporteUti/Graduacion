@@ -35,7 +35,7 @@ Facultad Multidisciplinaria Paracentral<br>
 @endforeach
 <br >
 
-Coordinaci&oacute;n General de Trabajos de Graduaci&oacute;n
+Coordinaci&oacute;n General de Trabajos de Grado
 <br >
 </h4>
 <h5 align="right">
@@ -63,7 +63,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
    @foreach($rol as $r)
    @if($r->idrol==$rlc->idrol && $r->idrol==4)
    <br>
-    Director general de trabajos de graduación
+    Director general de trabajos de grado
    @endif
    @endforeach
    @endif
@@ -74,7 +74,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
 <p align="justify">
 
 
-<h >El motivo de la presente es notificarle que el grupo que se detalla no podr&aacute; completar la etapa en el tiempo correspondiente. Remito a usted los datos del grupo que solicita la pr&oacute;rroga  interna n&uacute;mero {{$numerosoli}} de la etapa {{$etapa}}  del   Proyecto  de Trabajo de Graduaci&oacute;n:</h>
+<h >El motivo de la presente es notificarle que el grupo que se detalla no podr&aacute; completar la etapa en el tiempo correspondiente. Remito a usted los datos del grupo que solicita la pr&oacute;rroga  interna n&uacute;mero {{$numerosoli}} de la etapa {{$etapa}}  del   Proyecto  de Trabajo de Grado:</h>
 </p>@foreach($grupo as $gru)
 	@if($gru->codigoG==$codigo)
 <p align="justify"><h>Código: {{$gru->codigoG}}</h></p>	
@@ -165,7 +165,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
    @endforeach
    @foreach($rol as $r)
    @if($r->idrol==$rlc->idrol && $r->idrol==3)<br>
-   Coordinador General de Trabajos de Graduación
+   Coordinador General de Trabajos de Grado
    @endif
    @endforeach
    @endif

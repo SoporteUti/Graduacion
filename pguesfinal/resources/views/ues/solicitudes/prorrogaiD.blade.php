@@ -63,7 +63,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
 <h >Por medio de la presente le comunicamos no hemos podido completar la etapa I debido a: {{$motivo}}</h>
 </p>@foreach($grupo as $gru)
 	@if($gru->codigoG==$codigo)
-<p align="justify"><h>Trabajo de Graduación código: {{$gru->codigoG}}</h></p>	
+<p align="justify"><h>Trabajo de Grado código: {{$gru->codigoG}}</h></p>	
 	@endif
 	@endforeach
 
@@ -103,7 +103,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
 		</tbody>
 	</table>
 <p align="justify">
-<h>			Tipo de Proceso de Graduaci&oacute;n:</h>
+<h>			Tipo de Proceso de Grado:</h>
 			@foreach($grupo as $gru)
 			@if($gru->codigoG==$codigo)
 			@foreach($tipotema as $tp)
