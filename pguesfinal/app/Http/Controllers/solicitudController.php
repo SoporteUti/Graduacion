@@ -927,6 +927,7 @@ class solicitudController extends Controller
         $pdf = \PDF::loadview('ues.solicitudes.prorrogajdcoordinador', ["codigo" => $query, "motivo" => $motivo, "numerosoli" => $numerosoli], compact('departamento', 'rol', 'gso', 'carrera', 'rol_carrera', 'grupo', 'estudianteg', 'estudiante', 'tipotema', 'personas', 'asesores', 'docentes', 'user', 'enunciado'));
         return $pdf->download('Solicitud_Prorroga_JD_Coordinador ' . $query . '.pdf');
     }
+    //prorroga a junta directiva director
     public function imprimir3director()
     {
 

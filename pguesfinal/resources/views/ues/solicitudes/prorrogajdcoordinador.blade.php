@@ -35,7 +35,7 @@ Facultad Multidisciplinaria Paracentral<br>
 @endforeach
 <br >
 
-Coordinaci&oacute;n General de Trabajos de Graduaci&oacute;n
+Coordinaci&oacute;n General de Trabajos de Grado
 <br >
 </h4>
 <h5 align="right">
@@ -65,7 +65,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
    @foreach($rol as $r)
    @if($r->idrol==$rlc->idrol && $r->idrol==4)
    <br>
-    Director General de Trabajos de Graduación
+    Director General de Trabajos de Grado
    @endif
    @endforeach
    @endif
@@ -81,10 +81,10 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
 	@if($en->idsolicitud==3 && $en->idrol==3)
 	{{$en->enunciado}}
 	@endif
-	@endforeach, le solicitamos interponga sus buenos oficios para que la Junta Directiva de esta Facultad otorgue la  pr&oacute;rroga n&uacute;mero {{$numerosoli}} al Trabajo de Graduaci&oacute;n que se detalla a continuaci&oacute;n: </h>
+	@endforeach, le solicitamos interponga sus buenos oficios para que la Junta Directiva de esta Facultad otorgue la  pr&oacute;rroga n&uacute;mero {{$numerosoli}} al Trabajo de Grado que se detalla a continuaci&oacute;n: </h>
 </p>@foreach($grupo as $gru)
 	@if($gru->codigoG==$codigo)
-<p align="justify"><h>Trabajo de Graduaci&oacute;n código: {{$gru->codigoG}}</h></p>	
+<p align="justify"><h>Trabajo de Grado código: {{$gru->codigoG}}</h></p>	
 	@endif
 	@endforeach
 
@@ -201,7 +201,6 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
 
 
 <p align="justify"><h >Sin otro particular. Atentamente.</h>
-	<br>
 
 <h4 align="center">"HACIA LA LIBERTAD POR LA CULTURA"</h4></p>
 <br>
@@ -236,7 +235,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
    @endforeach
    @foreach($rol as $r)
    @if($r->idrol==$rlc->idrol && $r->idrol==3)
-   Coordinador General de Trabajos de Graduación
+   Coordinador General de Trabajos de Grado
    @endif
    @endforeach
    @endif

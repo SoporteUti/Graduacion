@@ -54,7 +54,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
    @foreach($rol as $r)
    @if($r->idrol==$rlc->idrol && $r->idrol==3)
    <br>
-    Coordinador General de Trabajos de Graduación
+    Coordinador General de Trabajos de Grado
    @endif
    @endforeach
    @endif
@@ -81,10 +81,10 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
 <p align="justify">
 
 
-<h >Por medio de la presente le comunicamos no hemos podido completar el proceso de graduaci&oacute;n en el tiempo otorgado por la Junta Directiva debido a: {{$motivo}}</h>
+<h >Por medio de la presente le comunicamos no hemos podido completar el proceso de grado en el tiempo otorgado por la Junta Directiva debido a: {{$motivo}}</h>
 </p>@foreach($grupo as $gru)
 	@if($gru->codigoG==$codigo)
-<p align="justify"><h>Trabajo de Graduaci&oacute;n código: {{$gru->codigoG}}</h></p>	
+<p align="justify"><h>Trabajo de Grado código: {{$gru->codigoG}}</h></p>	
 	@endif
 	@endforeach
 
@@ -124,7 +124,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
 		</tbody>
 	</table>
 <p align="justify">
-<h>			Tipo de Proceso de Graduaci&oacute;n:</h>
+<h>			Tipo de Proceso de Grado:</h>
 			@foreach($grupo as $gru)
 			@if($gru->codigoG==$codigo)
 			@foreach($tipotema as $tp)
@@ -141,7 +141,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
 			@endif
 			@endforeach
 </p>
-<palign="justify"><h >Por lo que solicitamos interponga sus oficios para que la Junta Directiva otorgue la pr&oacute;rroga n&uacute;mero {{$numerosoli}} para la realizaci&oacute;n del proceso de graducaci&oacute;n.</h></p>
+<palign="justify"><h >Por lo que solicitamos interponga sus oficios para que la Junta Directiva otorgue la pr&oacute;rroga n&uacute;mero {{$numerosoli}} para la realizaci&oacute;n del proceso de grado.</h></p>
 <p align="justify"><h >Sin otro particular. Atentamente.</h></p>
 <br>
 <p align="justify"><h > Docente/es Asesor/es:</h></p>
@@ -178,7 +178,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
                 @endforeach
 			</tbody>
 	</table>
-<br><br>
+<br>
 <h4 align="center">"HACIA LA LIBERTAD POR LA CULTURA"</h4>
 <p>
 	
