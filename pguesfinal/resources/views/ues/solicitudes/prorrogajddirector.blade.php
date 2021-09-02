@@ -287,12 +287,6 @@ break;
 		<h4 align="center" >"HACIA LA LIBERTAD POR LA CULTURA"</h4>
 	</div>
 </div>
-
-<p>
-	
-</p>	
-
-<br>
 	
 <table class="table table-hover" width="600px">
 	<thead>

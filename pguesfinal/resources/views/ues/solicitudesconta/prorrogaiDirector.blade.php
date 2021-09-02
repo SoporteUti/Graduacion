@@ -120,12 +120,12 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
   @endforeach
  @foreach($rol as $r)
  @if($r->idrol==$rlc->idrol && $r->idrol==3)
-   Coordinador general de trabajos de graduaci&oacute;n
+   Coordinador general de trabajos de grado
 @endif
 @endforeach
 @endif
 @endforeach
-del Departamento de {{$depto}} y con el Visto Bueno del/la Jefe del Departamento de {{$depto}}, {{$jefe}}. Tengo a bien solicitarles muy respetuosamente se tramite la modificaci&oacute;n del tema del Trabajo de Graduaci&oacute;n que se detalla a continuaci&oacute;n: </h>
+del Departamento de {{$depto}} y con el Visto Bueno del/la Jefe del Departamento de {{$depto}}, {{$jefe}}. Tengo a bien solicitarles muy respetuosamente se tramite la modificaci&oacute;n del tema del Trabajo de Grado que se detalla a continuaci&oacute;n: </h>
 
 <p align="justify"><h></h>
       @foreach($grupo as $gru)
@@ -184,7 +184,7 @@ del Departamento de {{$depto}} y con el Visto Bueno del/la Jefe del Departamento
 
   <br>
   <br>
-<h>Anexo la correspondencia relacionada a la solicitud enviada por el/la Coordinador General de Trabajos de Graduaci&oacute;n del Departamento de {{$depto}} con el respectivo visto bueno del/la Jefe de Departamento</h>
+<h>Anexo la correspondencia relacionada a la solicitud enviada por el/la Coordinador General de Trabajos de Grado del Departamento de {{$depto}} con el respectivo visto bueno del/la Jefe de Departamento</h>
 
 
 
@@ -206,7 +206,7 @@ del Departamento de {{$depto}} y con el Visto Bueno del/la Jefe del Departamento
    @endforeach
    @foreach($rol as $r)
    @if($r->idrol==$rlc->idrol)
-   <br>{{$r->nombre}} DE PROCESOS DE GRADUACI&Oacute;N
+   <br>{{$r->nombre}} DE PROCESOS DE GRADO
    @endif
    @endforeach
    @endif

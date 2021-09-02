@@ -19,7 +19,7 @@ Facultad Multidisciplinaria Paracentral<br>
       @if($d->iddepartamento ==$c->iddepartamento)
       Departamento de {{$d->nombre}}
       <br>
-      Coordinaci&oacute;n General de Trabajos de Graduaci&oacute;n
+      Coordinaci&oacute;n General de Trabajos de Grado
 <?php
       $idcarrera=$gru->idcarrera;
       $anio=$gru->fecharegistro;
@@ -60,7 +60,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
    @foreach($rol as $r)
    @if($r->idrol==$rlc->idrol && $r->idrol==4)
    <br>
-    Coordinador General de Trabajos de Graduaci&oacute;n
+    Coordinador General de Trabajos de Grado
    @endif
    @endforeach
    @endif
@@ -75,7 +75,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
 <p align="justify">
 
 
-<h >Por este medio, muy respetuosamente le solicito interponga sus buenos oficios ante la Junta Directiva para que se otorgue una  <strong>correcci&oacute;n en el nombre</strong> del Trabajo de Graduaci&oacute;n que se detalla a continuaci&oacute;n:</h>
+<h >Por este medio, muy respetuosamente le solicito interponga sus buenos oficios ante la Junta Directiva para que se otorgue una  <strong>correcci&oacute;n en el nombre</strong> del Trabajo de Grado que se detalla a continuaci&oacute;n:</h>
 
 <p align="justify"><h></h>
       @foreach($grupo as $gru)
@@ -156,7 +156,7 @@ San Vicente, <?php echo date('d');?> de <?php  $meses = array("Enero","Febrero",
   @endforeach
  @foreach($rol as $r)
  @if($r->idrol==$rlc->idrol && $r->idrol==3)
-   Coordinador General de Trabajos de Graduaci&oacute;n
+   Coordinador General de Trabajos de Grado
 @endif
 @endforeach
 @endif

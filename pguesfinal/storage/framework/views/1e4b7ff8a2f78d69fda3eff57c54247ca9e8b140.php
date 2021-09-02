@@ -371,7 +371,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" style="background:#00a65a; color:white">
-      <h4 class="modal-title">Solicitud de Prórroga Interna  dfgdgdg</h4>
+      <h4 class="modal-title">Solicitud de Prórroga Interna</h4>
     </div>
 
     <div hidden="" class="col-lg-6 col-md-6 col-xs-12 col-sm-6" > 
@@ -668,8 +668,6 @@
       <h4 class="modal-title">Solicitud de Cambio de Tema</h4>
     </div>
     <div class="modal-body">
-
-
      <div hidden="" class="col-lg-6 col-md-6 col-xs-12 col-sm-6" > 
        <div class="form-group"> 
         <div  class="input-group">                   
